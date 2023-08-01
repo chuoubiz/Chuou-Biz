@@ -24,6 +24,7 @@ module.exports = {
   },
   plugins: [
 
+    
     {
       resolve: `gatsby-plugin-lodash`,
       options: {
