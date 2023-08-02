@@ -189,13 +189,7 @@ const index = () => {
                     </dd>
                   </dl>
                 </div>
-                {/*					
-                <div className="pad">
-                  <p className="cen_pc red">
-                    ※浮気調査でGPS使用を促す業者にご注意ください！<br className="dsp_tbs">違法な証拠取得は証拠として認められない可能性があります。</p>
-                  <p className="cen"><Link to="https://www.keishicho.metro.tokyo.lg.jp/about_mpd/keiyaku_horei_kohyo/horei_jorei/stalker.html" target="_blank">ストーカー規制法について<br className="dsp_smt">（警視庁）&raquo;</Link></p>
-                </div>
-      */}
+
               </div>
               <div className="box price_box">
               <dl className="head">
@@ -266,7 +260,7 @@ const index = () => {
                 <dl>
                   <dt>
                     <img src="../../img/ehime/profile_name04.png" alt="" />
-                    <span className="label very"><Link to="https://rikon.vbest.jp/" target="_blank" rel="nofollow noopener noreferrer"><img src="../../img/top/bery_best_btn.png" alt="ベリーベスト法律事務所" loading="lazy" /></Link></span>
+                    <span className="label very"><a to="https://rikon.vbest.jp/" target="_blank" rel="nofollow noopener noreferrer"><img src="../../img/top/bery_best_btn.png" alt="ベリーベスト法律事務所" loading="lazy" /></a></span>
                   </dt>
                   <dd><img src="../../img/ehime/profile_txt04.png" alt="" className="dsp_hpt" /><img src="../../img/ehime/profile_txt04_sp.png" alt="" className="dsp_smt" /></dd>
                 </dl>
@@ -332,7 +326,7 @@ const index = () => {
                   </dl>
                   <dl>
                     <dt>広島相談室</dt>
-                    <dd><a href="https://www.chuou.biz/">総合探偵社中央リサーチ広島</a><br />
+                    <dd><Link to="/">総合探偵社中央リサーチ広島</Link><br />
                       広島県広島市中区上幟町2-45 今田ビル2F<br className="dsp_hp" />(家庭裁判所前 白島線電車道り沿い)<br />
                       TEL：082-211-1600(代)</dd>
                   </dl>
@@ -365,7 +359,7 @@ const index = () => {
                   </dl>
                 </div>
                 <ul className="wrap">
-                  <a href="https://www.ncia-research.or.jp/" target="_blank"><li>内閣総理大臣認可<br />全国調査業協同組合組合員<br />第3266号</li></a>
+                  <a href="https://www.ncia-research.or.jp/" target="_blank" rel="noopener noreferrer"><li>内閣総理大臣認可<br />全国調査業協同組合組合員<br />第3266号</li></a>
                   <li>愛媛県公安委員会<br />探偵業届出証明書番号<br />第82120013号</li>
                   <li>商標登録証<br />第6531358号</li>
                 </ul>
@@ -378,7 +372,7 @@ const index = () => {
                   <p><img src="../../img/ehime/img_yamaguchi.jpg" alt="" /><br />
                     プライバシーを守る相談室</p>
                 </div>
-                <p className="map"><a href="https://goo.gl/maps/nxYTXpNztSZBhBYj6" rel="nofollow" target="_blank"><img src="../../img/ehime/map.png" loading="lazy" alt="" /></a></p>
+                <p className="map"><a href="https://goo.gl/maps/nxYTXpNztSZBhBYj6" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/ehime/map.png" loading="lazy" alt="" /></a></p>
               </div>
               <div className="photo">
                 <h3 className="mp">当社の看板</h3>
@@ -393,7 +387,7 @@ const index = () => {
                   <div className="in">
                     <p><img src="../../img/ehime/logo_line.png" alt="" /></p>
                     <p className="b">LINEからお問い合わせ<br className="dsp_smt" />できます！</p>
-                    <p>QRコードから<a href="https://line.me/R/ti/p/65gpK3qcDs" target="_blank">「友だち登録」</a>すると、LINEでお問い合わせができます。</p>
+                    <p>QRコードから<a href="https://line.me/R/ti/p/65gpK3qcDs" target="_blank" rel="noopener noreferrer">「友だち登録」</a>すると、LINEでお問い合わせができます。</p>
                   </div>
                   <p className="qr"><img src="../../img/ehime/qr_line.png" alt="" /></p>
                 </div>

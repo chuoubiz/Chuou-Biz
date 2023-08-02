@@ -101,7 +101,7 @@ const company = () => {
                             <dd>
                             <p className="cen blue b nm">弊社代表が、元 衆議院議員 議長<br />
                                 灘尾 弘吉先生筆の書を頂きました。</p>
-                            <p className="nm cen">灘尾弘吉先生については<a href="https://ja.wikipedia.org/wiki/%E7%81%98%E5%B0%BE%E5%BC%98%E5%90%89" target="_blank">こちら</a></p>
+                            <p className="nm cen">灘尾弘吉先生については<a href="https://ja.wikipedia.org/wiki/%E7%81%98%E5%B0%BE%E5%BC%98%E5%90%89" target="_blank" rel="noopener noreferrer">こちら</a></p>
                             </dd>
                         </dl>
                         <dl>
@@ -157,7 +157,7 @@ const company = () => {
                                 愛媛県松山市三番町7-7-1 村上ビル2階<br />
                                 （松山市民病院徒歩2分）<br />
                                 TEL：089-931-3800(代)<br />
-                                MAIL：<Link to="mailto:ehime@chuou.biz">ehime@chuou.biz</Link></dd>
+                                MAIL：<a href="mailto:ehime@chuou.biz">ehime@chuou.biz</a></dd>
                             </dl>
                             <dl>
                             <dt>広島相談室</dt>
@@ -165,7 +165,7 @@ const company = () => {
                                 広島県広島市中区上幟町2-45 今田ビル2F<br />
                                 (家庭裁判所前 白島線電車道り沿い)<br />
                                 TEL：082-211-1600(代)<br />
-                                MAIL：<Link to="mailto:hiroshima@chuou.biz">hiroshima@chuou.biz</Link></dd>
+                                MAIL：<a href="mailto:hiroshima@chuou.biz">hiroshima@chuou.biz</a></dd>
                             </dl>
                             <dl>
                             <dt>山口相談室</dt>
@@ -173,7 +173,7 @@ const company = () => {
                                 山口県周南市平和通2丁目31 三真樹ビル2階<br />
                                 （徳山駅徒歩3分）<br />
                                 TEL：0834-22-7513(代)<br />
-                                MAIL：<Link to="mailto:yamaguchi@chuou.biz">yamaguchi@chuou.biz</Link></dd>
+                                MAIL：<a href="mailto:yamaguchi@chuou.biz">yamaguchi@chuou.biz</a></dd>
                             </dl>
                             <dl>
                             <dt>岡山相談室</dt>
@@ -181,7 +181,7 @@ const company = () => {
                                 岡山県岡山市北区富田町1丁目1-1<br />
                                 富士野ビル2階<br />
                                 TEL：086-231-6661(代)<br />
-                                MAIL：<Link to="mailto:okayama@chuou.biz">okayama@chuou.biz</Link></dd>
+                                MAIL：<a href="mailto:okayama@chuou.biz">okayama@chuou.biz</a></dd>
                             </dl>
                             <dl>
                             <dt>島根相談室</dt>
@@ -189,15 +189,15 @@ const company = () => {
                                 島根県松江市津田町305番 ツダマチビル1階<br />
                                 （松江駅徒歩5分）<br />
                                 TEL：0852-67-6573(代)<br />
-                                MAIL：<Link to="mailto:shimane@chuou.biz">shimane@chuou.biz</Link></dd>
+                                MAIL：<a href="mailto:shimane@chuou.biz">shimane@chuou.biz</a></dd>
                             </dl>
                             <dl>
                             <dt>広島本社</dt>
                             <dd>広島県広島市中区上幟町2-45 今田ビル2F<br />
-                                (家庭裁判所前 白島線電車道り沿い) <a href="https://goo.gl/maps/diLXEpJKHk94C7jA6" target="_blank">»MAP</a><br />
+                                (家庭裁判所前 白島線電車道り沿い) <a href="https://goo.gl/maps/diLXEpJKHk94C7jA6" target="_blank" rel="noopener noreferrer">»MAP</a><br />
                                 TEL：082-211-1600(代)<br />
                                 FAX：082-211-1688<br />
-                                MAIL：<Link to="mailto:info@chuou.biz">info@chuou.biz</Link></dd>
+                                MAIL：<a href="mailto:info@chuou.biz">info@chuou.biz</a></dd>
                             </dl>
                         </div>
                         </div>

@@ -14,8 +14,8 @@ const index = () => {
   
   <div id="img_top_msg" className="bg_blue_grad">
     <p className="mp nm">内閣総理大臣認可 全国調査業協同組合組合員</p>
-    <p className="txt nm">当探偵事務所は厳重な審査を経て<a href="http://www.ncia-research.or.jp/" rel="nofollow" target="_blank">全国調査業協同組合</a>に加盟しております。<br />
-      広告は新聞・看板や<a href="https://itp.ne.jp/info/341545111182370410/" rel="nofollow" target="_blank">NTT iタウンページ (探偵欄) </a>にも掲載中！</p>
+    <p className="txt nm">当探偵事務所は厳重な審査を経て<a href="http://www.ncia-research.or.jp/" rel="nofollow noopener noreferrer" target="_blank">全国調査業協同組合</a>に加盟しております。<br />
+      広告は新聞・看板や<a href="https://itp.ne.jp/info/341545111182370410/" rel="nofollow noopener noreferrer" target="_blank">NTT iタウンページ (探偵欄) </a>にも掲載中！</p>
   </div>
   <section id="container" className="cf">
     <div id="page_title">
@@ -267,7 +267,7 @@ const index = () => {
           <dl>
             <dt>
               <img src="../../img/okayama/profile_name04.png" alt="" />
-              <span className="label very"><a href="https://rikon.vbest.jp/" target="_blank" rel="nofollow"><img src="../../img/top/bery_best_btn.png" alt="ベリーベスト法律事務所" loading="lazy" /></a></span>
+              <span className="label very"><a href="https://rikon.vbest.jp/" target="_blank" rel="nofollow noopener noreferrer"><img src="../../img/top/bery_best_btn.png" alt="ベリーベスト法律事務所" loading="lazy" /></a></span>
             </dt>
             <dd><img src="../../img/okayama/profile_txt04.png" alt="" className="dsp_hpt" /><img src="../../img/okayama/profile_txt04_sp.png" alt="" className="dsp_smt" /></dd>
           </dl>
@@ -383,7 +383,7 @@ const index = () => {
             </dl>
           </div>
           <ul className="wrap">
-            <a href="https://www.ncia-research.or.jp/" target="_blank"><li>内閣総理大臣認可<br />全国調査業協同組合組合員<br />第3266号</li></a>
+            <a href="https://www.ncia-research.or.jp/" target="_blank" rel="noopener noreferrer"><li>内閣総理大臣認可<br />全国調査業協同組合組合員<br />第3266号</li></a>
             <li>岡山県公安委員会<br />探偵業届出証明書番号<br />第72100026号</li>
             <li>商標登録証<br />第6531358号</li>
           </ul>
@@ -396,7 +396,7 @@ const index = () => {
             <p><img src="../../img/okayama/img_yamaguchi.jpg" alt="" /><br />
               プライバシーを守る相談室</p>
           </div>
-          <p className="map"><a href="https://goo.gl/maps/Eyr7fYEAtyhkFcBN7" rel="nofollow" target="_blank"><img src="../../img/okayama/map.png" loading="lazy" alt="" /></a></p>
+          <p className="map"><a href="https://goo.gl/maps/Eyr7fYEAtyhkFcBN7" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/okayama/map.png" loading="lazy" alt="" /></a></p>
         </div>
         
       </div>
@@ -406,7 +406,7 @@ const index = () => {
             <div className="in">
               <p><img src="../../img/okayama/logo_line.png" alt="" /></p>
               <p className="b">LINEからお問い合わせ<br className="dsp_smt" />できます！</p>
-              <p>QRコードから<a href="https://line.me/R/ti/p/65gpK3qcDs" target="_blank">「友だち登録」</a>すると、LINEでお問い合わせができます。</p>
+              <p>QRコードから<a href="https://line.me/R/ti/p/65gpK3qcDs" target="_blank" rel="noopener noreferrer">「友だち登録」</a>すると、LINEでお問い合わせができます。</p>
             </div>
             <p className="qr"><img src="../../img/okayama/qr_line.png" alt="" /></p>
           </div>
@@ -425,10 +425,10 @@ const index = () => {
           </dl>
         </div>
         <ul>
-          <li><a href="http://www.ncia-research.or.jp/" rel="nofollow" target="_blank"><img src="../../img/okayama/bana01.png" alt="全国調査業協同組合" /></a></li>
-          <li><a href="https://www.pref.okayama.jp/site/kenkei/" rel="nofollow" target="_blank"><img src="../../img/okayama/okayama_p.png" alt="岡山県警察" /></a></li>
-          <li><a href="https://rikon.vbest.jp/" rel="nofollow" target="_blank"><img src="../../img/okayama/bana03.png" alt="ベリーベスト法律事務所" /></a></li>
-          <li><a href="https://best-legal.jp/want-to-claim-affair-alimony-3366" rel="nofollow" target="_blank"><img src="../../img/okayama/bana04.png" alt="不倫・浮気の慰謝料請求ならベリーベスト法律事務所" /></a></li>
+          <li><a href="http://www.ncia-research.or.jp/" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/okayama/bana01.png" alt="全国調査業協同組合" /></a></li>
+          <li><a href="https://www.pref.okayama.jp/site/kenkei/" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/okayama/okayama_p.png" alt="岡山県警察" /></a></li>
+          <li><a href="https://rikon.vbest.jp/" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/okayama/bana03.png" alt="ベリーベスト法律事務所" /></a></li>
+          <li><a href="https://best-legal.jp/want-to-claim-affair-alimony-3366" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/okayama/bana04.png" alt="不倫・浮気の慰謝料請求ならベリーベスト法律事務所" /></a></li>
         </ul>
       </div>
       <div id="top_area" className="bg_wide pt pb">
