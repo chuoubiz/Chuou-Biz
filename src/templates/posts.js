@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import Seo from '../components/SEO';
 import Header from '../components/Header';
 import SubpageTitle from '../components/SubpageTitle';
 import Breadcrumb from '../components/breadcrumbPosts';
@@ -20,7 +21,7 @@ const PostPage = ({ data }) => {
 
             <article className="main">
               <h3 className="line">{data.microcmsPosts.title}<br />
-              <span className='date'>更新日：<time dateTime={data.microcmsPosts.createdAt}>{data.microcmsPosts.updatedAt}</time></span></h3>
+              <span className='date'>更新日：<time dateTime={data.microcmsPosts.createdAt}>{data.microcmsPosts.date}</time></span></h3>
 
               <div
               dangerouslySetInnerHTML={{
@@ -40,6 +41,12 @@ const PostPage = ({ data }) => {
   );
 };
 
+export const Head = ({data}) => (  
+  <>  
+    <Seo title2={data.microcmsPosts.title} /> 
+  </>
+)
+
 export const query = graphql`
 query ($postId: String) {
   microcmsPosts(id: {eq: $postId}) {
@@ -55,8 +62,13 @@ query ($postId: String) {
     postsId
     updatedAt(formatString: "YYYY年MM月DD日")
     createdAt(formatString: "YYYY-MM-DDTHH:MM")
+    date(formatString: "YYYY/MM/DD")
   }
 }
 `;
 
+
+
 export default PostPage;
+
+
