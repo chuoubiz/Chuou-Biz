@@ -410,10 +410,10 @@ const index = () => {
                     </div>
 
                     <ul>
-                        <li><a href="http://www.ncia-research.or.jp/" rel="nofollow" target="_blank"><img src="../../img/shimane/bana01.png" alt="全国調査業協同組合" /></a></li>
-                        <li><a href="https://www.pref.shimane.lg.jp/police/" rel="nofollow" target="_blank"><img src="../../img/shimane/shimane-p.jpg" alt="島根県警察" /></a></li>
-                        <li><a href="https://rikon.vbest.jp/" rel="nofollow" target="_blank"><img src="../../img/shimane/bana03.png" alt="ベリーベスト法律事務所" /></a></li>
-                        <li><a href="https://best-legal.jp/want-to-claim-affair-alimony-3366" rel="nofollow" target="_blank"><img src="../../img/shimane/bana04.png" alt="不倫・浮気の慰謝料請求ならベリーベスト法律事務所" /></a></li>
+                        <li><a href="http://www.ncia-research.or.jp/" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/shimane/bana01.png" alt="全国調査業協同組合" /></a></li>
+                        <li><a href="https://www.pref.shimane.lg.jp/police/" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/shimane/shimane-p.jpg" alt="島根県警察" /></a></li>
+                        <li><a href="https://rikon.vbest.jp/" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/shimane/bana03.png" alt="ベリーベスト法律事務所" /></a></li>
+                        <li><a href="https://best-legal.jp/want-to-claim-affair-alimony-3366" rel="nofollow noopener noreferrer" target="_blank"><img src="../../img/shimane/bana04.png" alt="不倫・浮気の慰謝料請求ならベリーベスト法律事務所" /></a></li>
                     </ul>
                     
                 </div>
