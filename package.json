@@ -13,9 +13,6 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "dependencies": {
-    "@fontsource/m-plus-1p": "^4.5.10",
-    "@fontsource/noto-sans-jp": "^4.5.12",
-    "@fontsource/noto-serif-jp": "^4.5.12",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
