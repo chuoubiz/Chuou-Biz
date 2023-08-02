@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
+import Seo from '../components/SEO';
 import Layout from '../components/Layout';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
@@ -47,7 +48,7 @@ const CategoryPage = ({ data, pageContext }) => {
                   </div>
                 )}
                 <div className="column_txt">
-                  <time dateTime={node.createdAt}>{node.updatedAt}</time>
+                  <time dateTime={node.createdAt}>{node.date}</time>
                   <a href={'/posts/' + node.postsId + '/'}>{node.title}</a>
                   {stripHTML(node.content).length > MAX_CONTENT_LENGTH
                     ? stripHTML(node.content).substring(0, MAX_CONTENT_LENGTH) + '...'
@@ -106,23 +107,43 @@ function stripHTML(html) {
 }
 
 export const query = graphql`
-  query ($categoryId: String, $limit: Int, $skip: Int) {
-    allMicrocmsPosts(filter: { category: { id: { eq: $categoryId } } }, limit: $limit, skip: $skip) {
-      edges {
-        node {
+query ($categoryId: String, $limit: Int, $skip: Int) {
+  allMicrocmsPosts(
+    filter: {category: {id: {eq: $categoryId}}}
+    limit: $limit
+    skip: $skip
+    sort: {date: DESC}
+  ) {
+    edges {
+      node {
+        id
+        postsId
+        title
+        eyecatch {
+          url
+        }
+        content
+        createdAt
+        updatedAt
+        date(formatString: "YYYY/MM/DD")
+        category {
           id
-          postsId
-          title
-          eyecatch {
-            url
-          }
-          content
-          createdAt
-          updatedAt
+          name
         }
       }
     }
   }
+}
 `;
+
+export const Head = ({ data }) => {
+  const pageTitle = data.allMicrocmsPosts.edges[0].node.category.name; // ページのタイトルを取得
+
+  return (
+    <>
+      <Seo title2={pageTitle} />
+    </>
+  );
+};
 
 export default CategoryPage;
