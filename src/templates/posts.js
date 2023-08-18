@@ -6,8 +6,17 @@ import SubpageTitle from '../components/SubpageTitle';
 import Breadcrumb from '../components/breadcrumbPosts';
 import Layout from '../components/Layout';
 import Footer from '../components/Footer';
+import dayjs from 'dayjs';
+import 'dayjs/locale/ja';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Tokyo");
 
 const PostPage = ({ data }) => {
+  dayjs.locale('ja');
   const { microcmsPosts } = data; // フィールド名を修正
 
   return (
@@ -21,7 +30,7 @@ const PostPage = ({ data }) => {
 
             <article className="main">
               <h3 className="line">{data.microcmsPosts.title}<br />
-              <span className='date'>更新日：<time dateTime={data.microcmsPosts.createdAt}>{data.microcmsPosts.date}</time></span></h3>
+              <span className='date'>更新日：<time dateTime={dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY-MM-DDTHH:mm:ss')}>{dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY/MM/DD')}</time></span></h3>
 
               <div
               dangerouslySetInnerHTML={{
@@ -59,10 +68,8 @@ query ($postId: String) {
     eyecatch {
       url
     }
-    postsId
-    updatedAt(formatString: "YYYY年MM月DD日")
-    createdAt(formatString: "YYYY-MM-DDTHH:MM")
-    date(formatString: "YYYY/MM/DD")
+    postsId    
+    date
   }
 }
 `;

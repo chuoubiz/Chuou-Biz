@@ -11,10 +11,18 @@ import TopAbout from '../components/TopAbout'
 import TopGuide from '../components/TopGuide'
 import TopArea from '../components/TopArea'
 
-import TopColumn from '../components/TopColumn'
 import TopBlog from '../components/TopBlog'
+import dayjs from 'dayjs';
+import 'dayjs/locale/ja';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Tokyo");
 
 const IndexPage = ({data}) => {
+  dayjs.locale('ja');
   return (
     <>
       <Header h1title="広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ" />
@@ -205,7 +213,9 @@ const IndexPage = ({data}) => {
 
                       {data.allMicrocmsPosts.edges.map(({ node }) => (
                         <dl key={node.postsId}>
-                        <dt>{node.date}</dt>
+                        <dt>
+                          <time dateTime={dayjs.utc(node.date).tz('Asia/Tokyo').format('YYYY-MM-DDTHH:mm:ss')}>{dayjs.utc(node.date).tz('Asia/Tokyo').format('YYYY/MM/DD')}</time>
+                        </dt>
                         <dd><Link to={`/posts/${node.postsId}`}>{node.title}</Link></dd>
                         </dl>
                       ))}                        
@@ -519,7 +529,7 @@ query {
         postsId
         title
         content
-        date(formatString: "YYYY/MM/DD")
+        date
         category {
           id
         }

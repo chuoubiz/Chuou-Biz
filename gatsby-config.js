@@ -21,6 +21,7 @@ module.exports = {
     image: "/images/ogp.jpg",
     url: "https://www.chuou.biz",
     siteUrl: "https://www.chuou.biz",
+    timezone: 'Asia/Tokyo',
   },
   plugins: [
 
