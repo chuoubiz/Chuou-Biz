@@ -6,12 +6,21 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import SubpageTitle from '../components/SubpageTitle';
 import Breadcrumb from '../components/breadcrumb';
+import dayjs from 'dayjs';
+import 'dayjs/locale/ja';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
+dayjs.tz.setDefault("Asia/Tokyo");
 
 const MAX_CONTENT_LENGTH = 100; // 最大文字数を設定してください
 const PAGES_PER_GROUP = 5; // 1グループに表示するページ数
 const PAGE_PADDING = 1; // 前後に追加で表示するページ数
 
 const CategoryPage = ({ data, pageContext }) => {
+  dayjs.locale('ja');
   const { allMicrocmsPosts } = data;
   const { category, numPages, currentPage, startPage, endPage } = pageContext;
   const posts = allMicrocmsPosts.edges;
@@ -48,7 +57,7 @@ const CategoryPage = ({ data, pageContext }) => {
                   </div>
                 )}
                 <div className="column_txt">
-                  <time dateTime={node.createdAt}>{node.date}</time>
+                <time dateTime={dayjs.utc(node.date).tz('Asia/Tokyo').format('YYYY-MM-DDTHH:mm:ss')}>{dayjs.utc(node.date).tz('Asia/Tokyo').format('YYYY/MM/DD')}</time>
                   <a href={'/posts/' + node.postsId + '/'}>{node.title}</a>
                   {stripHTML(node.content).length > MAX_CONTENT_LENGTH
                     ? stripHTML(node.content).substring(0, MAX_CONTENT_LENGTH) + '...'
@@ -123,9 +132,7 @@ query ($categoryId: String, $limit: Int, $skip: Int) {
           url
         }
         content
-        createdAt
-        updatedAt
-        date(formatString: "YYYY/MM/DD")
+        date
         category {
           id
           name
