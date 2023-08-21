@@ -3850,3 +3850,8 @@
 		&.current { background-color: #89d4ea; }
 	}
 }
+
+.eyecatch_img {
+	margin: 20px 0;
+	img { object-fit: cover; }
+}
