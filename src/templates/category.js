@@ -28,7 +28,7 @@ const CategoryPage = ({ data, pageContext }) => {
   return (
     <>
       <div id='wrap'>
-        <Header />
+        <Header h1title={category.name} />
         <SubpageTitle subtitle={category.name} id="column" />
         <Breadcrumb subtitle={category.name} />
         <Layout>
