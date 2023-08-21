@@ -29,10 +29,23 @@ const PostPage = ({ data }) => {
           <div className="main pb">
 
             <article className="main">
+
+              {data.microcmsPosts.eyecatch ? (
+                <div className="eyecatch_img">
+                  <img
+                    src={data.microcmsPosts.eyecatch.url + '?fm=webp'}
+                    width={370}
+                    height={277}
+                    alt={data.microcmsPosts.title + 'サムネイル画像'}
+                    loading="lazy"
+                  />
+                </div>
+              ) : null}
+
               <h3 className="line">{data.microcmsPosts.title}<br />
               <span className='date'>更新日：<time dateTime={dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY-MM-DDTHH:mm:ss')}>{dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY/MM/DD')}</time></span></h3>
 
-              <div
+              <div className='post_main_box'
               dangerouslySetInnerHTML={{
                   __html: `${data.microcmsPosts.content}`,
               }}
