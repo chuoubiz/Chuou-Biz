@@ -396,12 +396,14 @@ const IndexPage = ({data}) => {
                   <dd className="b">探偵案内所、探偵ランキングなど作為的に掲載し、一部の業者だけあっせん・誘導する根拠のない嘘の誇大広告にはご注意ください。</dd>
                 </dl>
               </div>
-              <ul className="dsp_hp">
-                <li className="dsp_hp"><a href="https://www.pref.hiroshima.lg.jp/site/police/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/hiroshimapolice.jpg" width={180} height={46} loading="lazy" alt="広島県警察" /></a></li>
-                <li className="dsp_hp"><a href="https://rikon.vbest.jp/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/very_best.png" width={226} height={49} loading="lazy" alt="ベリーベスト法律事務所" /></a></li>
-                <li className="dsp_hp"><a href="https://best-legal.jp/want-to-claim-affair-alimony-3366/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/20210416.png" width={220} height={46} loading="lazy" alt="浮気や不倫お役立ち情報はコチラ" /></a></li>
-                <li id="ikuchan" className="dsp_hp"><a href="http://www.ikuchan.or.jp/service/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/ikuzennkoku.jpg" width={108} height={115} loading="lazy" alt="子育て応援イクちゃんサービス" /><span className="txt">お子様連れ大歓迎です。弊社は、<b className="orange">イクちゃんサービス参加店</b>に登録しております。</span></a></li>
+
+              <ul>
+                <li><a href="https://www.pref.hiroshima.lg.jp/site/police/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/hiroshimapolice.jpg" width={180} height={46} loading="lazy" alt="広島県警察" /></a></li>
+                <li><a href="https://rikon.vbest.jp/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/very_best.png" width={226} height={49} loading="lazy" alt="ベリーベスト法律事務所" /></a></li>
+                <li><a href="https://best-legal.jp/want-to-claim-affair-alimony-3366/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/20210416.png" width={220} height={46} loading="lazy" alt="浮気や不倫お役立ち情報はコチラ" /></a></li>
+                <li id="ikuchan"><a href="http://www.ikuchan.or.jp/service/" rel="nofollow noopener noreferrer" target="_blank"><img src="../img/top/ikuzennkoku.jpg" width={108} height={115} loading="lazy" alt="子育て応援イクちゃんサービス" /><span className="txt">お子様連れ大歓迎です。弊社は、<b className="orange">イクちゃんサービス参加店</b>に登録しております。</span></a></li>
               </ul>
+              
             </div>
 
             <TopArea />
