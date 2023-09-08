@@ -125,6 +125,9 @@ const contact = () => {
                                 </tbody></table>
                             <div className="btn">
                                 <p>お客様の個人情報の漏洩を防ぐため、このページの情報は暗号化され、SSLモードで送信されます。必要事項が記入できましたら「送信する」ボタンを押してください。</p>
+                                <div className='recap_box'>
+                                    <div className="g-recaptcha" data-sitekey="6LeXfjsnAAAAANdy2jGk320IIYkzJZ-fOtK33XCN" />
+                                </div>
                                 <p className="cen"><input type="submit" defaultValue="送信する" className="send" /> <input type="reset" name="reset" defaultValue="リセット" /></p>
                             </div>
 
@@ -154,6 +157,7 @@ export const Head = () => (
             description="山口の探偵社「中央リサーチ山口」ではどのようなお問合せにも対応致します。お気軽にご連絡ください。"
             keyword="探偵,山口,問合せ,中央リサーチ山口"
             />
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </>
   )
 export default contact
