@@ -129,7 +129,9 @@ const contact = () => {
                                 <div className='recap_box'>
                                     <div className="g-recaptcha" data-sitekey="6LeXfjsnAAAAANdy2jGk320IIYkzJZ-fOtK33XCN" />
                                 </div>
-                                <p className="cen"><input type="submit" defaultValue="送信する" className="send" /> <input type="reset" name="reset" defaultValue="リセット" /></p>
+                                <p className="cen">
+                                    <button type="submit" className="send">送信する</button>
+                                </p>
                             </div>
                             </form>
 
