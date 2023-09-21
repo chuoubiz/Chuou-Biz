@@ -479,26 +479,32 @@ a:link, a:visited { color: #005E9C; }
 	background: #eee;
 	position: relative;
 	@media only screen and (max-width: 768px) {
-		padding-bottom: 134px;
+		padding-bottom: 83px;
 	}
 	@media only screen and (max-width: 640px) {
-		padding-bottom: 125px;
+		padding-bottom: 147px;
 	}
 	.contact {
 		max-width: 1300px;
 		margin: 0 auto;
-		background: url("../img/bg_contact.jpg") no-repeat left bottom;
+		background: url("../img/bg_contact.jpg") no-repeat left top;
 		background-size: cover;
 		padding: 80px 0;
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		box-sizing: border-box;
+		@media only screen and (max-width: 1024px) {
+			padding: 40px;
+		}
 		@media only screen and (max-width: 768px) {
-			padding:3%;
-			background-image: none;
-			float: none;
+			padding: 420px 20px 20px 20px;
+			background-image: url("../img/bg_contact_smp.jpg");
+			background-position: top center;
 			width: 100%;
+		}
+		@media only screen and (max-width: 640px) {
+			padding: 260px 20px 20px 20px;
 		}
 		h3 {
 			color: #c1272d;
@@ -508,9 +514,15 @@ a:link, a:visited { color: #005E9C; }
 			@media only screen and (max-width: 768px) {
 				font-size: 25px;
 				margin: 3% 0 0 0;
+				background: rgba(255, 255, 255, 0.8);
+				padding-top: 15px;
+				text-align: center;
 			}
 			@media only screen and (max-width: 640px) {
 				font-size: 18px;
+				background: rgba(255, 255, 255, 0.8);
+				padding-top: 15px;
+				text-align: center;
 			}
 			&span {
 				font-weight: bold;
@@ -529,7 +541,7 @@ a:link, a:visited { color: #005E9C; }
 				padding: 0;
 			}
 			.box {
-				background: rgba(255, 255, 255, 0.5);
+				background: rgba(255, 255, 255, 0.8);
 				padding: 35px 45px;
 				@media only screen and (max-width: 768px) {
 					padding: 10px;
@@ -632,6 +644,7 @@ a:link, a:visited { color: #005E9C; }
 					.free2 {
 						display: flex;
 						flex-wrap: wrap;
+						align-items: center;
 						@media only screen and (max-width: 640px) {
 							margin: 0 15px;
 						}
@@ -735,7 +748,7 @@ a:link, a:visited { color: #005E9C; }
 				max-width: 100%;
 				margin: auto;
 				padding: 5px;
-				width: 400px;
+				width: 100%;
 			}
 			@media only screen and (max-width: 640px) {
 				width: 100%;
@@ -743,14 +756,29 @@ a:link, a:visited { color: #005E9C; }
 			}
 			li {
 				@media only screen and (max-width: 768px) {
-				width: 49%;
-				margin-bottom: 5px;
+				width: 30%;
+				margin-bottom: 0;
 				list-style: none;
+				padding: 10px;
+				box-sizing: border-box;
 				}
+				@media only screen and (max-width: 640px) {
+					width: 49%;
+					margin-bottom: 0;
+					padding: 5px;
+					list-style: none;
+					}
 				&:last-child {
 					@media only screen and (max-width: 768px) {
-					width: 100%;
-					margin-bottom: 0;
+						width: 40%;
+						margin-bottom: 0;
+						padding: 10px;
+						box-sizing: border-box;
+					}
+					@media only screen and (max-width: 640px) {
+						width: 100%;
+						margin-bottom: 0;
+						padding: 5px;
 					}
 				}
 				a {

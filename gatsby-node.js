@@ -66,17 +66,17 @@ exports.createPages = async ({ graphql, actions }) => {
 
       const links = [];
       if (currentPage > 1) {
-        links.push({ page: '<< Prev', url: currentPage === 1 ? `/${node.categoryId}` : `/${node.categoryId}/${currentPage - 1}` });
+        links.push({ page: '<< Prev', url: currentPage === 1 ? `/category/${node.categoryId}` : `/category/${node.categoryId}/${currentPage - 1}` });
       }
       for (let j = startPage; j <= endPage; j++) {
-        links.push({ page: j, url: j === 1 ? `/${node.categoryId}` : `/${node.categoryId}/${j}` });
+        links.push({ page: j, url: j === 1 ? `/category/${node.categoryId}` : `/category/${node.categoryId}/${j}` });
       }
       if (currentPage < numPages) {
-        links.push({ page: 'Next >>', url: `/${node.categoryId}/${currentPage + 1}` });
+        links.push({ page: 'Next >>', url: `/category/${node.categoryId}/${currentPage + 1}` });
       }
 
       createPage({
-        path: i === 0 ? `/${node.categoryId}` : `/${node.categoryId}/${currentPage}`,
+        path: i === 0 ? `/category/${node.categoryId}` : `/category/${node.categoryId}/${currentPage}`,
         component: categoryTemplate,
         context: {
           categoryId: node.categoryId,

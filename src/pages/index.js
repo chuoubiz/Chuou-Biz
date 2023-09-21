@@ -37,7 +37,7 @@ const IndexPage = ({data}) => {
 
         <div id="page_title">
           <div className="dsp_hpt"><img src="../img/top/title.png" width={1300} height={475} loading="lazy" alt="総合探偵社中央リサーチ" /></div>
-          <div className="dsp_smt"><img src="../img/top/title_sp.jpg" width={375} height={284} alt="総合探偵社中央リサーチ" /></div>
+          <div className="dsp_smt"><img src="../img/top/title_sp.jpg" alt="総合探偵社中央リサーチ" /></div>
         </div>
 
         <div id="img_bottom_msg">
