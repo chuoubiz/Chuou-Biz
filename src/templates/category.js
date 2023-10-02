@@ -70,7 +70,7 @@ const CategoryPage = ({ data, pageContext }) => {
 {numPages > 1 && (
   <div className='pager'>
     {currentPage > 1 && (
-      <Link to={currentPage === 2 ? `/${category.categoryId}` : `/${category.categoryId}/${currentPage - 1}`}>
+      <Link to={currentPage === 2 ? `/category/${category.categoryId}` : `/category/${category.categoryId}/${currentPage - 1}`}>
         &lt;&lt; 前へ
       </Link>
     )}
@@ -82,7 +82,7 @@ const CategoryPage = ({ data, pageContext }) => {
         return (
           <Link
             key={`pagination-link${pageNumber}`}
-            to={pageNumber === 1 ? `/${category.categoryId}` : `/${category.categoryId}/${pageNumber}`}
+            to={pageNumber === 1 ? `/category/${category.categoryId}` : `/category/${category.categoryId}/${pageNumber}`}
             className={pageNumber === currentPage ? "current" : ""}
           >
             {pageNumber}

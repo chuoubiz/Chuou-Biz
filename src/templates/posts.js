@@ -24,7 +24,7 @@ const PostPage = ({ data }) => {
       <div id='wrap'>
         <Header h1title={`${microcmsPosts.category.name}｜${microcmsPosts.title}`} />
         <SubpageTitle subtitle={microcmsPosts.category.name} id="column" />
-        <Breadcrumb url={`/${microcmsPosts.category.id}/`} cat={microcmsPosts.category.name} title={data.microcmsPosts.title} />
+        <Breadcrumb url={`/category/${microcmsPosts.category.id}/`} cat={microcmsPosts.category.name} title={data.microcmsPosts.title} />
         <Layout>
           <div className="main pb">
 
@@ -51,7 +51,7 @@ const PostPage = ({ data }) => {
               }}
               />
 
-              <p class="cen"><a href={`/${microcmsPosts.category.id}/`} className='bt01'>一覧に戻る</a></p>
+              <p class="cen"><a href={`/category/${microcmsPosts.category.id}/`} className='bt01'>一覧に戻る</a></p>
               <p class="cen"><a href="/" className='bt01'>広島で浮気調査なら<br class="dsp_smt" />総合探偵社 中央リサーチ広島へ</a></p>
                 
             </article>
