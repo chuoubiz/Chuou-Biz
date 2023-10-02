@@ -31,7 +31,7 @@ const index = () => {
             <div id="menu_sp" className="dsp_tbs shimane pc">
                 <ul>
                     <li><Link to="/shimane/voice/">お客様の声</Link></li>
-                    <li><Link to="/shimane/contact/">お問い合わせ</Link></li>
+                    <li><Link to="/shimane/toiawase/">お問い合わせ</Link></li>
                     <li><Link to="/shimane/company/">会社概要</Link></li>
                     <li><Link to="/shimane/price/">料金表</Link></li>
                 </ul>
