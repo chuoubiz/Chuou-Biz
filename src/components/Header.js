@@ -12,7 +12,7 @@ const Header = (props) => {
           <p className="title_top">
             <Link to="/">
               <img
-                src="/img/title.png"
+                src="/img/logo.png"
                 width={430}
                 height={36}
                 alt="株式会社中央リサーチ"
