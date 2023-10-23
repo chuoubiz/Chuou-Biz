@@ -102,9 +102,6 @@ const sitemap = () => {
                     <Link to="/stalker/">嫌がらせ・ストーカー対策</Link>
                   </li>
                   <li>
-                    <Link to="/bullying/">いじめ問題</Link>
-                  </li>
-                  <li>
                     <Link to="/tapping/">盗聴器発見</Link>
                   </li>
                   <li>
@@ -125,27 +122,19 @@ const sitemap = () => {
                     <Link to="/corporation/#market-research">市場調査</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#employee-behavior">
-                      従業員の素行
-                    </Link>
+                    <Link to="/corporation/#employee-behavior">従業員の素行</Link>
                   </li>
                   <li>
                     <Link to="/corporation/#crisis-management">危機管理</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#traffic-accident">
-                      交通事故調査
-                    </Link>
+                    <Link to="/corporation/#traffic-accident">交通事故調査</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#intellectual-property">
-                      知的財産調査
-                    </Link>
+                    <Link to="/corporation/#intellectual-property">知的財産調査</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#competitor-Survey">
-                      競合他社調査
-                    </Link>
+                    <Link to="/corporation/#competitor-Survey">競合他社調査</Link>
                   </li>
                 </ul>
               </div>
@@ -159,10 +148,7 @@ const sitemap = () => {
 };
 export const Head = () => (
   <>
-    <Seo
-      title="サイトマップ"
-      description="広島の探偵社「中央リサーチ」ホームページのサイトマップです。"
-    />
+    <Seo title="サイトマップ" description="広島の探偵社「中央リサーチ」ホームページのサイトマップです。" />
   </>
 );
 export default sitemap;
