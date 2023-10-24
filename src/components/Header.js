@@ -183,10 +183,10 @@ const Header = (props) => {
                     <Link to="/fickleness/">浮気・不倫調査</Link>
                   </li>
                   <li>
-                    <Link to="/type/">離婚の種類について</Link>
+                    <Link to="/fickleness/type/">離婚の種類について</Link>
                   </li>
                   <li>
-                    <Link to="/proof/">内容証明について</Link>
+                    <Link to="/fickleness/proof/">内容証明について</Link>
                   </li>
                   <li>
                     <Link to="/behavior/">素行調査</Link>
