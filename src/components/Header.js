@@ -11,12 +11,7 @@ const Header = (props) => {
         <div id="sticky">
           <p className="title_top">
             <Link to="/">
-              <img
-                src="/img/logo.png"
-                width={430}
-                height={36}
-                alt="株式会社中央リサーチ"
-              />
+              <img src="/img/logo.png" width={430} height={36} alt="株式会社中央リサーチ" />
             </Link>
           </p>
           <div className="contact">
@@ -36,8 +31,7 @@ const Header = (props) => {
                 href="https://line.me/R/ti/p/65gpK3qcDs"
                 aria-label="LINE"
                 rel="nofollow noopener noreferrer"
-                target="_blank"
-              >
+                target="_blank">
                 <img src="/img/line.png" width={58} height={58} alt="LINE" />
               </a>
             </p>
@@ -64,10 +58,10 @@ const Header = (props) => {
                   <Link to="/fickleness/">浮気・不倫調査</Link>
                 </li>
                 <li className="pad">
-                  <Link to="/type/">離婚の種類について</Link>
+                  <Link to="/fickleness/type/">離婚の種類について</Link>
                 </li>
                 <li className="pad">
-                  <Link to="/proof/">内容証明について</Link>
+                  <Link to="/fickleness/proof/">内容証明について</Link>
                 </li>
                 <li>
                   <Link to="/behavior/">素行調査</Link>
@@ -117,9 +111,7 @@ const Header = (props) => {
                   <Link to="/corporation/#traffic-accident">交通事故調査</Link>
                 </li>
                 <li>
-                  <Link to="/corporation/#intellectual-property">
-                    知的財産調査
-                  </Link>
+                  <Link to="/corporation/#intellectual-property">知的財産調査</Link>
                 </li>
                 <li>
                   <Link to="/corporation/#competitor-Survey">競合他社調査</Link>
@@ -181,11 +173,7 @@ const Header = (props) => {
                 <Link to="/">ホーム</Link>
               </li>
               <li>
-                <input
-                  id="smpnav-check1"
-                  className="smpnav-check1"
-                  type="checkbox"
-                />
+                <input id="smpnav-check1" className="smpnav-check1" type="checkbox" />
                 <label className="smpnav-label" htmlFor="smpnav-check1">
                   調査項目
                   <FontAwesomeIcon icon={faPlus} />
@@ -224,11 +212,7 @@ const Header = (props) => {
                 </ul>
               </li>
               <li>
-                <input
-                  id="smpnav-check2"
-                  className="smpnav-check2"
-                  type="checkbox"
-                />
+                <input id="smpnav-check2" className="smpnav-check2" type="checkbox" />
                 <label className="smpnav-label" htmlFor="smpnav-check2">
                   法人様向けプラン
                   <FontAwesomeIcon icon={faPlus} />
@@ -244,36 +228,24 @@ const Header = (props) => {
                     <Link to="/corporation/#market-research">市場調査</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#employee-behavior">
-                      従業員の素行
-                    </Link>
+                    <Link to="/corporation/#employee-behavior">従業員の素行</Link>
                   </li>
                   <li>
                     <Link to="/corporation/#crisis-management">危機管理</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#traffic-accident">
-                      交通事故調査
-                    </Link>
+                    <Link to="/corporation/#traffic-accident">交通事故調査</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#intellectual-property">
-                      知的財産調査
-                    </Link>
+                    <Link to="/corporation/#intellectual-property">知的財産調査</Link>
                   </li>
                   <li>
-                    <Link to="/corporation/#competitor-Survey">
-                      競合他社調査
-                    </Link>
+                    <Link to="/corporation/#competitor-Survey">競合他社調査</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <input
-                  id="smpnav-check3"
-                  className="smpnav-check3"
-                  type="checkbox"
-                />
+                <input id="smpnav-check3" className="smpnav-check3" type="checkbox" />
                 <label className="smpnav-label" htmlFor="smpnav-check3">
                   相談室案内
                   <FontAwesomeIcon icon={faPlus} />
