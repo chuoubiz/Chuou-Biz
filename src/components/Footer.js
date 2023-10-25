@@ -9,12 +9,7 @@ export default function Footer() {
           <ul>
             <li className="mail">
               <Link to="/toiawase/" aria-label="メールで相談">
-                <img
-                  src="/img/btn_mail.png"
-                  width={186}
-                  height={39}
-                  alt="メールで相談"
-                />
+                <img src="/img/btn_mail.png" width={186} height={39} alt="メールで相談" />
               </Link>
             </li>
             <li className="line">
@@ -22,14 +17,8 @@ export default function Footer() {
                 href="https://line.me/R/ti/p/65gpK3qcDs"
                 aria-label="ラインで相談"
                 rel="nofollow noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  src="/img/btn_line.png"
-                  width={186}
-                  height={39}
-                  alt="LINEで相談"
-                />
+                target="_blank">
+                <img src="/img/btn_line.png" width={186} height={39} alt="LINEで相談" />
               </a>
             </li>
             <li className="tel">
@@ -53,27 +42,14 @@ export default function Footer() {
                 <div className="tel_area">
                   <p className="free sans">
                     <a href="tel:0120-30-6630" aria-label="相談窓口電話番号">
-                      <img
-                        src="/img/tel.svg"
-                        width={60}
-                        height={39}
-                        alt="フリーダイヤル"
-                      />
+                      <img src="/img/tel.svg" width={60} height={39} alt="フリーダイヤル" />
                       0120-30-6630
                     </a>
                   </p>
                   <p className="free2">
                     <span className="txt mp">女性相談員ご希望の方はこちら</span>
-                    <a
-                      href="tel:0120-20-3399"
-                      aria-label="女性相談員ご希望の方はこちら"
-                    >
-                      <img
-                        src="/img/tel.svg"
-                        width={30}
-                        height={20}
-                        alt="フリーダイヤル"
-                      />
+                    <a href="tel:0120-20-3399" aria-label="女性相談員ご希望の方はこちら">
+                      <img src="/img/tel.svg" width={30} height={20} alt="フリーダイヤル" />
                       0120-20-3399
                     </a>
                   </p>
@@ -152,10 +128,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-
-        <p id="copyright">
-          Copyright &copy; 2022 株式会社中央リサーチ. All Rights Reserved.
-        </p>
+        <p id="copyright">Copyright &copy; 2022 株式会社中央リサーチ. All Rights Reserved.</p>
       </footer>
     </>
   );
