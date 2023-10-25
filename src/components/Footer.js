@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function Footer() {
   return (
@@ -9,7 +10,7 @@ export default function Footer() {
           <ul>
             <li className="mail">
               <Link to="/toiawase/" aria-label="メールで相談">
-                <img src="/img/btn_mail.png" width={186} height={39} alt="メールで相談" />
+                <StaticImage src="../img/btn_mail.webp" width={186} height={39} alt="メールで相談" />
               </Link>
             </li>
             <li className="line">
@@ -18,12 +19,12 @@ export default function Footer() {
                 aria-label="ラインで相談"
                 rel="nofollow noopener noreferrer"
                 target="_blank">
-                <img src="/img/btn_line.png" width={186} height={39} alt="LINEで相談" />
+                <StaticImage src="../img/btn_line.webp" width={186} height={39} alt="LINEで相談" />
               </a>
             </li>
             <li className="tel">
               <a href="tel:0120-30-6630" aria-label="電話で相談">
-                <img src="/img/btn_tel.png" width={398} height={67} alt="" />
+                <StaticImage src="../img/btn_tel.webp" width={285} height={48} alt="電話で相談" />
               </a>
             </li>
           </ul>
