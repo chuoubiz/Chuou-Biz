@@ -16,6 +16,7 @@ import dayjs from "dayjs";
 import "dayjs/locale/ja";
 import utc from "dayjs/plugin/utc";
 import timezone from "dayjs/plugin/timezone";
+import { StaticImage } from "gatsby-plugin-image";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -31,21 +32,13 @@ const IndexPage = ({ data }) => {
         <p className="mp nm">内閣総理大臣認可 全国調査業協同組合組合員</p>
         <p className="txt nm">
           当探偵事務所は厳重な審査を経て
-          <a
-            href="http://www.ncia-research.or.jp/"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
+          <a href="http://www.ncia-research.or.jp/" rel="nofollow noopener noreferrer" target="_blank">
             全国調査業協同組合
           </a>
           に加盟しております。
           <br />
           広告は中国新聞や
-          <a
-            href="https://itp.ne.jp/info/341545111182370410/"
-            rel="nofollow noopener noreferrer"
-            target="_blank"
-          >
+          <a href="https://itp.ne.jp/info/341545111182370410/" rel="nofollow noopener noreferrer" target="_blank">
             NTT iタウンページ (探偵欄){" "}
           </a>
           にも掲載中！
@@ -54,18 +47,21 @@ const IndexPage = ({ data }) => {
 
       <section id="container" className="cf">
         <div id="page_title">
-          <div className="dsp_hpt">
-            <img
-              src="../img/top/title.png"
-              width={1300}
-              height={475}
-              loading="lazy"
-              alt="総合探偵社中央リサーチ"
-            />
-          </div>
-          <div className="dsp_smt">
-            <img src="../img/top/title_sp.jpg" alt="総合探偵社中央リサーチ" />
-          </div>
+          <StaticImage
+            src="../img/top/title.webp"
+            width={1300}
+            height={475}
+            loading="lazy"
+            alt="総合探偵社中央リサーチ"
+            className="dsp_hpt"
+          />
+          <StaticImage
+            src="../img/top/title_sp.webp"
+            width={414}
+            height={342}
+            alt="総合探偵社中央リサーチ"
+            className="dsp_smt"
+          />
         </div>
 
         <div id="img_bottom_msg">
@@ -83,38 +79,22 @@ const IndexPage = ({ data }) => {
             <b className="fm">唯一</b>の探偵社です！ »
           </Link>
         </p>
-
-        <ul id="menu_sp" className="dsp_tbs pc">
-          <li>
-            <Link to="/beginner/">はじめての方へ</Link>
-          </li>
-          <li>
-            <Link to="/choose/">探偵社の選び方</Link>
-          </li>
-          <li>
-            <Link to="/service/">当社の取り組み</Link>
-          </li>
-          <li>
-            <Link to="/toiawase/">お問い合わせ</Link>
-          </li>
-          <li>
-            <Link to="/company/">会社概要</Link>
-          </li>
-          <li>
-            <Link to="/price/">料金表</Link>
-          </li>
-        </ul>
       </section>
 
       <section id="topmenu" className="cf">
         <div className="topmenu">
-          <div className="top_success_img">
-            <img src="../img/success_txt01.png" alt="調査成功率98.8%" />
-          </div>
+          <StaticImage
+            src="../img/success_txt01.webp"
+            alt="調査成功率98.8%"
+            width={389}
+            height={211}
+            className="top_success_img"
+          />
+
           <TopMenu />
         </div>
         <div className="bg_back">
-          <img src="../img/top/bg01.jpg" loading="lazy" width="100%" alt="" />
+          <StaticImage src="../img/top/bg01.jpg" loading="lazy" alt="" />
         </div>
       </section>
       <section id="topplan" className="cf">
@@ -124,14 +104,10 @@ const IndexPage = ({ data }) => {
             <div className="box">
               <dl className="head">
                 <dt className="mp">
-                  <div className="top_point_title">
-                    必要なところにピンポイント調査
-                  </div>
+                  <div className="top_point_title">必要なところにピンポイント調査</div>
                 </dt>
                 <dd>
-                  <p className="nm">
-                    お客様に合った無駄のないプランを提案し、動かぬ証拠を取ります。
-                  </p>
+                  <p className="nm">お客様に合った無駄のないプランを提案し、動かぬ証拠を取ります。</p>
                 </dd>
               </dl>
               <div className="wrap">
@@ -165,9 +141,7 @@ const IndexPage = ({ data }) => {
                     <p>
                       19万円<span className="fs">（税込 209,000円）</span>
                       、調査員2名体制
-                      <span className="fs">
-                        （20時間を数日間にわけて調査致します）
-                      </span>
+                      <span className="fs">（20時間を数日間にわけて調査致します）</span>
                     </p>
                     <p className="red attention">※浮気調査の成功率98.8%実績</p>
                   </dd>
@@ -178,9 +152,7 @@ const IndexPage = ({ data }) => {
                     <p>
                       28万円<span className="fs">（税込 308,000円）</span>
                       、調査員2名体制
-                      <span className="fs">
-                        （30時間を数日間にわけて調査致します）
-                      </span>
+                      <span className="fs">（30時間を数日間にわけて調査致します）</span>
                     </p>
                     <p className="red attention">※浮気調査の成功率99.3%実績</p>
                   </dd>
@@ -202,48 +174,16 @@ const IndexPage = ({ data }) => {
                     <br />
                     <span className="smt_fs">（深夜料金一切不要で安心）</span>
                     <br />
-                    <span className="credit">
-                      ※お支払いはクレジットも利用可能
-                    </span>
+                    <span className="credit">※お支払いはクレジットも利用可能</span>
                   </div>
                 </dt>
                 <dd>
                   <p className="icon">
-                    <img
-                      src="../img/top/pay00.png"
-                      width={49}
-                      height={37}
-                      loading="lazy"
-                      alt=""
-                    />
-                    <img
-                      src="../img/top/pay01.png"
-                      width={50}
-                      height={35}
-                      loading="lazy"
-                      alt=""
-                    />
-                    <img
-                      src="../img/top/pay02.png"
-                      width={85}
-                      height={26}
-                      loading="lazy"
-                      alt=""
-                    />
-                    <img
-                      src="../img/top/pay03.png"
-                      width={59}
-                      height={35}
-                      loading="lazy"
-                      alt=""
-                    />
-                    <img
-                      src="../img/top/pay04.png"
-                      width={124}
-                      height={32}
-                      loading="lazy"
-                      alt=""
-                    />
+                    <img src="../img/top/pay00.png" width={49} height={37} loading="lazy" alt="" />
+                    <img src="../img/top/pay01.png" width={50} height={35} loading="lazy" alt="" />
+                    <img src="../img/top/pay02.png" width={85} height={26} loading="lazy" alt="" />
+                    <img src="../img/top/pay03.png" width={59} height={35} loading="lazy" alt="" />
+                    <img src="../img/top/pay04.png" width={124} height={32} loading="lazy" alt="" />
                   </p>
                   <p className="dsp_smt fs">
                     <span className="fs">※お支払いはクレジットも利用可能</span>
@@ -267,16 +207,12 @@ const IndexPage = ({ data }) => {
             <h2 className="serif">
               <span className="red">証拠</span>こそが真実を立証します
             </h2>
-            <p className="mp b">
-              今､あなたの心を救うのは真実しかありません。今、勇気をもってください！
-            </p>
+            <p className="mp b">今､あなたの心を救うのは真実しかありません。今、勇気をもってください！</p>
             <p>
               結果がどんなに残酷なものであっても真実ならば人はそれを受け入れ先に進むことが出来るのですが、偽りは、人の心を膠着させてしまいます。
             </p>
             <p className="serif sub">裁判所は証拠を基に審理いたします</p>
-            <p className="txt">
-              弊社の、ご相談内容で最も多いのは、浮気・不倫調査についてのご相談です。
-            </p>
+            <p className="txt">弊社の、ご相談内容で最も多いのは、浮気・不倫調査についてのご相談です。</p>
             <p className="txt">
               その中で問題になるのが、多くのお客様が簡単なSNSのやり取りだけで不貞の証拠になると誤認し、裁判に負けてしまう可能性がある事です。
             </p>
@@ -293,22 +229,10 @@ const IndexPage = ({ data }) => {
                   <dt>ズームで、ここまで撮ることが出来ます</dt>
                   <dd>
                     <p className="arrow">
-                      <img
-                        src="../img/top/sample01.jpg"
-                        width={248}
-                        height={198}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample01.jpg" width={248} height={198} loading="lazy" alt="" />
                     </p>
                     <p>
-                      <img
-                        src="../img/top/sample02.jpg"
-                        width={248}
-                        height={198}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample02.jpg" width={248} height={198} loading="lazy" alt="" />
                     </p>
                   </dd>
                 </dl>
@@ -316,23 +240,11 @@ const IndexPage = ({ data }) => {
                   <dt>ホテルの出入りや、自宅の出入りを確実に撮影</dt>
                   <dd>
                     <p className="arrow">
-                      <img
-                        src="../img/top/sample03.jpg"
-                        width={248}
-                        height={198}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample03.jpg" width={248} height={198} loading="lazy" alt="" />
                       <span>2019/6/25/19:09</span>
                     </p>
                     <p>
-                      <img
-                        src="../img/top/sample04.jpg"
-                        width={248}
-                        height={198}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample04.jpg" width={248} height={198} loading="lazy" alt="" />
                       <span>2019/6/25/21:11</span>
                     </p>
                   </dd>
@@ -341,13 +253,7 @@ const IndexPage = ({ data }) => {
                   <dt className="ico">普通のカメラで夜、暗所撮影</dt>
                   <dd>
                     <p className="arrow">
-                      <img
-                        src="../img/top/sample05.jpg"
-                        width={338}
-                        height={248}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample05.jpg" width={338} height={248} loading="lazy" alt="" />
                       <span>2019/6/25/19:09</span>
                     </p>
                   </dd>
@@ -356,13 +262,7 @@ const IndexPage = ({ data }) => {
                   <dt className="ico">高感度カメラで夜、同所暗所</dt>
                   <dd>
                     <p className="arrow">
-                      <img
-                        src="../img/top/sample06.jpg"
-                        width={338}
-                        height={248}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample06.jpg" width={338} height={248} loading="lazy" alt="" />
                     </p>
                   </dd>
                 </dl>
@@ -370,26 +270,14 @@ const IndexPage = ({ data }) => {
                   <dt className="ico">高感度カメラで夜ズーム暗所</dt>
                   <dd>
                     <p>
-                      <img
-                        src="../img/top/sample07.jpg"
-                        width={338}
-                        height={248}
-                        loading="lazy"
-                        alt=""
-                      />
+                      <img src="../img/top/sample07.jpg" width={338} height={248} loading="lazy" alt="" />
                     </p>
                   </dd>
                 </dl>
               </div>
 
               <div className="cen">
-                <img
-                  src="../img/top/sample08.png"
-                  width={655}
-                  height={337}
-                  loading="lazy"
-                  alt=""
-                />
+                <img src="../img/top/sample08.png" width={655} height={337} loading="lazy" alt="" />
               </div>
 
               <p className="link mp">
@@ -398,20 +286,8 @@ const IndexPage = ({ data }) => {
             </div>
           </div>
           <div className="bg_back2">
-            <img
-              src="../img/top/bg02.jpg"
-              width="100%"
-              loading="lazy"
-              className="dsp_hp"
-              alt=""
-            />
-            <img
-              src="../img/top/bg02_smp.jpg"
-              width="100%"
-              loading="lazy"
-              className="dsp_tbs"
-              alt=""
-            />
+            <img src="../img/top/bg02.jpg" width="100%" loading="lazy" className="dsp_hp" alt="" />
+            <img src="../img/top/bg02_smp.jpg" width="100%" loading="lazy" className="dsp_tbs" alt="" />
           </div>
         </div>
       </section>
@@ -425,16 +301,8 @@ const IndexPage = ({ data }) => {
                 {data.allMicrocmsPosts.edges.map(({ node }) => (
                   <dl key={node.postsId}>
                     <dt>
-                      <time
-                        dateTime={dayjs
-                          .utc(node.date)
-                          .tz("Asia/Tokyo")
-                          .format("YYYY-MM-DDTHH:mm:ss")}
-                      >
-                        {dayjs
-                          .utc(node.date)
-                          .tz("Asia/Tokyo")
-                          .format("YYYY/MM/DD")}
+                      <time dateTime={dayjs.utc(node.date).tz("Asia/Tokyo").format("YYYY-MM-DDTHH:mm:ss")}>
+                        {dayjs.utc(node.date).tz("Asia/Tokyo").format("YYYY/MM/DD")}
                       </time>
                     </dt>
                     <dd>
@@ -584,20 +452,8 @@ const IndexPage = ({ data }) => {
           </div>
         </div>
         <div className="bg_back2">
-          <img
-            src="../img/top/bg07.jpg"
-            width="100%"
-            loading="lazy"
-            className="dsp_hp"
-            alt=""
-          />
-          <img
-            src="../img/top/bg07_smp.jpg"
-            width="100%"
-            loading="lazy"
-            className="dsp_tbs"
-            alt=""
-          />
+          <img src="../img/top/bg07.jpg" width="100%" loading="lazy" className="dsp_hp" alt="" />
+          <img src="../img/top/bg07_smp.jpg" width="100%" loading="lazy" className="dsp_tbs" alt="" />
         </div>
       </section>
 
@@ -630,18 +486,8 @@ const IndexPage = ({ data }) => {
               をいたします。
             </h3>
             <p className="img cen">
-              <a
-                href="https://youtu.be/MMlJj9fimqU"
-                rel="nofollow noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  src="img/top/youtube.jpg"
-                  alt="YouTube"
-                  width={900}
-                  height={507}
-                  loading="lazy"
-                />
+              <a href="https://youtu.be/MMlJj9fimqU" rel="nofollow noopener noreferrer" target="_blank">
+                <img src="img/top/youtube.jpg" alt="YouTube" width={900} height={507} loading="lazy" />
               </a>
             </p>
           </div>
@@ -650,9 +496,7 @@ const IndexPage = ({ data }) => {
             <h3 className="mp cen">
               <span>中央リサーチはコロナ対策を実施しています</span>
             </h3>
-            <p className="b">
-              中央リサーチではお客様の健康と安全を守るために以下の感染予防対策を実施しています。
-            </p>
+            <p className="b">中央リサーチではお客様の健康と安全を守るために以下の感染予防対策を実施しています。</p>
             <div className="wrap">
               <dl>
                 <dt>アルコール消毒液の設置</dt>
@@ -666,9 +510,7 @@ const IndexPage = ({ data }) => {
                       loading="lazy"
                     />
                   </p>
-                  <p className="txt nm">
-                    入口に消毒液を設置しておりますので手指の除菌にご協力お願いします。
-                  </p>
+                  <p className="txt nm">入口に消毒液を設置しておりますので手指の除菌にご協力お願いします。</p>
                 </dd>
               </dl>
               <dl>
@@ -683,9 +525,7 @@ const IndexPage = ({ data }) => {
                       loading="lazy"
                     />
                   </p>
-                  <p className="txt nm">
-                    全スタッフのマスクの着用を徹底しております。
-                  </p>
+                  <p className="txt nm">全スタッフのマスクの着用を徹底しております。</p>
                 </dd>
               </dl>
               <dl>
@@ -700,9 +540,7 @@ const IndexPage = ({ data }) => {
                       loading="lazy"
                     />
                   </p>
-                  <p className="txt nm">
-                    毎日出勤時に全スタッフの検温を実施して発熱の確認をしています。
-                  </p>
+                  <p className="txt nm">毎日出勤時に全スタッフの検温を実施して発熱の確認をしています。</p>
                 </dd>
               </dl>
             </div>
@@ -757,23 +595,12 @@ const IndexPage = ({ data }) => {
                 <a
                   href="https://www.pref.hiroshima.lg.jp/site/police/"
                   rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
-                  <img
-                    src="../img/top/hiroshimapolice.jpg"
-                    width={180}
-                    height={46}
-                    loading="lazy"
-                    alt="広島県警察"
-                  />
+                  target="_blank">
+                  <img src="../img/top/hiroshimapolice.jpg" width={180} height={46} loading="lazy" alt="広島県警察" />
                 </a>
               </li>
               <li>
-                <a
-                  href="https://rikon.vbest.jp/"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
+                <a href="https://rikon.vbest.jp/" rel="nofollow noopener noreferrer" target="_blank">
                   <img
                     src="../img/top/very_best.png"
                     width={226}
@@ -787,8 +614,7 @@ const IndexPage = ({ data }) => {
                 <a
                   href="https://best-legal.jp/want-to-claim-affair-alimony-3366/"
                   rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
+                  target="_blank">
                   <img
                     src="../img/top/20210416.png"
                     width={220}
@@ -799,11 +625,7 @@ const IndexPage = ({ data }) => {
                 </a>
               </li>
               <li id="ikuchan">
-                <a
-                  href="http://www.ikuchan.or.jp/service/"
-                  rel="nofollow noopener noreferrer"
-                  target="_blank"
-                >
+                <a href="http://www.ikuchan.or.jp/service/" rel="nofollow noopener noreferrer" target="_blank">
                   <img
                     src="../img/top/ikuzennkoku.jpg"
                     width={108}
@@ -859,15 +681,7 @@ const jsonLd = {
       openingHoursSpecification: [
         {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
+          dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
           opens: "00:00",
           closes: "24:00",
         },
@@ -934,11 +748,7 @@ export const Head = () => (
 
 export const query = graphql`
   query {
-    allMicrocmsPosts(
-      limit: 2
-      filter: { category: { id: { eq: "column" } } }
-      sort: { date: DESC }
-    ) {
+    allMicrocmsPosts(limit: 2, filter: { category: { id: { eq: "column" } } }, sort: { date: DESC }) {
       edges {
         node {
           postsId
