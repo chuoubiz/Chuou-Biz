@@ -23,6 +23,7 @@ export default function Footer() {
             </a>
           </li>
         </ul>
+
         <div className="contact bg bg_wide">
           <div className="main">
             <h3 className="mp">
@@ -36,14 +37,15 @@ export default function Footer() {
                 </div>
                 <div className="tel_area">
                   <p className="free sans">
-                    <a href="tel:0120-30-6630" aria-label="相談窓口電話番号:0120-30-6630">
-                      <img src="/img/tel.svg" width={60} height={39} alt="フリーダイヤル" loading="lazy" />
-                      0120-30-6630
+                    <a href="tel:0120-30-6630">
+                      <img src="/img/tel.svg" width="60" height="39" alt="フリーダイヤル" loading="lazy" />
+                      <span aria-hidden="true">0120-30-6630</span>
+                      <span class="sr-only">相談窓口電話番号:0120-30-6630</span>
                     </a>
                   </p>
                   <p className="free2">
                     <span className="txt mp">女性相談員ご希望の方はこちら</span>
-                    <a href="tel:0120-20-3399" aria-label="女性相談員ご希望の方はこちら:0120-20-3399">
+                    <a href="tel:0120-20-3399" aria-label="女性相談員ご希望の方はこちら、電話番号:0120-20-3399">
                       <img src="/img/tel.svg" width={30} height={20} alt="フリーダイヤル" loading="lazy" />
                       0120-20-3399
                     </a>
