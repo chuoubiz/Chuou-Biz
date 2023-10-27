@@ -245,12 +245,7 @@ a:visited {
   box-sizing: border-box;
   padding: 30px 20px 10px;
   border-radius: 9px;
-  background: linear-gradient(
-    90deg,
-    rgba(229, 243, 248, 1) 0%,
-    rgba(255, 255, 255, 1) 52.75%,
-    rgba(229, 243, 248, 1) 100%
-  );
+  background: linear-gradient(90deg, rgba(229, 243, 248, 1) 0%, rgba(255, 255, 255, 1) 52.75%, rgba(229, 243, 248, 1) 100%);
   display: flex;
   justify-content: space-between;
   @media print, screen and (min-width: 769px) {
@@ -825,103 +820,98 @@ a:visited {
       background: rgba(0, 0, 0, 0.5);
       box-sizing: border-box;
       z-index: 10;
-      display: block;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 100%;
+      margin: auto;
+      padding: 5px;
+      width: 100%;
     }
-    ul {
+    @media only screen and (max-width: 640px) {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    li {
       @media only screen and (max-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        max-width: 100%;
-        margin: auto;
-        padding: 5px;
-        width: 100%;
-      }
-      @media only screen and (max-width: 640px) {
-        width: 100%;
+        width: 30%;
+        margin-bottom: 0;
+        list-style: none;
+        padding: 10px;
         box-sizing: border-box;
       }
-      li {
+      @media only screen and (max-width: 640px) {
+        width: 49%;
+        margin-bottom: 0;
+        padding: 5px;
+        list-style: none;
+      }
+      &:last-child {
         @media only screen and (max-width: 768px) {
-          width: 30%;
+          width: 40%;
           margin-bottom: 0;
-          list-style: none;
           padding: 10px;
           box-sizing: border-box;
         }
         @media only screen and (max-width: 640px) {
-          width: 49%;
+          width: 100%;
           margin-bottom: 0;
           padding: 5px;
-          list-style: none;
         }
-        &:last-child {
-          @media only screen and (max-width: 768px) {
-            width: 40%;
-            margin-bottom: 0;
-            padding: 10px;
-            box-sizing: border-box;
-          }
-          @media only screen and (max-width: 640px) {
-            width: 100%;
-            margin-bottom: 0;
-            padding: 5px;
-          }
+      }
+      a {
+        @media only screen and (max-width: 768px) {
+          display: block;
+          padding: 5px 3px;
+          border-radius: 5px;
+          text-align: center;
         }
-        a {
+      }
+      &.mail a {
+        @media only screen and (max-width: 768px) {
+          background: linear-gradient(to top, #0a82b7, #054a97);
+          border: 1px solid #054a97;
+        }
+      }
+      &.line a {
+        @media only screen and (max-width: 768px) {
+          position: relative;
+          background: linear-gradient(to top, #30d950, #06c755);
+          border: 1px solid #06c755;
+        }
+        &::before {
           @media only screen and (max-width: 768px) {
+            position: absolute;
+            top: -5px;
+            right: -5px;
             display: block;
-            padding: 5px 3px;
-            border-radius: 5px;
+            width: 20px;
+            height: 20px;
+            background: #ff0004;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 10px;
             text-align: center;
-          }
-        }
-        &.mail a {
-          @media only screen and (max-width: 768px) {
-            background: linear-gradient(to top, #0a82b7, #054a97);
-            border: 1px solid #054a97;
-          }
-        }
-        &.line a {
-          @media only screen and (max-width: 768px) {
-            position: relative;
-            background: linear-gradient(to top, #30d950, #06c755);
-            border: 1px solid #06c755;
-          }
-          &::before {
-            @media only screen and (max-width: 768px) {
-              position: absolute;
-              top: -5px;
-              right: -5px;
-              display: block;
-              width: 20px;
-              height: 20px;
-              background: #ff0004;
-              border-radius: 50%;
-              color: #fff;
-              font-size: 10px;
-              text-align: center;
-              line-height: 20px;
-              content: "1";
-            }
-          }
-        }
-        &.tel a {
-          @media only screen and (max-width: 768px) {
-            padding: 0;
-            background: linear-gradient(to top, #c1362d, #c1272d);
-            border: 1px solid #c1272d;
+            line-height: 20px;
+            content: "1";
           }
         }
       }
+      &.tel a {
+        @media only screen and (max-width: 768px) {
+          padding: 0;
+          background: linear-gradient(to top, #c1362d, #c1272d);
+          border: 1px solid #c1272d;
+        }
+      }
     }
-    p {
-      padding: 2px 0;
-      background: #c1272d;
-      color: #fff;
-      font-size: 12px;
-      text-align: center;
-    }
+  }
+  p {
+    padding: 2px 0;
+    background: #c1272d;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
   }
 }
 
@@ -1289,8 +1279,7 @@ ol.no_maru li:before {
   margin-bottom: 0;
 }
 .bg_dia dl dt {
-  background: url("../img/top/bg_dia.png") no-repeat left 20px center,
-    linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
+  background: url("../img/top/bg_dia.png") no-repeat left 20px center, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
   color: #fff;
   padding: 13px 0 13px 60px;
   font-weight: 500;
@@ -2082,8 +2071,7 @@ ol.no_maru li:before {
 }
 
 #shimane_6reason::before {
-  background: url("../img/shimane/bg_reason.jpg") no-repeat center top,
-    url("../img/shimane/bg_reason_btm.png") no-repeat center bottom;
+  background: url("../img/shimane/bg_reason.jpg") no-repeat center top, url("../img/shimane/bg_reason_btm.png") no-repeat center bottom;
   background-size: 100% auto;
 }
 #shimane_6reason h3 {
@@ -3088,7 +3076,6 @@ input[type="checkbox"]:checked ~ #overlay-button span {
     width: 65px;
     height: 65px;
     cursor: pointer;
-    user-select: none;
     z-index: 10000;
     background: linear-gradient(90deg, rgba(10, 131, 184, 1) 0%, rgba(5, 74, 151, 1) 100%);
     display: flex;
@@ -3145,7 +3132,6 @@ input[type="checkbox"]:checked ~ #overlay-button span {
     width: 56px;
     height: 56px;
     cursor: pointer;
-    user-select: none;
     z-index: 10000;
   }
   #overlay-button span {
@@ -3188,7 +3174,6 @@ input[type="checkbox"]:checked ~ #overlay-button span {
     width: 50px;
     height: 50px;
     cursor: pointer;
-    user-select: none;
     z-index: 10000;
   }
   #overlay div {

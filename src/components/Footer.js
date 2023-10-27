@@ -6,29 +6,23 @@ export default function Footer() {
   return (
     <>
       <footer id="footer">
-        <div id="footer_btn">
-          <ul>
-            <li className="mail">
-              <Link to="/toiawase/" aria-label="メールで相談">
-                <StaticImage src="../img/btn_mail.webp" width={186} height={39} alt="メールで相談" />
-              </Link>
-            </li>
-            <li className="line">
-              <a
-                href="https://line.me/R/ti/p/65gpK3qcDs"
-                aria-label="ラインで相談"
-                rel="nofollow noopener noreferrer"
-                target="_blank">
-                <StaticImage src="../img/btn_line.webp" width={186} height={39} alt="LINEで相談" />
-              </a>
-            </li>
-            <li className="tel">
-              <a href="tel:0120-30-6630" aria-label="電話で相談">
-                <StaticImage src="../img/btn_tel.webp" width={285} height={48} alt="電話で相談" />
-              </a>
-            </li>
-          </ul>
-        </div>
+        <ul id="footer_btn">
+          <li className="mail">
+            <Link to="/toiawase/" aria-label="メールで相談">
+              <StaticImage src="../img/btn_mail.webp" width={186} height={39} alt="メールで相談" loading="lazy" />
+            </Link>
+          </li>
+          <li className="line">
+            <a href="https://line.me/R/ti/p/65gpK3qcDs" aria-label="ラインで相談" rel="nofollow noopener noreferrer" target="_blank">
+              <StaticImage src="../img/btn_line.webp" width={186} height={39} alt="LINEで相談" loading="lazy" />
+            </a>
+          </li>
+          <li className="tel">
+            <a href="tel:0120-30-6630" aria-label="電話で相談">
+              <StaticImage src="../img/btn_tel.webp" width={285} height={48} alt="電話で相談" loading="lazy" />
+            </a>
+          </li>
+        </ul>
         <div className="contact bg bg_wide">
           <div className="main">
             <h3 className="mp">
@@ -42,15 +36,15 @@ export default function Footer() {
                 </div>
                 <div className="tel_area">
                   <p className="free sans">
-                    <a href="tel:0120-30-6630" aria-label="相談窓口電話番号">
-                      <img src="/img/tel.svg" width={60} height={39} alt="フリーダイヤル" />
+                    <a href="tel:0120-30-6630" aria-label="相談窓口電話番号:0120-30-6630">
+                      <img src="/img/tel.svg" width={60} height={39} alt="フリーダイヤル" loading="lazy" />
                       0120-30-6630
                     </a>
                   </p>
                   <p className="free2">
                     <span className="txt mp">女性相談員ご希望の方はこちら</span>
-                    <a href="tel:0120-20-3399" aria-label="女性相談員ご希望の方はこちら">
-                      <img src="/img/tel.svg" width={30} height={20} alt="フリーダイヤル" />
+                    <a href="tel:0120-20-3399" aria-label="女性相談員ご希望の方はこちら:0120-20-3399">
+                      <img src="/img/tel.svg" width={30} height={20} alt="フリーダイヤル" loading="lazy" />
                       0120-20-3399
                     </a>
                   </p>
