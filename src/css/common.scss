@@ -58,21 +58,21 @@
 #topguide .mp,
 #sample h4,
 #sample dt .time {
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
 }
 #container .mpr {
-  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 #header .contact .tel a,
 #jobs .no,
 #container .sans {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 #container .serif,
 #page_title .sub,
 #topevidence .serif,
 #top_promise .serif {
-  font-family: "Noto Serif JP", serif;
+  font-family: 'Noto Serif JP', serif;
 }
 /*フォント色指定*/
 .red {
@@ -200,7 +200,7 @@ a:visited {
     }
     &:before {
       @media only screen and (max-width: 640px) {
-        content: "家庭裁判所前にある探偵事務所";
+        content: '家庭裁判所前にある探偵事務所';
         font-size: 12px;
         color: #901003;
       }
@@ -289,7 +289,7 @@ a:visited {
       display: inline-block;
       color: #c1272d;
       font-size: 29px;
-      background: url("../img/free.png") no-repeat left top 4px;
+      background: url('../img/free.png') no-repeat left top 4px;
       background-size: 37px auto;
       padding-left: 40px;
       margin-left: 10px;
@@ -357,14 +357,14 @@ a:visited {
     color: #000;
   }
   #menu .hp_menu li .dropdwn_menu li a:before {
-    content: "\25C6";
+    content: '\25C6';
     font-size: 10px;
     margin-right: 5px;
   }
   #menu .hp_menu li .dropdwn_menu li.pad a:before {
     position: relative;
     top: -3px;
-    content: "\221F";
+    content: '\221F';
     margin-left: 1em;
   }
 }
@@ -443,7 +443,7 @@ a:visited {
   text-align: center;
 }
 #page_title .sub {
-  background: url("../img/bg_sub_title.jpg") no-repeat center center / cover;
+  background: url('../img/bg_sub_title.jpg') no-repeat center center / cover;
   font-size: 48px;
   color: #fff;
   font-weight: normal;
@@ -457,7 +457,7 @@ a:visited {
   display: block;
   width: 100%;
   height: 1px;
-  content: "";
+  content: '';
 }
 #page_title:before {
   top: 0;
@@ -495,7 +495,7 @@ a:visited {
   width: 50px;
   height: 2px;
   margin-left: -25px;
-  content: "";
+  content: '';
 }
 #container h3.line {
   border-bottom: 1px solid #14aad5;
@@ -521,7 +521,7 @@ a:visited {
   position: relative;
   padding-left: 25px;
   &:after {
-    content: "";
+    content: '';
     display: block;
     line-height: 0;
     overflow: hidden;
@@ -538,7 +538,7 @@ a:visited {
   font-weight: bold;
   color: #005e9c;
   line-height: 1.4;
-  background: url("../img/h3_bg.png") no-repeat left top 10px;
+  background: url('../img/h3_bg.png') no-repeat left top 10px;
   padding-top: 10px;
   padding-left: 80px;
   margin-bottom: 30px;
@@ -555,32 +555,30 @@ a:visited {
   background: #eee;
   position: relative;
   @media only screen and (max-width: 768px) {
-    padding-bottom: 83px;
+    padding-bottom: 80px;
   }
   @media only screen and (max-width: 640px) {
-    padding-bottom: 147px;
+    padding-bottom: 130px;
   }
   .contact {
     max-width: 1300px;
     margin: 0 auto;
-    background: url("../img/bg_contact.jpg") no-repeat left top;
+    background: url('../img/bg_contact.jpg') no-repeat left top;
     background-size: cover;
     padding: 80px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     box-sizing: border-box;
-    @media only screen and (max-width: 1024px) {
+    @media not screen and (min-width: 1025px) {
+      width: 100%;
       padding: 40px;
     }
     @media only screen and (max-width: 768px) {
-      padding: 420px 20px 20px 20px;
-      background-image: url("../img/bg_contact_smp.jpg");
+      padding: 20px;
+      background-image: none;
       background-position: top center;
       width: 100%;
-    }
-    @media only screen and (max-width: 640px) {
-      padding: 260px 20px 20px 20px;
     }
     h3 {
       color: #c1272d;
@@ -856,6 +854,7 @@ a:visited {
           margin-bottom: 0;
           padding: 10px;
           box-sizing: border-box;
+          display: flex;
         }
         @media only screen and (max-width: 640px) {
           width: 100%;
@@ -897,7 +896,7 @@ a:visited {
             font-size: 10px;
             text-align: center;
             line-height: 20px;
-            content: "1";
+            content: '1';
           }
         }
       }
@@ -906,6 +905,12 @@ a:visited {
           padding: 0;
           background: linear-gradient(to top, #c1362d, #c1272d);
           border: 1px solid #c1272d;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+
+          justify-content: center;
+          align-items: center;
         }
       }
     }
@@ -959,7 +964,7 @@ a:visited {
   margin-left: 8px;
 }
 #page_navi li + li:before {
-  content: ">";
+  content: '>';
   margin-right: 8px;
 }
 #page_navi a {
@@ -1009,7 +1014,7 @@ p.link.full a span {
 }
 p.link a::before,
 p.link.full a span::after {
-  content: "";
+  content: '';
   width: 10px;
   height: 10px;
   border: 0px;
@@ -1101,7 +1106,7 @@ p.link.full a span::after {
   margin-bottom: 25px;
 }
 .investigation_case .box .info .hito span {
-  background: #14aad5 url("../img/investigation_case/human.png") no-repeat left 15px center;
+  background: #14aad5 url('../img/investigation_case/human.png') no-repeat left 15px center;
   background-size: 16px auto;
   border-radius: 30px;
   color: #fff;
@@ -1116,7 +1121,7 @@ p.link.full a span::after {
   background-color: #005e9c;
 }
 .investigation_case .box .info .hito span.time {
-  background: #333 url("../img/investigation_case/time.png") no-repeat left 15px center;
+  background: #333 url('../img/investigation_case/time.png') no-repeat left 15px center;
 }
 .investigation_case .box .info .img {
   position: absolute;
@@ -1127,7 +1132,7 @@ p.link.full a span::after {
   margin-bottom: 30px;
 }
 .investigation_case .box .info dl.content dt {
-  background: url("../img/investigation_case/target.png") no-repeat left top;
+  background: url('../img/investigation_case/target.png') no-repeat left top;
   font-size: 18px;
   font-weight: bold;
   color: #005e9c;
@@ -1178,7 +1183,7 @@ p.link.full a span::after {
 }
 .investigation_case .box .info .comment .sec dl dd:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 20px;
   left: -34px;
   border: 15px solid transparent;
@@ -1217,7 +1222,7 @@ ul.maru li {
 }
 ul.maru li:before {
   color: #005e9c;
-  content: "\25CF";
+  content: '\25CF';
 }
 ol.no_maru {
   list-style: none;
@@ -1284,7 +1289,7 @@ ol.no_maru li:before {
   margin-bottom: 0;
 }
 .bg_dia dl dt {
-  background: url("../img/top/bg_dia.png") no-repeat left 20px center, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
+  background: url('../img/top/bg_dia.png') no-repeat left 20px center, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
   color: #fff;
   padding: 13px 0 13px 60px;
   font-weight: 500;
@@ -1357,7 +1362,7 @@ ol.no_maru li:before {
 
 /*okayama*/
 #okayama_about::before {
-  background: url("../img/okayama/bg_about.jpg") no-repeat center top / cover;
+  background: url('../img/okayama/bg_about.jpg') no-repeat center top / cover;
 }
 
 #top_menu.okayama .head,
@@ -1413,6 +1418,19 @@ ol.no_maru li:before {
     padding: 15px 15px 15px;
   }
 }
+
+@media not screen and (min-width: 1025px) {
+  #top_menu .head h2 {
+    padding-left: 80px;
+  }
+}
+
+@media not screen and (min-width: 900px) {
+  #top_menu .head h2 {
+    padding-left: 0;
+  }
+}
+
 @media only screen and (max-width: 640px) {
   /* スマホ用 */
   #top_menu .head {
@@ -1457,7 +1475,7 @@ ol.no_maru li:before {
 }
 
 #okayama_reason {
-  background: #d0eef7 url("../img/okayama/bg_reason.png");
+  background: #d0eef7 url('../img/okayama/bg_reason.png');
 }
 #okayama_reason h3 {
   display: flex;
@@ -1470,7 +1488,7 @@ ol.no_maru li:before {
 }
 #okayama_reason h3::before,
 #okayama_reason h3::after {
-  content: "";
+  content: '';
   flex-grow: 1;
   height: 1px;
   margin-top: 30px;
@@ -1575,7 +1593,7 @@ ol.no_maru li:before {
   margin-bottom: 50px;
 }
 #okayama_point::before {
-  background: url("../img/okayama/bg_point.jpg") no-repeat center top;
+  background: url('../img/okayama/bg_point.jpg') no-repeat center top;
   background-size: 100% auto;
 }
 #okayama_point h3 {
@@ -1595,7 +1613,7 @@ ol.no_maru li:before {
 @media only screen and (max-width: 768px) {
   /* タブレット・スマホ用 */
   #okayama_point::before {
-    background: url("../img/okayama/bg_point.jpg") no-repeat center top / cover;
+    background: url('../img/okayama/bg_point.jpg') no-repeat center top / cover;
     background-size: auto 300px;
   }
   #okayama_point h3 {
@@ -1608,7 +1626,7 @@ ol.no_maru li:before {
 @media only screen and (max-width: 640px) {
   /* スマホ用 */
   #okayama_point::before {
-    background: url("../img/okayama/bg_point_sp.jpg") no-repeat center top / cover;
+    background: url('../img/okayama/bg_point_sp.jpg') no-repeat center top / cover;
     background-size: auto 300px;
   }
   #okayama_point h3 {
@@ -1640,7 +1658,7 @@ ol.no_maru li:before {
 }
 
 #top_hiroshima.okayama::before {
-  background: url("../img/okayama/bg_about.jpg") no-repeat center top / cover;
+  background: url('../img/okayama/bg_about.jpg') no-repeat center top / cover;
 }
 
 /*ehime*/
@@ -1649,7 +1667,7 @@ ol.no_maru li:before {
   padding-bottom: 30px;
 }
 #ehime_promise::before {
-  background: url("../img/ehime/bg_promise.jpg") no-repeat center top / cover;
+  background: url('../img/ehime/bg_promise.jpg') no-repeat center top / cover;
 }
 #ehime_promise::after {
   position: absolute;
@@ -1661,12 +1679,12 @@ ol.no_maru li:before {
   margin-left: calc(((100vw - 100%) / 2) * -1);
   margin-right: calc(((100vw - 100%) / 2) * -1);
   background: linear-gradient(to bottom, transparent 100px, #14aad5);
-  content: "";
+  content: '';
   z-index: -1;
 }
 #ehime_promise h3 {
   padding: 20px 0 60px 110px;
-  background: url("../img/top/clover.png") no-repeat left top 15px;
+  background: url('../img/top/clover.png') no-repeat left top 15px;
   background-size: 92px auto;
   border-top: 2px solid #005e9c;
   color: #005e9c;
@@ -1729,10 +1747,10 @@ ol.no_maru li:before {
 }
 /**/
 #top_hiroshima.ehime::before {
-  background: url("../img/ehime/bg_about.jpg") no-repeat center top / cover;
+  background: url('../img/ehime/bg_about.jpg') no-repeat center top / cover;
 }
 #ehime_reason::before {
-  background: url("../img/ehime/bg_reason.jpg") no-repeat center top;
+  background: url('../img/ehime/bg_reason.jpg') no-repeat center top;
   background-size: 100% auto;
 }
 #ehime_reason h3 {
@@ -1791,7 +1809,7 @@ ol.no_maru li:before {
   background: linear-gradient(to top, #dcf2f9 200px, transparent 410px);
 }
 #ehime_about::before {
-  background: #dcf2f9 url("../img/ehime/about/bg.jpg") no-repeat center bottom;
+  background: #dcf2f9 url('../img/ehime/about/bg.jpg') no-repeat center bottom;
   background-size: 100% auto;
 }
 #about #ehime_about dl {
@@ -1861,7 +1879,7 @@ ol.no_maru li:before {
   margin-bottom: 50px;
 }
 #ehime_point::before {
-  background: url("../img/ehime/bg_point.jpg") no-repeat center top;
+  background: url('../img/ehime/bg_point.jpg') no-repeat center top;
   background-size: 100% auto;
 }
 #ehime_point h3 {
@@ -1881,7 +1899,7 @@ ol.no_maru li:before {
 @media only screen and (max-width: 768px) {
   /* タブレット・スマホ用 */
   #ehime_point::before {
-    background: url("../img/ehime/bg_point.jpg") no-repeat center top / cover;
+    background: url('../img/ehime/bg_point.jpg') no-repeat center top / cover;
     background-size: auto 300px;
   }
   #ehime_point h3 {
@@ -1891,7 +1909,7 @@ ol.no_maru li:before {
 @media only screen and (max-width: 640px) {
   /* スマホ用 */
   #ehime_point::before {
-    background: url("../img/ehime/bg_point_sp.jpg") no-repeat center top / cover;
+    background: url('../img/ehime/bg_point_sp.jpg') no-repeat center top / cover;
     background-size: auto 300px;
   }
   #ehime_point h3 {
@@ -1916,13 +1934,13 @@ ol.no_maru li:before {
 
 /*shimane*/
 #top_hiroshima::before {
-  background: url("../img/shimane/bg_about.jpg") no-repeat center top / cover;
+  background: url('../img/shimane/bg_about.jpg') no-repeat center top / cover;
 }
 #about {
   background: linear-gradient(to bottom, #dcf2f9 200px, transparent 410px);
 }
 #about #shimane_about.bg_wide::before {
-  background: #dcf2f9 url("../img/shimane/about/bg.jpg") no-repeat center bottom;
+  background: #dcf2f9 url('../img/shimane/about/bg.jpg') no-repeat center bottom;
   background-size: 100% auto;
 }
 #about #shimane_about dl {
@@ -1996,7 +2014,7 @@ ol.no_maru li:before {
   padding-bottom: 30px;
 }
 #shimane_promise::before {
-  background: url("../img/shimane/bg_promise.jpg") no-repeat center top / cover;
+  background: url('../img/shimane/bg_promise.jpg') no-repeat center top / cover;
 }
 #shimane_promise::after {
   position: absolute;
@@ -2008,12 +2026,12 @@ ol.no_maru li:before {
   margin-left: calc(((100vw - 100%) / 2) * -1);
   margin-right: calc(((100vw - 100%) / 2) * -1);
   background: linear-gradient(to bottom, transparent 100px, #14aad5);
-  content: "";
+  content: '';
   z-index: -1;
 }
 #shimane_promise h3 {
   padding: 20px 0 60px 110px;
-  background: url("../img/top/clover.png") no-repeat left top 15px;
+  background: url('../img/top/clover.png') no-repeat left top 15px;
   background-size: 92px auto;
   border-top: 2px solid #005e9c;
   color: #005e9c;
@@ -2076,7 +2094,7 @@ ol.no_maru li:before {
 }
 
 #shimane_6reason::before {
-  background: url("../img/shimane/bg_reason.jpg") no-repeat center top, url("../img/shimane/bg_reason_btm.png") no-repeat center bottom;
+  background: url('../img/shimane/bg_reason.jpg') no-repeat center top, url('../img/shimane/bg_reason_btm.png') no-repeat center bottom;
   background-size: 100% auto;
 }
 #shimane_6reason h3 {
@@ -2092,7 +2110,7 @@ ol.no_maru li:before {
 }
 #shimane_6reason h3 b::before,
 #shimane_6reason h3 b::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   display: inline-block;
@@ -2140,7 +2158,7 @@ ol.no_maru li:before {
   font-weight: bold;
   text-align: center;
   line-height: 65px;
-  font-family: "M PLUS 1p", sans-serif;
+  font-family: 'M PLUS 1p', sans-serif;
   counter-increment: number;
   content: counter(number);
 }
@@ -2148,7 +2166,7 @@ ol.no_maru li:before {
   margin-bottom: 25px;
   padding: 30px;
   padding-left: 100px;
-  background: #fff url("../img/shimane/arow.png") no-repeat left 30px center;
+  background: #fff url('../img/shimane/arow.png') no-repeat left 30px center;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   color: #005e9c;
@@ -2168,8 +2186,8 @@ ol.no_maru li:before {
     display: block;
     width: 144px;
     height: 170px;
-    background: url("../img/shimane/img_reason01.png") no-repeat right bottom / contain;
-    content: "";
+    background: url('../img/shimane/img_reason01.png') no-repeat right bottom / contain;
+    content: '';
   }
   #shimane_6reason .txt {
     margin-right: 340px;
@@ -2243,10 +2261,10 @@ ol.no_maru li:before {
 
 #top_shimane {
   &::before {
-    background: url("../img/shimane/bg_about.jpg") no-repeat center top / cover;
+    background: url('../img/shimane/bg_about.jpg') no-repeat center top / cover;
   }
   h3 {
-    background: url("../img/top/clover.png") no-repeat left top 15px;
+    background: url('../img/top/clover.png') no-repeat left top 15px;
     background-size: 92px auto;
     font-size: 37px;
     border-top: 2px solid #005e9c;
@@ -2292,10 +2310,10 @@ ol.no_maru li:before {
 #shimane_point {
   margin-bottom: 50px;
   &::before {
-    background: url("../img/shimane/bg_point.jpg") no-repeat center top;
+    background: url('../img/shimane/bg_point.jpg') no-repeat center top;
     background-size: 100% auto;
     @media only screen and (max-width: 768px) {
-      background: url("../img/shimane/bg_point_sp.jpg") no-repeat center top;
+      background: url('../img/shimane/bg_point_sp.jpg') no-repeat center top;
       background-size: auto 300px;
     }
   }
@@ -2326,7 +2344,7 @@ ol.no_maru li:before {
   background: linear-gradient(to top, #fff 200px, transparent 410px);
 }
 #about_sub .bg_wide::before {
-  background: #dcf2f9 url("../img/shimane/about/bg.jpg") no-repeat center bottom;
+  background: #dcf2f9 url('../img/shimane/about/bg.jpg') no-repeat center bottom;
   background-size: 100% auto;
 }
 #about_sub dl {
@@ -2374,7 +2392,7 @@ ol.no_maru li:before {
 #yamaguchi_point {
   margin-bottom: 50px;
   &::before {
-    background: url("../img/yamaguchi/bg_point.jpg") no-repeat center top;
+    background: url('../img/yamaguchi/bg_point.jpg') no-repeat center top;
     background-size: 100% auto;
     @media only screen and (max-width: 768px) {
       background-size: auto 50%;
@@ -2411,7 +2429,7 @@ ol.no_maru li:before {
     font-size: 100% !important;
   }
   &::before {
-    background: url("../img/yamaguchi/bg_txt.jpg") no-repeat center top;
+    background: url('../img/yamaguchi/bg_txt.jpg') no-repeat center top;
     background-size: 100% auto;
     @media only screen and (max-width: 768px) {
       background-size: auto 100%;
@@ -2420,7 +2438,7 @@ ol.no_maru li:before {
 }
 
 #about.yamaguchi .bg_wide::before {
-  background: #dcf2f9 url("../img/okayama/about/bg.jpg") no-repeat center bottom;
+  background: #dcf2f9 url('../img/okayama/about/bg.jpg') no-repeat center bottom;
   background-size: 100% auto;
 }
 #yamaguchi_about dl {
@@ -2492,7 +2510,7 @@ ol.no_maru li:before {
 }
 
 #yamaguchi_reason::before {
-  background-image: url("../img/yamaguchi/bg_reason01.png"), url("../img/yamaguchi/bg_reason02.png");
+  background-image: url('../img/yamaguchi/bg_reason01.png'), url('../img/yamaguchi/bg_reason02.png');
   background-position: left 50px, right 50px;
   background-repeat: no-repeat;
 }
@@ -2690,15 +2708,15 @@ ol.no_maru li:before {
 }
 
 #top_hiroshima.yamaguchi::before {
-  background: url("../img/yamaguchi/bg_about.jpg") no-repeat center top / cover;
+  background: url('../img/yamaguchi/bg_about.jpg') no-repeat center top / cover;
 }
 
 #top_menu.okayama:before {
-  background: url("../img/okayama/bg_msg.jpg") no-repeat center top / cover;
+  background: url('../img/okayama/bg_msg.jpg') no-repeat center top / cover;
 }
 
 #top_menu.shimane:before {
-  background: url("../img/shimane/bg_msg.jpg") no-repeat center top / cover;
+  background: url('../img/shimane/bg_msg.jpg') no-repeat center top / cover;
 }
 
 #top_hiroshima.yamaguchi .photo li {
@@ -2898,6 +2916,9 @@ ol.no_maru li:before {
   justify-content: flex-start;
   align-items: center;
   z-index: 9999 !important;
+  @media not screen and (min-width: 1025px) {
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -2945,7 +2966,7 @@ ol.no_maru li:before {
   box-sizing: border-box;
 }
 .g_nav li a:before {
-  content: "";
+  content: '';
   width: 1px;
   height: 30px;
   background-color: #ccc;
@@ -2953,7 +2974,7 @@ ol.no_maru li:before {
   left: 0;
 }
 .g_nav li:last-child a::after {
-  content: "";
+  content: '';
   width: 1px;
   height: 30px;
   background-color: #ccc;
@@ -3034,16 +3055,16 @@ ol.no_maru li:before {
   background: #fff;
 }
 
-input[type="checkbox"]#overlay-input {
+input[type='checkbox']#overlay-input {
   display: none;
 }
-input[type="checkbox"]:checked ~ #overlay {
+input[type='checkbox']:checked ~ #overlay {
   visibility: visible;
   opacity: 1;
   overflow-x: auto;
 }
-input[type="checkbox"]:checked ~ #overlay-button:hover span,
-input[type="checkbox"]:checked ~ #overlay-button span {
+input[type='checkbox']:checked ~ #overlay-button:hover span,
+input[type='checkbox']:checked ~ #overlay-button span {
   background: transparent;
 }
 
@@ -3112,13 +3133,13 @@ input[type="checkbox"]:checked ~ #overlay-button span {
     border-radius: 2px;
     background-color: #fff;
     position: absolute;
-    content: "";
+    content: '';
     transition: all 0.2s ease-in-out;
   }
-  input[type="checkbox"]:checked ~ #overlay-button span:before {
+  input[type='checkbox']:checked ~ #overlay-button span:before {
     transform: rotate(45deg) translate(7px, 7px);
   }
-  input[type="checkbox"]:checked ~ #overlay-button span:after {
+  input[type='checkbox']:checked ~ #overlay-button span:after {
     transform: rotate(-45deg) translate(7px, -7px);
   }
 }
@@ -3162,14 +3183,14 @@ input[type="checkbox"]:checked ~ #overlay-button span {
     border-radius: 2px;
     background-color: #fff;
     position: absolute;
-    content: "";
+    content: '';
     transition: all 0.2s ease-in-out;
   }
 
-  input[type="checkbox"]:checked ~ #overlay-button span:before {
+  input[type='checkbox']:checked ~ #overlay-button span:before {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  input[type="checkbox"]:checked ~ #overlay-button span:after {
+  input[type='checkbox']:checked ~ #overlay-button span:after {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
@@ -3208,14 +3229,14 @@ input[type="checkbox"]:checked ~ #overlay-button span {
     border-radius: 2px;
     background-color: #fff;
     position: absolute;
-    content: "";
+    content: '';
     transition: all 0.2s ease-in-out;
   }
 
-  input[type="checkbox"]:checked ~ #overlay-button span:before {
+  input[type='checkbox']:checked ~ #overlay-button span:before {
     transform: rotate(45deg) translate(5px, 5px);
   }
-  input[type="checkbox"]:checked ~ #overlay-button span:after {
+  input[type='checkbox']:checked ~ #overlay-button span:after {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
@@ -3323,6 +3344,9 @@ input[type="checkbox"]:checked ~ #overlay-button span {
   overflow: hidden;
   text-align: left;
   line-height: 1.5;
+  @media not screen and (min-width: 1025px) {
+    padding: 20px;
+  }
 }
 #topplan,
 #toppromise {
@@ -3351,6 +3375,9 @@ input[type="checkbox"]:checked ~ #overlay-button span {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+  @media not screen and (min-width: 1025px) {
+    width: 100%;
+  }
 }
 #top_evidence p,
 #top_about p,
@@ -3392,6 +3419,12 @@ input[type="checkbox"]:checked ~ #overlay-button span {
 }
 .bg_back2 .gatsby-image-wrapper {
   width: 100%;
+}
+
+@media not screen and (min-width: 1025px) {
+  #topmenu {
+    background-color: #13abd4;
+  }
 }
 
 @media only screen and (max-width: 640px) {

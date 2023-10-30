@@ -1,132 +1,154 @@
-import React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState, useEffect } from 'react';
 
-export default function Footer() {
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
+
+const Footer = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const scrollThreshold = 300; // スクロールしきい値（ピクセル単位）
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > scrollThreshold) {
+      setIsVisible(true);
+    } else {
+      setIsVisible(false);
+    }
+  };
+
   return (
     <>
-      <footer id="footer">
-        <ul id="footer_btn">
-          <li className="mail">
-            <Link to="/toiawase/" aria-label="メールで相談">
-              <StaticImage src="../img/btn_mail.webp" width={186} height={39} alt="メールで相談" loading="lazy" />
+      <footer id='footer'>
+        <ul id='footer_btn' className={`slide-in ${isVisible ? 'visible' : ''}`}>
+          <li className='mail'>
+            <Link to='/toiawase/' aria-label='メールで相談'>
+              <StaticImage src='../img/btn_mail.webp' width={186} height={39} alt='メールで相談' loading='lazy' />
             </Link>
           </li>
-          <li className="line">
-            <a href="https://line.me/R/ti/p/65gpK3qcDs" aria-label="ラインで相談" rel="nofollow noopener noreferrer" target="_blank">
-              <StaticImage src="../img/btn_line.webp" width={186} height={39} alt="LINEで相談" loading="lazy" />
+          <li className='line'>
+            <a href='https://line.me/R/ti/p/65gpK3qcDs' aria-label='ラインで相談' rel='nofollow noopener noreferrer' target='_blank'>
+              <StaticImage src='../img/btn_line.webp' width={186} height={39} alt='LINEで相談' loading='lazy' />
             </a>
           </li>
-          <li className="tel">
-            <a href="tel:0120-30-6630" aria-label="電話で相談">
-              <StaticImage src="../img/btn_tel.webp" width={285} height={48} alt="電話で相談" loading="lazy" />
+          <li className='tel'>
+            <a href='tel:0120-30-6630' aria-label='電話で相談'>
+              <StaticImage src='../img/btn_tel.webp' alt='電話で相談' loading='lazy' />
             </a>
           </li>
         </ul>
 
-        <div className="contact bg bg_wide">
-          <div className="main">
-            <h3 className="mp">
+        <div className='contact bg bg_wide'>
+          <div className='main'>
+            <h3 className='mp'>
               <span>まごころ調査</span>の当社へまずはお電話を!
             </h3>
-            <div className="box">
-              <h4 className="mp">話しやすい相談員が親身になって応対</h4>
-              <div className="wrap">
-                <div className="shikaku">
+            <div className='box'>
+              <h4 className='mp'>話しやすい相談員が親身になって応対</h4>
+              <div className='wrap'>
+                <div className='shikaku'>
                   無料<span>相談窓口</span>
                 </div>
-                <div className="tel_area">
-                  <p className="free sans">
-                    <a href="tel:0120-30-6630">
-                      <img src="/img/tel.svg" width="60" height="39" alt="フリーダイヤル" loading="lazy" />
-                      <span aria-hidden="true">0120-30-6630</span>
-                      <span class="sr-only">相談窓口電話番号:0120-30-6630</span>
+                <div className='tel_area'>
+                  <p className='free sans'>
+                    <a href='tel:0120-30-6630'>
+                      <img src='/img/tel.svg' width='60' height='39' alt='フリーダイヤル' loading='lazy' />
+                      <span aria-hidden='true'>0120-30-6630</span>
+                      <span class='sr-only'>相談窓口電話番号:0120-30-6630</span>
                     </a>
                   </p>
-                  <p className="free2">
-                    <span className="txt mp">女性相談員ご希望の方はこちら</span>
-                    <a href="tel:0120-20-3399" aria-label="女性相談員ご希望の方はこちら、電話番号:0120-20-3399">
-                      <img src="/img/tel.svg" width={30} height={20} alt="フリーダイヤル" loading="lazy" />
+                  <p className='free2'>
+                    <span className='txt mp'>女性相談員ご希望の方はこちら</span>
+                    <a href='tel:0120-20-3399' aria-label='女性相談員ご希望の方はこちら、電話番号:0120-20-3399'>
+                      <img src='/img/tel.svg' width={30} height={20} alt='フリーダイヤル' loading='lazy' />
                       0120-20-3399
                     </a>
                   </p>
                 </div>
               </div>
-              <p className="mp txt2">
+              <p className='mp txt2'>
                 年中無休！ 24時間受付！
-                <br className="dsp_smt" />
+                <br className='dsp_smt' />
                 <span>携帯電話でもOK!</span>
               </p>
-              <p className="nm">※このお電話は、最寄りの営業所に繋がります。</p>
+              <p className='nm'>※このお電話は、最寄りの営業所に繋がります。</p>
             </div>
           </div>
         </div>
 
-        <div className="links dsp_hp">
+        <div className='links dsp_hp'>
           <ul>
             <li>
-              <Link to="/">広島の探偵社 中央リサーチトップページ</Link>
+              <Link to='/'>広島の探偵社 中央リサーチトップページ</Link>
             </li>
             <li>
-              <Link to="/service/">当社の取り組み</Link>
+              <Link to='/service/'>当社の取り組み</Link>
             </li>
             <li>
-              <Link to="/company/">会社概要</Link>
+              <Link to='/company/'>会社概要</Link>
             </li>
             <li>
-              <Link to="/jirei/">事例紹介</Link>
+              <Link to='/jirei/'>事例紹介</Link>
             </li>
             <li>
-              <Link to="/price/">料金表</Link>
+              <Link to='/price/'>料金表</Link>
             </li>
             <li>
-              <Link to="/jobs/">採用情報</Link>
+              <Link to='/jobs/'>採用情報</Link>
             </li>
             <li>
-              <Link to="/toiawase/">お問い合わせ</Link>
+              <Link to='/toiawase/'>お問い合わせ</Link>
             </li>
             <li>
-              <Link to="/policy/">個人情報保護に関する取り組み</Link>
+              <Link to='/policy/'>個人情報保護に関する取り組み</Link>
             </li>
             <li>
-              <Link to="/sitemap/">サイトマップ</Link>
+              <Link to='/sitemap/'>サイトマップ</Link>
             </li>
           </ul>
           <ul>
             <li>
-              <Link to="/beginner/">はじめての方</Link>
+              <Link to='/beginner/'>はじめての方</Link>
             </li>
             <li>
-              <Link to="/choose/">探偵社の選び方</Link>
+              <Link to='/choose/'>探偵社の選び方</Link>
             </li>
             <li>
-              <Link to="/fickleness/">浮気・不倫調査</Link>
+              <Link to='/fickleness/'>浮気・不倫調査</Link>
             </li>
             <li>
-              <Link to="/behavior/">素行調査</Link>
+              <Link to='/behavior/'>素行調査</Link>
             </li>
             <li>
-              <Link to="/trial/">裁判証拠収集</Link>
+              <Link to='/trial/'>裁判証拠収集</Link>
             </li>
             <li>
-              <Link to="/marriage/">結婚・身上調査</Link>
+              <Link to='/marriage/'>結婚・身上調査</Link>
             </li>
             <li>
-              <Link to="/whereabouts/">家出・所在調査</Link>
+              <Link to='/whereabouts/'>家出・所在調査</Link>
             </li>
             <li>
-              <Link to="/stalker/">嫌がらせ対策</Link>
+              <Link to='/stalker/'>嫌がらせ対策</Link>
             </li>
             <li>
-              <Link to="/tapping/">盗聴器発見</Link>
+              <Link to='/tapping/'>盗聴器発見</Link>
             </li>
             <li>
-              <Link to="/fingerprint/">指紋・筆跡鑑定</Link>
+              <Link to='/fingerprint/'>指紋・筆跡鑑定</Link>
             </li>
           </ul>
         </div>
-        <p id="copyright">Copyright &copy; 2022 株式会社中央リサーチ. All Rights Reserved.</p>
+        <p id='copyright'>Copyright &copy; 2022 株式会社中央リサーチ. All Rights Reserved.</p>
       </footer>
     </>
   );
-}
+};
+
+export default Footer;
