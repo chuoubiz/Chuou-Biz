@@ -40,7 +40,7 @@
   height: 100%;
   margin-left: calc(((100vw - 100%) / 2) * -1);
   margin-right: calc(((100vw - 100%) / 2) * -1);
-  content: "";
+  content: '';
   z-index: -1;
 }
 @media only screen and (max-width: 1150px) {
@@ -99,13 +99,13 @@
   opacity: 0.6;
 }
 #top_menu:before {
-  background: url("../img/top/bg01.jpg") center / cover;
+  background: url('../img/top/bg01.jpg') center / cover;
 }
 #top_menu.ehime:before {
-  background: url("../img/ehime/bg_msg.jpg") center / cover;
+  background: url('../img/ehime/bg_msg.jpg') center / cover;
 }
 #top_menu.yamaguchi:before {
-  background: url("../img/yamaguchi/bg_msg.jpg") center / cover;
+  background: url('../img/yamaguchi/bg_msg.jpg') center / cover;
 }
 #top_menu .head {
   max-width: 100%;
@@ -198,7 +198,7 @@
   vertical-align: top;
 }
 #top_menu .head .comment a:after {
-  content: url("../img/top/flag.png");
+  content: url('../img/top/flag.png');
   position: absolute;
   right: -15px;
   top: 0;
@@ -207,12 +207,13 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 10px;
 }
 #top_menu .wrap a {
   display: block;
-  width: 250px;
+  width: calc((100% - 40px * 3) / 4);
   background: linear-gradient(180deg, rgba(255, 255, 255, 1) 65%, rgba(229, 229, 229, 1) 100%);
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 #top_menu .wrap a .mp {
@@ -230,7 +231,7 @@
 }
 
 #top_evidence:before {
-  background: url("../img/top/bg02.jpg") no-repeat right top;
+  background: url('../img/top/bg02.jpg') no-repeat right top;
 }
 #top_evidence h2 {
   font-size: 56px;
@@ -255,10 +256,10 @@
   margin-bottom: 50px;
 }
 #top_evidence .wrap dl.w2 {
-  width: 530px;
+  width: 49%;
 }
 #top_evidence .wrap dl.w3 {
-  width: 338px;
+  width: 32%;
 }
 #top_evidence .wrap dl.w2 dd {
   display: flex;
@@ -268,7 +269,7 @@
   margin-bottom: 10px;
 }
 #top_evidence .wrap dl dt.ico {
-  background: url("../img/top/ico01.png") no-repeat left top 2px;
+  background: url('../img/top/ico01.png') no-repeat left top 2px;
   padding-left: 30px;
 }
 #top_evidence .wrap dl dd p.arrow,
@@ -286,7 +287,7 @@
 }
 #top_evidence .wrap dl dd p.arrow:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   right: -51px;
   margin-top: -25px;
@@ -297,7 +298,7 @@
   border: 1px solid #ccc;
 }
 .top_column:before {
-  background: url("../img/top/bg03.jpg") no-repeat top;
+  background: url('../img/top/bg03.jpg') no-repeat top;
   background-size: 100% auto;
 }
 .top_column h3 {
@@ -327,7 +328,7 @@
   margin-left: 100px;
 }
 #top_plan:before {
-  background: url("../img/top/bg04.jpg") no-repeat top / cover;
+  background: url('../img/top/bg04.jpg') no-repeat top / cover;
   background-size: 100% auto;
 }
 #top_plan .cen a {
@@ -364,7 +365,7 @@
   position: absolute;
   top: 0;
   right: -57px;
-  content: "";
+  content: '';
   background: #14aad5;
   width: 67px;
   height: 67px;
@@ -388,7 +389,7 @@
   position: relative;
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     background: #14aad5;
     right: -57px;
     top: -1px;
@@ -425,7 +426,7 @@
   position: relative;
   &:after {
     position: absolute;
-    content: "";
+    content: '';
     background: #14aad5;
     height: 157px;
     right: -110px;
@@ -529,7 +530,7 @@
   position: absolute;
   top: 0;
   right: -57px;
-  content: "";
+  content: '';
   background: #14aad5;
   width: 67px;
   height: 67px;
@@ -615,6 +616,10 @@
   border: 2px solid #14aad5;
   box-sizing: border-box;
   margin-bottom: 40px;
+  @media not screen and (min-width: 1025px) {
+    width: 49%;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -628,16 +633,19 @@
 
 #top_plan .box .wrap dl.plan.w3 {
   width: 310px;
+  @media not screen and (min-width: 1025px) {
+    width: 32%;
+  }
 }
 #top_plan .box .wrap dl.plan dt {
-  background: url("../img/top/bg_dia.png") no-repeat left 20px center, url("../img/top/bg_dt.png") no-repeat right top, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
+  background: url('../img/top/bg_dia.png') no-repeat left 20px center, url('../img/top/bg_dt.png') no-repeat right top, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
   color: #fff;
   padding: 9px 0 9px 60px;
   font-weight: 500;
   font-size: 28px;
 }
 #top_plan .box .wrap dl.plan.w3 dt {
-  background: url("../img/top/bg_dia.png") no-repeat left 20px center, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
+  background: url('../img/top/bg_dia.png') no-repeat left 20px center, linear-gradient(to right, rgba(20, 170, 213, 1) 0%, rgba(10, 132, 185, 1) 100%);
 }
 #top_plan .box .wrap dl.plan dd {
   box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.4);
@@ -699,7 +707,7 @@
   }
 }
 #top_profile .bg:before {
-  background: url("../img/top/bg05.jpg") no-repeat right top / cover;
+  background: url('../img/top/bg05.jpg') no-repeat right top / cover;
 }
 #top_profile .bg {
   padding-top: 40px;
@@ -755,7 +763,7 @@
   padding: 20px;
 }
 #top_promise:before {
-  background: url("../img/top/bg06.jpg") no-repeat center / cover;
+  background: url('../img/top/bg06.jpg') no-repeat center / cover;
 }
 #top_promise.pt {
   padding-top: 40px;
@@ -765,7 +773,7 @@
   font-size: 37px;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
   letter-spacing: 1.85px;
-  background: url("../img/top/clover.png") no-repeat left top;
+  background: url('../img/top/clover.png') no-repeat left top;
   padding: 30px 0 10px 60px;
   margin-bottom: 30px;
 }
@@ -800,7 +808,7 @@
   top: -10px;
 }
 #top_promise .wrap .box .no:before {
-  content: "";
+  content: '';
   position: absolute;
   right: -10px;
   width: 0;
@@ -829,11 +837,11 @@
   border-radius: 9px;
 }
 #top_reason:before {
-  background: url("../img/top/bg07.jpg") no-repeat left top;
+  background: url('../img/top/bg07.jpg') no-repeat left top;
   background-size: auto 100%;
 }
 #top_reason .in h3 {
-  background: url("../img/top/clover02.png") top center no-repeat;
+  background: url('../img/top/clover02.png') top center no-repeat;
   padding-top: 30px;
   text-align: center;
   font-size: 37px;
@@ -864,7 +872,7 @@
   font-size: 20px;
 }
 #top_faq h3 {
-  background: url("../img/top/clover.png") no-repeat left top 15px;
+  background: url('../img/top/clover.png') no-repeat left top 15px;
   background-size: 92px auto;
   font-size: 37px;
   border-top: 2px solid #005e9c;
@@ -877,7 +885,7 @@
 }
 #top_faq dl,
 #faq dl {
-  background: #ededed url("../img/bg_dot.png");
+  background: #ededed url('../img/bg_dot.png');
   border-radius: 10px;
   padding: 20px;
   margin-bottom: 50px;
@@ -928,7 +936,7 @@
   text-decoration: underline;
 }
 #top_support:before {
-  background: url("../img/top/bg_shadow_top.png") repeat-x top;
+  background: url('../img/top/bg_shadow_top.png') repeat-x top;
 }
 #top_support h3 {
   font-size: 38px;
@@ -988,7 +996,7 @@
   top: 32px;
 }
 #top_about:before {
-  background: url("../img/top/bg08.jpg") no-repeat center / cover;
+  background: url('../img/top/bg08.jpg') no-repeat center / cover;
 }
 #top_about .bg {
   background: rgba(255, 255, 255, 0.5);
@@ -1006,7 +1014,7 @@
   padding-bottom: 10px;
 }
 #top_about h3 span:after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1061,6 +1069,9 @@
 #top_about .wrap dl {
   width: 320px;
   margin-bottom: 20px;
+  @media not screen and (min-width: 1025px) {
+    width: 32%;
+  }
 }
 #top_about .wrap dl dt {
   color: #fff;
@@ -1091,15 +1102,18 @@
   line-height: 1.5;
   padding: 20px;
   box-sizing: border-box;
+  @media not screen and (min-width: 1025px) {
+    width: 32%;
+  }
   a {
     color: #fff;
   }
 }
 #top_hiroshima:before {
-  background: url("../img/top/bg09.jpg") no-repeat top / cover;
+  background: url('../img/top/bg09.jpg') no-repeat top / cover;
 }
 #top_hiroshima h3 {
-  background: url("../img/top/clover.png") no-repeat left top 15px;
+  background: url('../img/top/clover.png') no-repeat left top 15px;
   background-size: 92px auto;
   font-size: 37px;
   border-top: 2px solid #005e9c;
@@ -1167,6 +1181,9 @@
   box-sizing: border-box;
   position: relative;
   margin-bottom: 30px;
+  @media not screen and (min-width: 1025px) {
+    width: 49%;
+  }
 }
 #top_hiroshima .example .wrap dl dt {
   position: absolute;
@@ -1237,7 +1254,7 @@
   color: #fa8813;
 }
 #top_area:before {
-  background: url("../img/top/bg10.jpg") no-repeat center / cover;
+  background: url('../img/top/bg10.jpg') no-repeat center / cover;
 }
 #top_area h3 {
   font-size: 33px;
@@ -1367,7 +1384,7 @@
   top: -10px;
 }
 #jobs .no span:before {
-  content: "";
+  content: '';
   position: absolute;
   right: -10px;
   width: 0;
@@ -1414,11 +1431,11 @@
 #beginner_msg .msg_box02 {
   border: 1px solid #c1272d;
   box-sizing: border-box;
-  background: url("../img/beginner/msg_box02_bg.png") no-repeat left center / auto 100%;
+  background: url('../img/beginner/msg_box02_bg.png') no-repeat left center / auto 100%;
 }
 #beginner_msg .msg_box02:after {
   display: block;
-  content: "";
+  content: '';
   clear: both;
 }
 #beginner_msg .msg_box02 .txt_area {
@@ -1494,7 +1511,7 @@
   padding-bottom: 108px;
 }
 #beginner_flow.bg_wide:before {
-  background: url("../img/beginner/flow_bg.jpg") no-repeat center center / cover;
+  background: url('../img/beginner/flow_bg.jpg') no-repeat center center / cover;
 }
 #beginner_flow .flow_wrapper {
   background: rgba(255, 255, 255, 0.5);
@@ -1542,7 +1559,7 @@
 }
 #beginner_flow .flow_box02:before {
   position: absolute;
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   left: 50%;
@@ -1728,7 +1745,7 @@
   margin-bottom: 20px;
   padding-left: 35px;
   padding-top: 5px;
-  background: url("../img/choose/point_li.png") no-repeat top left;
+  background: url('../img/choose/point_li.png') no-repeat top left;
 }
 #choose_point .point_ul01 li:last-of-type {
   margin-bottom: 0;
@@ -1771,7 +1788,7 @@
   padding-bottom: 80px;
 }
 #choose_possible.bg_wide:before {
-  background: url("../img/choose/possible_bg.png") no-repeat center top / 100% auto;
+  background: url('../img/choose/possible_bg.png') no-repeat center top / 100% auto;
 }
 #choose_possible h3.headline02 {
   font-size: 37px;
@@ -1817,7 +1834,7 @@
   padding-bottom: 90px;
 }
 #choose_price.bg_wide:before {
-  background: url("../img/choose/price_bg.png") no-repeat left top;
+  background: url('../img/choose/price_bg.png') no-repeat left top;
 }
 #choose_price .price_table {
   width: 100%;
@@ -1995,7 +2012,7 @@
   padding-bottom: 80px;
 }
 #choose_caution.bg_wide:before {
-  background: url("../img/choose/caution_bg.png") no-repeat center top / 100% auto;
+  background: url('../img/choose/caution_bg.png') no-repeat center top / 100% auto;
 }
 #choose_caution p {
   line-height: 2;
@@ -2055,7 +2072,7 @@
 }
 /*浮気・不倫調査*/
 #fickleness .fickleness_about:before {
-  background: url("../img/fickleness/bg01.png") no-repeat center / cover;
+  background: url('../img/fickleness/bg01.png') no-repeat center / cover;
 }
 #fickleness .fickleness_about h3 {
   color: #005e9c;
@@ -2115,7 +2132,7 @@
   order: 2;
 }
 #fickleness .fickleness_point:before {
-  background: url("../img/fickleness/bg02.png") no-repeat center / cover;
+  background: url('../img/fickleness/bg02.png') no-repeat center / cover;
 }
 #fickleness .fickleness_point h3.headline {
   background: none;
@@ -2225,7 +2242,7 @@
   margin-bottom: 0;
 }
 #fickleness .fickleness_check .bg dl dt {
-  background: url("../img/chk.png") no-repeat left top;
+  background: url('../img/chk.png') no-repeat left top;
   padding-left: 50px;
   margin-bottom: 15px;
 }
@@ -2251,7 +2268,7 @@
   position: relative;
 }
 #fickleness .fickleness_request:before {
-  background: #d0eef7 url("../img/fickleness/bg03.png") no-repeat bottom / 100% auto;
+  background: #d0eef7 url('../img/fickleness/bg03.png') no-repeat bottom / 100% auto;
 }
 #fickleness .fickleness_request h3 {
   margin-right: 120px;
@@ -2281,7 +2298,7 @@
 }
 #fickleness .fickleness_request .list .sec:not(:last-of-type):before {
   position: absolute;
-  content: "";
+  content: '';
   left: 50%;
   bottom: -102px;
   margin-left: -60px;
@@ -2334,7 +2351,7 @@
 }
 #fickleness .fickleness_request .list .sec dl dd:before {
   position: absolute;
-  content: "";
+  content: '';
   top: 15px;
   left: -34px;
   border: 15px solid transparent;
@@ -2394,7 +2411,7 @@
   width: 10px;
   height: 50%;
   background: #005e9c;
-  content: "";
+  content: '';
 }
 #service h3.smp::before {
   background: #f2f2f2;
@@ -2492,25 +2509,25 @@
 }
 #voice .letter h3 {
   font-size: 37px;
-  background: url("../img/voice/ico01.png") no-repeat left top;
+  background: url('../img/voice/ico01.png') no-repeat left top;
   padding-left: 75px;
   margin-bottom: 50px;
 }
 #voice .letter .box {
   position: relative;
-  background: #f2f2f2 url("../img/voice/bg_dot.png");
+  background: #f2f2f2 url('../img/voice/bg_dot.png');
   padding: 10px;
   margin-bottom: 50px;
 }
 #voice .letter .box:before {
-  content: url("../img/voice/waku01.png");
+  content: url('../img/voice/waku01.png');
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
 }
 #voice .letter .box:after {
-  content: url("../img/voice/waku02.png");
+  content: url('../img/voice/waku02.png');
   position: absolute;
   top: 0;
   right: 0;
@@ -2521,13 +2538,13 @@
   position: relative;
 }
 #voice .letter .box > .in:before {
-  content: url("../img/voice/waku03.png");
+  content: url('../img/voice/waku03.png');
   position: absolute;
   bottom: -20px;
   left: -10px;
 }
 #voice .letter .box > .in:after {
-  content: url("../img/voice/waku04.png");
+  content: url('../img/voice/waku04.png');
   position: absolute;
   bottom: -20px;
   right: -10px;
@@ -2554,7 +2571,7 @@
 }
 /*料金表*/
 #price_msg::before {
-  background: url("../img/price/bg.jpg") no-repeat center center;
+  background: url('../img/price/bg.jpg') no-repeat center center;
   background-size: cover;
 }
 #price_msg .in {
@@ -2726,7 +2743,7 @@
 
 /*会社概要*/
 #company .bg:before {
-  background: url("../img/company/bg.jpg") no-repeat center / cover;
+  background: url('../img/company/bg.jpg') no-repeat center / cover;
 }
 #company .bg .waku {
   background: rgba(255, 255, 255, 0.9);
@@ -2882,7 +2899,7 @@
 }
 /*素行調査*/
 #behavior .bg:before {
-  background: url("../img/behavior/bg.jpg") no-repeat center / cover;
+  background: url('../img/behavior/bg.jpg') no-repeat center / cover;
 }
 #behavior .bg h3 {
   font-size: 33px;
@@ -2940,7 +2957,7 @@
 }
 /*裁判証拠収集*/
 #trial .bg:before {
-  background: url("../img/trial/bg.jpg") no-repeat center / cover;
+  background: url('../img/trial/bg.jpg') no-repeat center / cover;
 }
 #trial .bg h3 {
   font-size: 33px;
@@ -2978,7 +2995,7 @@
   width: 10px;
   height: 50%;
   background: #005e9c;
-  content: "";
+  content: '';
 }
 #trial .example h3.smp::before {
   background: #f2f2f2;
@@ -3039,7 +3056,7 @@
   padding: 0 10px 5px;
 }
 #marriage .bg:before {
-  background: url("../img/marriage/bg.jpg") no-repeat center / cover;
+  background: url('../img/marriage/bg.jpg') no-repeat center / cover;
 }
 #marriage .bg .sec:not(:last-of-type) {
   margin-bottom: 50px;
@@ -3120,7 +3137,7 @@
   position: relative;
 }
 #stalker > .bg:before {
-  background: url("../img/stalker/bg.jpg") no-repeat center / cover;
+  background: url('../img/stalker/bg.jpg') no-repeat center / cover;
 }
 #stalker > .bg h3 {
   font-size: 33px;
@@ -3241,7 +3258,7 @@
 }
 /*盗聴器発見*/
 #tapping .bg:before {
-  background: url("../img/tapping/bg.jpg") no-repeat center / cover;
+  background: url('../img/tapping/bg.jpg') no-repeat center / cover;
 }
 #tapping .bg .man_area {
   position: relative;
@@ -3333,7 +3350,7 @@
 }
 /*指紋・筆跡鑑定*/
 #fingerprint .bg:before {
-  background: url("../img/fingerprint/bg.jpg") no-repeat center / cover;
+  background: url('../img/fingerprint/bg.jpg') no-repeat center / cover;
 }
 #fingerprint .bg h3 {
   font-size: 33px;
@@ -3371,7 +3388,7 @@
   margin-bottom: 15px;
 }
 #type .bg:before {
-  background: #d0eef7 url("../img/type/bg.png") no-repeat bottom / cover;
+  background: #d0eef7 url('../img/type/bg.png') no-repeat bottom / cover;
 }
 #type .bg dl {
   position: relative;
@@ -3420,7 +3437,7 @@
   padding: 40px 0 70px;
 }
 #proof .what:before {
-  background: url("../img/proof/bg.jpg") no-repeat top / cover;
+  background: url('../img/proof/bg.jpg') no-repeat top / cover;
 }
 #proof .what h3 {
   color: #fff;
@@ -3500,7 +3517,7 @@
 }
 #sample dl:not(:last-child):before {
   position: absolute;
-  content: "";
+  content: '';
   bottom: -50px;
   right: calc(50% - 25px);
   border: 25px solid transparent;
@@ -3526,7 +3543,7 @@
 }
 #sample dt .clock::before,
 #sample dt .clock::after {
-  content: "";
+  content: '';
   position: absolute;
   border-radius: 0.1em;
   transform: translate(-0.05em, 0.05em);
@@ -3599,7 +3616,7 @@
 }
 /*法人様向けプラン*/
 #corporation .bg:before {
-  background: url("../img/corporation/bg.jpg") no-repeat center / cover;
+  background: url('../img/corporation/bg.jpg') no-repeat center / cover;
 }
 #corporation h3 {
   font-size: 18px;
@@ -3731,7 +3748,7 @@
 }
 #sitemap p.btn a::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 10px;
   width: 10px;
@@ -3766,7 +3783,7 @@
 }
 #sitemap .flex li a::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 0;
   width: 10px;
@@ -3792,7 +3809,7 @@
 }
 #sitemap .flex li ul.in li a::after {
   position: absolute;
-  content: "";
+  content: '';
   top: 50%;
   left: 20px;
   width: 10px;
@@ -3826,7 +3843,7 @@
   box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.2) inset;
   color: #ffffff;
   font-size: 16px;
-  font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   cursor: pointer;
 }
 #mailform .btn button + button {
@@ -3834,7 +3851,7 @@
   border-color: #dddddd;
   color: #666666;
 }
-#mailform .tbl input[type="text"],
+#mailform .tbl input[type='text'],
 #mailform .tbl textarea,
 #mailform button {
   width: 100%;
@@ -3889,13 +3906,13 @@
   align-items: center;
   transition: all 0.3s ease 0s;
 }
-.page-nav li a[aria-current="page"] {
+.page-nav li a[aria-current='page'] {
   background-color: #2fb3f6;
   border: solid 2px #2fb3f6;
   color: #fff;
   font-weight: 900;
 }
-.page-nav li a[aria-current="page"]:hover {
+.page-nav li a[aria-current='page']:hover {
   background-color: #fff;
   color: #2fb3f6;
 }
@@ -4014,4 +4031,17 @@
   img {
     object-fit: cover;
   }
+}
+
+.slide-in {
+  position: fixed;
+  right: -1600px; /* スライドイン前の位置 */
+  bottom: 0;
+  transition: right 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.slide-in.visible {
+  right: 0; /* スライドイン後の位置 */
+  bottom: 0;
 }
