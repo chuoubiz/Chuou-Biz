@@ -1,122 +1,90 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Seo from "../../components/SEO";
-import HeaderYamaguchi from "../../components/HeaderYamaguchi";
-import FooterYamaguchi from "../../components/FooterYamaguchi";
+import Seo from '../../components/SEO';
+import HeaderYamaguchi from '../../components/HeaderYamaguchi';
+import FooterYamaguchi from '../../components/FooterYamaguchi';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const yamaguchi = () => {
   return (
     <>
-      <div id="wrap">
-        <HeaderYamaguchi
-          h1title="山口の探偵｜浮気調査は55年の実績と信頼｜総合探偵社中央リサーチ山口"
-          pagetitle="JR徳山駅前にある探偵事務所"
-        />
-        <div id="img_top_msg" className="bg_blue_grad">
-          <p className="mp nm">内閣総理大臣認可 全国調査業協同組合組合員</p>
-          <p className="txt nm">
+      <div id='wrap'>
+        <HeaderYamaguchi h1title='山口の探偵｜浮気調査は55年の実績と信頼｜総合探偵社中央リサーチ山口' pagetitle='JR徳山駅前にある探偵事務所' />
+        <div id='img_top_msg' className='bg_blue_grad'>
+          <p className='mp nm'>内閣総理大臣認可 全国調査業協同組合組合員</p>
+          <p className='txt nm'>
             当探偵事務所は厳重な審査を経て
-            <a
-              href="http://www.ncia-research.or.jp/"
-              rel="nofollow noopener noreferrer"
-              target="_blank"
-            >
+            <a href='http://www.ncia-research.or.jp/' rel='nofollow noopener noreferrer' target='_blank'>
               全国調査業協同組合
             </a>
             に加盟しております。
             <br />
             広告は新聞・看板や
-            <a
-              href="https://itp.ne.jp/info/341545111182370410/"
-              rel="nofollow noopener noreferrer"
-              target="_blank"
-            >
-              NTT iタウンページ (探偵欄){" "}
+            <a href='https://itp.ne.jp/info/341545111182370410/' rel='nofollow noopener noreferrer' target='_blank'>
+              NTT iタウンページ (探偵欄){' '}
             </a>
             にも掲載中！
           </p>
         </div>
-        <section id="container" className="cf">
-          <div id="page_title">
-            <div className="dsp_hpt">
-              <img src="../../img/top/title.png" alt="総合探偵社中央リサーチ" />
+        <section id='container' className='cf'>
+          <div id='page_title'>
+            <div className='dsp_hpt'>
+              <StaticImage src='../../img/top/title.webp' alt='総合探偵社中央リサーチ' />
             </div>
-            <div className="dsp_smt">
-              <img
-                src="../../img/top/title_sp.jpg"
-                alt="総合探偵社中央リサーチ"
-              />
+            <div className='dsp_smt'>
+              <StaticImage src='../../img/top/title_sp.webp' alt='総合探偵社中央リサーチ' />
             </div>
           </div>
-          <div id="img_bottom_msg">
-            <p className="nm cen thin">
+          <div id='img_bottom_msg'>
+            <p className='nm cen thin'>
               ※弊社では探偵経験10年以上のスタッフが卓越した調査力で、
-              <br className="dsp_tbs" />
+              <br className='dsp_tbs' />
               ご安心、ご納得できるサービスを提供します。
             </p>
           </div>
-          <p id="top_comment" className="dsp_smt">
-            <Link to="#top_profile">
+          <p id='top_comment' className='dsp_smt'>
+            <Link to='#top_profile'>
               弁護士事務所から推奨されている
               <br />
               探偵社です！ »
             </Link>
           </p>
-          {/* タブレット・スマホ時メイン画の下に表示されるメニュー */}
-          <div id="menu_sp" className="dsp_tbs yamaguchi pc">
-            <ul>
-              <li>
-                <Link to="/yamaguchi/voice/">お客様の声</Link>
-              </li>
-              <li>
-                <Link to="/yamaguchi/toiawase/">お問い合わせ</Link>
-              </li>
-              <li>
-                <Link to="/yamaguchi/company/">会社概要</Link>
-              </li>
-              <li>
-                <Link to="/yamaguchi/price/">料金表</Link>
-              </li>
-            </ul>
-          </div>
-          {/* ここまで */}
-          <div className="main">
-            <div id="top_menu" className="bg_wide pt pb yamaguchi">
-              <div className="top_success_img">
-                <img src="../img/success_txt01.png" alt="調査成功率98.8%" />
+
+          <div className='main'>
+            <div id='top_menu' className='bg_wide pt pb yamaguchi'>
+              <div className='top_success_img'>
+                <StaticImage src='../../img/success_txt01.webp' alt='調査成功率98.8%' />
               </div>
 
-              <div className="head">
-                <p className="maru">
-                  <span className="in serif">
-                    <span className="fs">探偵実績</span>
+              <div className='head'>
+                <p className='maru'>
+                  <span className='in serif'>
+                    <span className='fs'>探偵実績</span>
                     <br />
-                    55<span className="fs">年</span>
+                    55<span className='fs'>年</span>
                   </span>
                 </p>
-                <div className="cb">
+                <div className='cb'>
                   <h2>
                     地元山口で、調査力
-                    <br className="dsp_smt" />
+                    <br className='dsp_smt' />
                     No.1を誇る探偵社です｡
                   </h2>
-                  <div className="cen dsp_hpt">
-                    <p className="comment">
-                      <Link to="#top_profile">
-                        弁護士事務所から推奨されている探偵社です！ »
-                      </Link>
+                  <div className='cen dsp_hpt'>
+                    <p className='comment'>
+                      <Link to='#top_profile'>弁護士事務所から推奨されている探偵社です！ »</Link>
                     </p>
                   </div>
                 </div>
               </div>
-              <div className="top_price_txt smp">
-                <img src="../img/plan_txt01_smp.png" alt="安心プラン5500円" />
+              <div className='top_price_txt smp'>
+                <StaticImage src='../../img/plan_txt01_smp.webp' alt='安心プラン5500円' />
               </div>
-              <dl className="mp yamaguchi_top">
+              <dl className='mp yamaguchi_top'>
                 <dt>
                   解決の第一歩はまず
-                  <br className="dsp_smt" />
+                  <br className='dsp_smt' />
                   相談してみることから始まります
                 </dt>
                 <dd>
@@ -126,475 +94,349 @@ const yamaguchi = () => {
                 </dd>
               </dl>
             </div>
-            <div id="about" className="yamaguchi">
-              <div id="yamaguchi_about" className="bg_wide main pt pb">
-                <h3 className="ttl">調査項目</h3>
-                <div className="box_flex">
-                  <dl id="uwaki">
+            <div id='about' className='yamaguchi'>
+              <div id='yamaguchi_about' className='bg_wide main pt pb'>
+                <h3 className='ttl'>調査項目</h3>
+                <div className='box_flex'>
+                  <dl id='uwaki'>
                     <dt>
-                      <img src="../../img/yamaguchi/about/img01.jpg" alt="" />
-                      <b className="mp">浮気・不倫調査</b>
+                      <img src='../../img/yamaguchi/about/img01.jpg' alt='' />
+                      <b className='mp'>浮気・不倫調査</b>
                     </dt>
-                    <dd>
-                      浮気や不倫の疑いで不安な日々を過ごされている方のために、一日も早く笑顔を取り戻していただけるよう、迅速に調査し、動かぬ証拠をお撮りします。
-                    </dd>
+                    <dd>浮気や不倫の疑いで不安な日々を過ごされている方のために、一日も早く笑顔を取り戻していただけるよう、迅速に調査し、動かぬ証拠をお撮りします。</dd>
                   </dl>
-                  <dl id="saiban">
+                  <dl id='saiban'>
                     <dt>
-                      <img src="../../img/yamaguchi/about/img02.jpg" alt="" />
-                      <b className="mp">裁判証拠収集</b>
+                      <img src='../../img/yamaguchi/about/img02.jpg' alt='' />
+                      <b className='mp'>裁判証拠収集</b>
                     </dt>
                     <dd>
                       裁判を有利に進めるために
-                      <span className="red">
-                        事実関係を立証できる有力な証拠を収集
-                      </span>
+                      <span className='red'>事実関係を立証できる有力な証拠を収集</span>
                       します。十分な資料や証拠により、ゆとりをもって裁判に臨んでいただくための調査です。
                     </dd>
                   </dl>
-                  <dl id="kekkon">
+                  <dl id='kekkon'>
                     <dt>
-                      <img src="../../img/yamaguchi/about/img03.jpg" alt="" />
-                      <b className="mp">結婚・身上調査</b>
+                      <img src='../../img/yamaguchi/about/img03.jpg' alt='' />
+                      <b className='mp'>結婚・身上調査</b>
                     </dt>
                     <dd>
                       結婚は本人たちだけの問題ではなく、ご家族や親族にも影響があります。
                       <br />
                       結婚相手がどのような家族なのか、風評や人物性・職業など調査し
-                      <span className="red">信用性を知る為の調査</span>です。
+                      <span className='red'>信用性を知る為の調査</span>です。
                     </dd>
                   </dl>
-                  <dl id="iede">
+                  <dl id='iede'>
                     <dt>
-                      <img src="../../img/yamaguchi/about/img04.jpg" alt="" />
-                      <b className="mp">家出・所在調査</b>
+                      <img src='../../img/yamaguchi/about/img04.jpg' alt='' />
+                      <b className='mp'>家出・所在調査</b>
                     </dt>
                     <dd>
                       家出してしまったご家族を中心に、連絡の取れなくなってなった友人やかつての恩師、お金を借りたまま逃げてしまった相手などをお探しします。特に家出や失踪は人命に係ることもありますので、
-                      <span className="red">
-                        一刻も早く調査・捜索を行なう事が重要
-                      </span>
+                      <span className='red'>一刻も早く調査・捜索を行なう事が重要</span>
                       です。
                     </dd>
                   </dl>
-                  <dl id="stalker">
+                  <dl id='stalker'>
                     <dt>
-                      <img src="../../img/yamaguchi/about/img05.jpg" alt="" />
-                      <b className="mp">嫌がらせ対策</b>
+                      <img src='../../img/yamaguchi/about/img05.jpg' alt='' />
+                      <b className='mp'>嫌がらせ対策</b>
                     </dt>
                     <dd>
                       年々増加する、嫌がらせ、いじめ等の被害を
-                      <span className="red">徹底的に排除</span>
+                      <span className='red'>徹底的に排除</span>
                       する為、真実を明らかにし、安心した生活が送れるよう証拠収集をいたします。
                     </dd>
                   </dl>
-                  <dl id="touchouki">
+                  <dl id='touchouki'>
                     <dt>
-                      <img src="../../img/yamaguchi/about/img06.jpg" alt="" />
-                      <b className="mp">盗聴器発見</b>
+                      <img src='../../img/yamaguchi/about/img06.jpg' alt='' />
+                      <b className='mp'>盗聴器発見</b>
                     </dt>
                     <dd>
-                      <span className="red">
-                        近年、盗聴器使用による犯罪が増えています。
-                      </span>
+                      <span className='red'>近年、盗聴器使用による犯罪が増えています。</span>
                       盗聴器はインターネットや通信販売で手軽に入手出来てしまうことから、自分の知らない間に大切な個人情報が流出する危険性があります。不安や懸念のない日々のためにも、最新機器を使用し専門の調査員が盗聴器調査をいたします。
                     </dd>
                   </dl>
                 </div>
-                <p className="link nm">
-                  <Link to="/yamaguchi/jirei/">調査事例はこちら</Link>
+                <p className='link nm'>
+                  <Link to='/yamaguchi/jirei/'>調査事例はこちら</Link>
                 </p>
               </div>
             </div>
-            <div id="yamaguchi_reason" className="bg_wide pt pb">
-              <h3 className="mp">
+            <div id='yamaguchi_reason' className='bg_wide pt pb'>
+              <h3 className='mp'>
                 <b>中央リサーチ山口が選ばれる理由</b>
               </h3>
-              <div className="box_flex bg_wide">
+              <div className='box_flex bg_wide'>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/img01.jpg" alt="" />
-                    <b className="mp">業界最安値</b>
+                    <img src='../../img/yamaguchi/img01.jpg' alt='' />
+                    <b className='mp'>業界最安値</b>
                   </dt>
-                  <dd>
-                    他社に負けない低料金で高い調査力をもつスタッフのみ応対、必ずお力になります。
-                  </dd>
+                  <dd>他社に負けない低料金で高い調査力をもつスタッフのみ応対、必ずお力になります。</dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/img02.jpg" alt="" />
-                    <b className="mp">中四国最大級の探偵事務所</b>
+                    <img src='../../img/yamaguchi/img02.jpg' alt='' />
+                    <b className='mp'>中四国最大級の探偵事務所</b>
                   </dt>
-                  <dd>
-                    調査内容の事案に合った経験豊富な地元のスタッフが迅速に対応し問題解決します。
-                  </dd>
+                  <dd>調査内容の事案に合った経験豊富な地元のスタッフが迅速に対応し問題解決します。</dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/img03.jpg" alt="" />
-                    <b className="mp">女性相談員が応対</b>
+                    <img src='../../img/yamaguchi/img03.jpg' alt='' />
+                    <b className='mp'>女性相談員が応対</b>
                   </dt>
-                  <dd>
-                    男性スタッフでは話しにくい事案も女性相談員が悩みに寄り添い対応します。
-                  </dd>
+                  <dd>男性スタッフでは話しにくい事案も女性相談員が悩みに寄り添い対応します。</dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/img04.jpg" alt="" />
-                    <b className="mp">警察OBや弁護士との連携</b>
+                    <img src='../../img/yamaguchi/img04.jpg' alt='' />
+                    <b className='mp'>警察OBや弁護士との連携</b>
                   </dt>
-                  <dd>
-                    全国で約３００名の弁護士と連携。より証拠能力の高い報告書を作成します。
-                  </dd>
+                  <dd>全国で約３００名の弁護士と連携。より証拠能力の高い報告書を作成します。</dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/img05.jpg" alt="" />
-                    <b className="mp">
+                    <img src='../../img/yamaguchi/img05.jpg' alt='' />
+                    <b className='mp'>
                       特殊な調査も
-                      <br className="dst_tbs" />
+                      <br className='dst_tbs' />
                       幅広い分野で対応
                     </b>
                   </dt>
-                  <dd>
-                    コンプライアンスを守り、的確かつ適正な調査で、お客様に満足頂いております。
-                  </dd>
+                  <dd>コンプライアンスを守り、的確かつ適正な調査で、お客様に満足頂いております。</dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/img06.jpg" alt="" />
-                    <b className="mp">
+                    <img src='../../img/yamaguchi/img06.jpg' alt='' />
+                    <b className='mp'>
                       調査終了後の
-                      <br className="dst_tbs" />
+                      <br className='dst_tbs' />
                       アフターケアも万全
                     </b>
                   </dt>
-                  <dd>
-                    事実関係の確認や証拠を取った後の進め方も的確な対策をアドバイスいたします。
-                  </dd>
+                  <dd>事実関係の確認や証拠を取った後の進め方も的確な対策をアドバイスいたします。</dd>
                 </dl>
               </div>
             </div>
-            <div id="yamaguchi_button">
-              <p className="link mp pt pb">
-                <Link to="/yamaguchi/voice/">お客様の声はこちら</Link>
+            <div id='yamaguchi_button'>
+              <p className='link mp pt pb'>
+                <Link to='/yamaguchi/voice/'>お客様の声はこちら</Link>
               </p>
             </div>
-            <div id="top_plan" className="bg_wide pb">
-              <h3 className="mp">浮気調査安心プラン</h3>
-              <div className="box">
-                <dl className="head">
-                  <dt className="mp">
-                    <div className="top_point_title">
-                      必要なところにピンポイント調査
-                    </div>
+            <div id='top_plan' className='bg_wide pb'>
+              <h3 className='mp'>浮気調査安心プラン</h3>
+              <div className='box'>
+                <dl className='head'>
+                  <dt className='mp'>
+                    <div className='top_point_title'>必要なところにピンポイント調査</div>
                   </dt>
                   <dd>
-                    <p className="nm">
-                      お客様に合った無駄のないプランを提案し、動かぬ証拠を取ります。
-                    </p>
+                    <p className='nm'>お客様に合った無駄のないプランを提案し、動かぬ証拠を取ります。</p>
                   </dd>
                 </dl>
-                <div className="wrap">
-                  <dl className="plan w2">
-                    <dt className="mp">浮気調査(行動調査)基本料金</dt>
+                <div className='wrap'>
+                  <dl className='plan w2'>
+                    <dt className='mp'>浮気調査(行動調査)基本料金</dt>
                     <dd>
-                      <span className="red_waku mp">調査員1名毎</span>
-                      <span className="fs_smt">行動調査1時間毎の基本料金</span>
-                      <br className="dsp_tbs" />
-                      <span className="price red">
-                        5,000<span className="fs">円</span>
+                      <span className='red_waku mp'>調査員1名毎</span>
+                      <span className='fs_smt'>行動調査1時間毎の基本料金</span>
+                      <br className='dsp_tbs' />
+                      <span className='price red'>
+                        5,000<span className='fs'>円</span>
                       </span>
-                      <span className="komi">税込 5,500円</span>
+                      <span className='komi'>税込 5,500円</span>
                     </dd>
                   </dl>
-                  <dl className="plan w2">
-                    <dt className="mp">1時間毎 基本料金</dt>
+                  <dl className='plan w2'>
+                    <dt className='mp'>1時間毎 基本料金</dt>
                     <dd>
-                      <span className="red_waku mp">調査員2名</span>
-                      <span className="fs_smt">行動調査1時間毎の基本料金</span>
-                      <br className="dsp_tbs" />
-                      <span className="price red">
-                        10,000<span className="fs">円</span>
+                      <span className='red_waku mp'>調査員2名</span>
+                      <span className='fs_smt'>行動調査1時間毎の基本料金</span>
+                      <br className='dsp_tbs' />
+                      <span className='price red'>
+                        10,000<span className='fs'>円</span>
                       </span>
-                      <span className="komi">税込 11,000円</span>
+                      <span className='komi'>税込 11,000円</span>
                     </dd>
                   </dl>
-                  <dl className="plan w3">
-                    <dt className="mp">20時間プラン</dt>
+                  <dl className='plan w3'>
+                    <dt className='mp'>20時間プラン</dt>
                     <dd>
                       <p>
-                        19万円<span className="fs">（税込 209,000円）</span>
+                        19万円<span className='fs'>（税込 209,000円）</span>
                         、調査員2名体制
-                        <span className="fs">
-                          （20時間を数日間にわけて調査致します）
-                        </span>
+                        <span className='fs'>（20時間を数日間にわけて調査致します）</span>
                       </p>
-                      <p className="red attention">
-                        ※浮気調査の成功率98.8%実績
-                      </p>
+                      <p className='red attention'>※浮気調査の成功率98.8%実績</p>
                     </dd>
                   </dl>
-                  <dl className="plan w3">
-                    <dt className="mp">30時間プラン</dt>
+                  <dl className='plan w3'>
+                    <dt className='mp'>30時間プラン</dt>
                     <dd>
                       <p>
-                        28万円<span className="fs">（税込 308,000円）</span>
+                        28万円<span className='fs'>（税込 308,000円）</span>
                         、調査員2名体制
-                        <span className="fs">
-                          （30時間を数日間にわけて調査致します）
-                        </span>
+                        <span className='fs'>（30時間を数日間にわけて調査致します）</span>
                       </p>
-                      <p className="red attention">
-                        ※浮気調査の成功率99.3%実績
-                      </p>
+                      <p className='red attention'>※浮気調査の成功率99.3%実績</p>
                     </dd>
                   </dl>
-                  <dl className="plan w3">
-                    <dt className="mp">成功報酬プラン</dt>
+                  <dl className='plan w3'>
+                    <dt className='mp'>成功報酬プラン</dt>
                     <dd>
                       <p>結果が出なければ調査料0円</p>
-                      <p className="red attention">※不貞の証拠取得時に適応</p>
+                      <p className='red attention'>※不貞の証拠取得時に適応</p>
                     </dd>
                   </dl>
                 </div>
               </div>
-              <div className="box price_box">
-                <dl className="head">
-                  <dt className="mp w2">
-                    <div className="top_price_title">
-                      <span className="smt_red">追加料金不要</span>で任せて安心
+              <div className='box price_box'>
+                <dl className='head'>
+                  <dt className='mp w2'>
+                    <div className='top_price_title'>
+                      <span className='smt_red'>追加料金不要</span>で任せて安心
                       <br />
-                      <span className="smt_fs">（深夜料金一切不要で安心）</span>
+                      <span className='smt_fs'>（深夜料金一切不要で安心）</span>
                       <br />
-                      <span className="credit">
-                        ※お支払いはクレジットも利用可能
-                      </span>
+                      <span className='credit'>※お支払いはクレジットも利用可能</span>
                     </div>
                   </dt>
                   <dd>
-                    <p className="icon">
-                      <img
-                        src="../img/top/pay00.png"
-                        width={49}
-                        height={37}
-                        loading="lazy"
-                        alt=""
-                      />
-                      <img
-                        src="../img/top/pay01.png"
-                        width={50}
-                        height={35}
-                        loading="lazy"
-                        alt=""
-                      />
-                      <img
-                        src="../img/top/pay02.png"
-                        width={85}
-                        height={26}
-                        loading="lazy"
-                        alt=""
-                      />
-                      <img
-                        src="../img/top/pay03.png"
-                        width={59}
-                        height={35}
-                        loading="lazy"
-                        alt=""
-                      />
-                      <img
-                        src="../img/top/pay04.png"
-                        width={124}
-                        height={32}
-                        loading="lazy"
-                        alt=""
-                      />
+                    <p className='icon'>
+                      <img src='../img/top/pay00.png' width={49} height={37} loading='lazy' alt='' />
+                      <img src='../img/top/pay01.png' width={50} height={35} loading='lazy' alt='' />
+                      <img src='../img/top/pay02.png' width={85} height={26} loading='lazy' alt='' />
+                      <img src='../img/top/pay03.png' width={59} height={35} loading='lazy' alt='' />
+                      <img src='../img/top/pay04.png' width={124} height={32} loading='lazy' alt='' />
                     </p>
-                    <p className="dsp_smt fs">
-                      <span className="fs">
-                        ※お支払いはクレジットも利用可能
-                      </span>
+                    <p className='dsp_smt fs'>
+                      <span className='fs'>※お支払いはクレジットも利用可能</span>
                     </p>
-                    <p className="link mp">
-                      <Link to="/price/">料金の詳細はこちら</Link>
+                    <p className='link mp'>
+                      <Link to='/price/'>料金の詳細はこちら</Link>
                     </p>
                   </dd>
                 </dl>
               </div>
             </div>
-            <div id="yamaguchi_point" className="bg_wide pt mb0_smp">
+            <div id='yamaguchi_point' className='bg_wide pt mb0_smp'>
               <h3>浮気調査の重要なポイント</h3>
-              <div className="in">
-                <p className="cen_pc nm">
+              <div className='in'>
+                <p className='cen_pc nm'>
                   裁判に勝つための浮気の動かぬ証拠とは、メールやSNSなどの会話の証拠ではなく裁判所が認める性的関係の立証でなくてはなりません。
                   <br />
                   それが不貞行為です。浮気の裁判証拠として性的関係を立証できるかが一番大切なポイントになります。
                   <br />
                   例えば2人がホテルに入る瞬間の写真や映像、その後の経過時間の記録、
-                  <br className="dsp_hp" />
+                  <br className='dsp_hp' />
                   そして２人がホテルから出る瞬間の写真や映像などが有力な証拠となります。
                   <br />
                   浮気相手の自宅に出入りしている場合も同様、入る瞬間と経過時間、出る瞬間などの写真や映像が有力な証拠とされています。
                 </p>
               </div>
             </div>
-            <div id="top_evidence">
-              <div className="sample pb">
-                <h3 className="line mp">報告書写真サンプル</h3>
-                <div className="wrap">
-                  <dl className="w2">
+            <div id='top_evidence'>
+              <div className='sample pb'>
+                <h3 className='line mp'>報告書写真サンプル</h3>
+                <div className='wrap'>
+                  <dl className='w2'>
                     <dt>遠くから確実に証拠を押さえます。</dt>
                     <dd>
-                      <p className="arrow">
-                        <img
-                          src="../../img/top/sample01.jpg"
-                          loading="lazy"
-                          alt=""
-                        />
+                      <p className='arrow'>
+                        <img src='../../img/top/sample01.jpg' loading='lazy' alt='' />
                       </p>
                       <p>
-                        <img src="../../img/top/sample02.jpg" alt="" />
+                        <img src='../../img/top/sample02.jpg' alt='' />
                       </p>
                     </dd>
                   </dl>
-                  <dl className="w2">
+                  <dl className='w2'>
                     <dt>決定的な証拠も確実に撮影</dt>
                     <dd>
-                      <p className="arrow">
-                        <img
-                          src="../../img/top/sample03.jpg"
-                          loading="lazy"
-                          alt=""
-                        />
+                      <p className='arrow'>
+                        <img src='../../img/top/sample03.jpg' loading='lazy' alt='' />
                         <span>2019/6/25/19:09</span>
                       </p>
                       <p>
-                        <img src="../../img/top/sample04.jpg" alt="" />
+                        <img src='../../img/top/sample04.jpg' alt='' />
                         <span>2019/6/25/21:11</span>
                       </p>
                     </dd>
                   </dl>
                 </div>
-                <p className="cen">
-                  <img
-                    src="../../img/yamaguchi/sample08.png"
-                    alt=""
-                    className
-                  />
+                <p className='cen'>
+                  <img src='../../img/yamaguchi/sample08.png' alt='' className />
                 </p>
-                <p className="link mp">
-                  <Link to="/sample/">調査報告書サンプルはコチラ</Link>
+                <p className='link mp'>
+                  <Link to='/sample/'>調査報告書サンプルはコチラ</Link>
                 </p>
               </div>
             </div>
-            <div id="top_profile">
-              <h3 className="mp bg_wide yamaguchi">
-                <img
-                  src="../../img/top/medal_big.png"
-                  alt=""
-                  width={53}
-                  height={53}
-                  loading="lazy"
-                />
+            <div id='top_profile'>
+              <h3 className='mp bg_wide yamaguchi'>
+                <img src='../../img/top/medal_big.png' alt='' width={53} height={53} loading='lazy' />
                 <span>弁護士事務所からの推奨コメント</span>
               </h3>
-              <div className="bg bg_wide pb">
+              <div className='bg bg_wide pb'>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/profile_name01.png" alt="" />
+                    <img src='../../img/yamaguchi/profile_name01.png' alt='' />
                   </dt>
                   <dd>
-                    <img
-                      src="../../img/yamaguchi/profile_txt01.png"
-                      alt=""
-                      className="dsp_hpt"
-                    />
-                    <img
-                      src="../../img/yamaguchi/profile_txt01_sp.png"
-                      alt=""
-                      className="dsp_smt"
-                    />
+                    <img src='../../img/yamaguchi/profile_txt01.png' alt='' className='dsp_hpt' />
+                    <img src='../../img/yamaguchi/profile_txt01_sp.png' alt='' className='dsp_smt' />
                   </dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/profile_name02.png" alt="" />
+                    <img src='../../img/yamaguchi/profile_name02.png' alt='' />
                   </dt>
                   <dd>
-                    <img
-                      src="../../img/yamaguchi/profile_txt02.png"
-                      alt=""
-                      className="dsp_hpt"
-                    />
-                    <img
-                      src="../../img/yamaguchi/profile_txt02_sp.png"
-                      alt=""
-                      className="dsp_smt"
-                    />
+                    <img src='../../img/yamaguchi/profile_txt02.png' alt='' className='dsp_hpt' />
+                    <img src='../../img/yamaguchi/profile_txt02_sp.png' alt='' className='dsp_smt' />
                   </dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/profile_name03.png" alt="" />
+                    <img src='../../img/yamaguchi/profile_name03.png' alt='' />
                   </dt>
                   <dd>
-                    <img
-                      src="../../img/yamaguchi/profile_txt03.png"
-                      alt=""
-                      className="dsp_hpt"
-                    />
-                    <img
-                      src="../../img/yamaguchi/profile_txt03_sp.png"
-                      alt=""
-                      className="dsp_smt"
-                    />
+                    <img src='../../img/yamaguchi/profile_txt03.png' alt='' className='dsp_hpt' />
+                    <img src='../../img/yamaguchi/profile_txt03_sp.png' alt='' className='dsp_smt' />
                   </dd>
                 </dl>
                 <dl>
                   <dt>
-                    <img src="../../img/yamaguchi/profile_name04.png" alt="" />
-                    <span className="label very">
-                      <a
-                        href="https://rikon.vbest.jp/"
-                        target="_blank"
-                        rel="nofollow noopener noreferrer"
-                      >
-                        <img
-                          src="../../img/top/bery_best_btn.png"
-                          alt="ベリーベスト法律事務所"
-                          loading="lazy"
-                        />
+                    <img src='../../img/yamaguchi/profile_name04.png' alt='' />
+                    <span className='label very'>
+                      <a href='https://rikon.vbest.jp/' target='_blank' rel='nofollow noopener noreferrer'>
+                        <img src='../../img/top/bery_best_btn.png' alt='ベリーベスト法律事務所' loading='lazy' />
                       </a>
                     </span>
                   </dt>
                   <dd>
-                    <img
-                      src="../../img/yamaguchi/profile_txt04.png"
-                      alt=""
-                      className="dsp_hpt"
-                    />
-                    <img
-                      src="../../img/yamaguchi/profile_txt04_sp.png"
-                      alt=""
-                      className="dsp_smt"
-                    />
+                    <img src='../../img/yamaguchi/profile_txt04.png' alt='' className='dsp_hpt' />
+                    <img src='../../img/yamaguchi/profile_txt04_sp.png' alt='' className='dsp_smt' />
                   </dd>
                 </dl>
               </div>
             </div>
-            <div id="yamaguchi_txt" className="bg_wide pt pb mp">
-              <p className="cen_pc nm">
+            <div id='yamaguchi_txt' className='bg_wide pt pb mp'>
+              <p className='cen_pc nm'>
                 お客様の気持ちに寄り添い、一日でも早く本来の笑顔を取り戻していただくことが、
-                <br className="dsp_hp" />
+                <br className='dsp_hp' />
                 私たち総合探偵社中央リサーチ山口スタッフ一同の願いです。
               </p>
             </div>
-            <div id="top_faq" className="pb">
-              <h3 className="mp">浮気の問題解決を困難にしてしまう事例</h3>
-              <p>
-                パートナーが浮気していると思われる場合の対応で最も行ってはならない事例をご紹介します。
-              </p>
-              <div className="list">
+            <div id='top_faq' className='pb'>
+              <h3 className='mp'>浮気の問題解決を困難にしてしまう事例</h3>
+              <p>パートナーが浮気していると思われる場合の対応で最も行ってはならない事例をご紹介します。</p>
+              <div className='list'>
                 <dl>
                   <dt>
                     <span>Q</span>
@@ -641,101 +483,78 @@ const yamaguchi = () => {
                 </dl>
               </div>
             </div>
-            <div id="top_corona" className="bg_wide pt pb">
-              <h3 className="mp cen">
+            <div id='top_corona' className='bg_wide pt pb'>
+              <h3 className='mp cen'>
                 <span>
                   中央リサーチ山口は
-                  <br className="dsp_smt" />
+                  <br className='dsp_smt' />
                   コロナ対策を実施しています。
                 </span>
               </h3>
-              <p className="b">
-                中央リサーチ山口ではお客様の健康と安全を守るために以下の感染予防対策を実施しています。
-              </p>
-              <div className="wrap">
+              <p className='b'>中央リサーチ山口ではお客様の健康と安全を守るために以下の感染予防対策を実施しています。</p>
+              <div className='wrap'>
                 <dl>
                   <dt>アルコール消毒液の設置</dt>
                   <dd>
-                    <p className="ico nm">
-                      <img
-                        src="../../img/top/corona01.png"
-                        loading="lazy"
-                        alt="アルコール消毒液の設置"
-                      />
+                    <p className='ico nm'>
+                      <img src='../../img/top/corona01.png' loading='lazy' alt='アルコール消毒液の設置' />
                     </p>
-                    <p className="txt thin nm">
-                      入口に消毒液を設置しておりますので手指の除菌にご協力お願いします。
-                    </p>
+                    <p className='txt thin nm'>入口に消毒液を設置しておりますので手指の除菌にご協力お願いします。</p>
                   </dd>
                 </dl>
                 <dl>
                   <dt>スタッフのマスク着用</dt>
                   <dd>
-                    <p className="ico nm">
-                      <img
-                        src="../../img/top/corona02.png"
-                        loading="lazy"
-                        alt="スタッフのマスク着用"
-                      />
+                    <p className='ico nm'>
+                      <img src='../../img/top/corona02.png' loading='lazy' alt='スタッフのマスク着用' />
                     </p>
-                    <p className="txt thin nm">
-                      全スタッフのマスクの着用を徹底しております。
-                    </p>
+                    <p className='txt thin nm'>全スタッフのマスクの着用を徹底しております。</p>
                   </dd>
                 </dl>
                 <dl>
                   <dt>スタッフの検温の確認</dt>
                   <dd>
-                    <p className="ico nm">
-                      <img
-                        src="../../img/top/corona03.png"
-                        loading="lazy"
-                        alt="スタッフの検温の確認"
-                      />
+                    <p className='ico nm'>
+                      <img src='../../img/top/corona03.png' loading='lazy' alt='スタッフの検温の確認' />
                     </p>
-                    <p className="txt thin nm">
-                      毎日出勤時に全スタッフの検温を実施して発熱の確認をしています。
-                    </p>
+                    <p className='txt thin nm'>毎日出勤時に全スタッフの検温を実施して発熱の確認をしています。</p>
                   </dd>
                 </dl>
               </div>
             </div>
-            <div id="top_about" className="bg_wide pt pb">
-              <div className="bg">
-                <h3 className="cen">
+            <div id='top_about' className='bg_wide pt pb'>
+              <div className='bg'>
+                <h3 className='cen'>
                   <span>
-                    <img
-                      src="../../img/top/txt.png"
-                      alt="総合探偵社 中央リサーチ"
-                    />
+                    <img src='../../img/top/txt.png' alt='総合探偵社 中央リサーチ' />
                   </span>
                 </h3>
-                <p className="earth">
-                  <span className="maru">
-                    <img src="../../img/top/earth.png" alt="" />
-                    <span className="txt">
+                <p className='earth'>
+                  <span className='maru'>
+                    <img src='../../img/top/earth.png' alt='' />
+                    <span className='txt'>
                       全国対応
                       <br />
                       海外もOK!
                     </span>
                   </span>
                 </p>
-                <p className="mp cen msg">
+                <p className='mp cen msg'>
                   つらい思いをされている方が
-                  <br className="dsp_tbs" />
+                  <br className='dsp_tbs' />
                   一日も早く笑顔を取り戻す為に・・・。
                   <br />
                   弊社スタッフは一丸となり
-                  <br className="dsp_smt" />
+                  <br className='dsp_smt' />
                   「人助け」の思いで、
-                  <br className="dsp_tbs" />
+                  <br className='dsp_tbs' />
                   日夜探偵業務に取り組んでおります。
                 </p>
-                <div className="wrap">
+                <div className='wrap'>
                   <dl>
                     <dt>山口相談室</dt>
                     <dd>
-                      <Link to="/yamaguchi/">総合探偵社中央リサーチ山口</Link>
+                      <Link to='/yamaguchi/'>総合探偵社中央リサーチ山口</Link>
                       <br />
                       山口県周南市平和通2丁目31 三真樹ビル2階
                       <br />
@@ -747,9 +566,7 @@ const yamaguchi = () => {
                   <dl>
                     <dt>広島相談室</dt>
                     <dd>
-                      <a href="https://www.chuou.biz/">
-                        総合探偵社中央リサーチ広島
-                      </a>
+                      <a href='https://www.chuou.biz/'>総合探偵社中央リサーチ広島</a>
                       <br />
                       広島県広島市中区上幟町2-45 今田ビル2F
                       <br />
@@ -761,7 +578,7 @@ const yamaguchi = () => {
                   <dl>
                     <dt>島根相談室</dt>
                     <dd>
-                      <Link to="/shimane/">総合探偵社中央リサーチ島根</Link>
+                      <Link to='/shimane/'>総合探偵社中央リサーチ島根</Link>
                       <br />
                       島根県松江市津田町305番 ツダマチビル1階
                       <br />
@@ -773,7 +590,7 @@ const yamaguchi = () => {
                   <dl>
                     <dt>岡山相談室</dt>
                     <dd>
-                      <Link to="/okayama/">総合探偵社中央リサーチ岡山</Link>
+                      <Link to='/okayama/'>総合探偵社中央リサーチ岡山</Link>
                       <br />
                       岡山県岡山市北区富田町1丁目1-1
                       <br />
@@ -785,7 +602,7 @@ const yamaguchi = () => {
                   <dl>
                     <dt>愛媛相談室</dt>
                     <dd>
-                      <Link to="/ehime/">総合探偵社中央リサーチ愛媛</Link>
+                      <Link to='/ehime/'>総合探偵社中央リサーチ愛媛</Link>
                       <br />
                       愛媛県松山市三番町7-7-1 村上ビル2階
                       <br />
@@ -807,12 +624,8 @@ const yamaguchi = () => {
                     </dd>
                   </dl>
                 </div>
-                <ul className="wrap">
-                  <a
-                    href="https://www.ncia-research.or.jp/"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
+                <ul className='wrap'>
+                  <a href='https://www.ncia-research.or.jp/' rel='noopener noreferrer' target='_blank'>
                     <li>
                       内閣総理大臣認可
                       <br />
@@ -836,154 +649,110 @@ const yamaguchi = () => {
                 </ul>
               </div>
             </div>
-            <div id="top_hiroshima" className="bg_wide pb yamaguchi">
-              <h3 className="mp">山口相談室案内</h3>
-              <div className="wrap">
-                <div className="img">
+            <div id='top_hiroshima' className='bg_wide pb yamaguchi'>
+              <h3 className='mp'>山口相談室案内</h3>
+              <div className='wrap'>
+                <div className='img'>
                   <p>
-                    <img src="../../img/yamaguchi/img_yamaguchi.jpg" alt="" />
+                    <img src='../../img/yamaguchi/img_yamaguchi.jpg' alt='' />
                     <br />
                     プライバシーを守る相談室
                   </p>
                 </div>
-                <p className="map">
-                  <a
-                    href="https://goo.gl/maps/BkgVy32pUpaQQycG8"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                    aria-label="GoogleMAP"
-                  >
-                    <img
-                      src="../../img/yamaguchi/map.png"
-                      loading="lazy"
-                      aria-label="GoogleMAP"
-                      alt="GoogleMAP"
-                    />
+                <p className='map'>
+                  <a href='https://goo.gl/maps/BkgVy32pUpaQQycG8' rel='nofollow noopener noreferrer' target='_blank' aria-label='GoogleMAP'>
+                    <img src='../../img/yamaguchi/map.png' loading='lazy' aria-label='GoogleMAP' alt='GoogleMAP' />
                   </a>
                 </p>
               </div>
-              <div className="photo">
-                <h3 className="mp">当社の看板</h3>
-                <ul className="box_flex yamaguchi">
+              <div className='photo'>
+                <h3 className='mp'>当社の看板</h3>
+                <ul className='box_flex yamaguchi'>
                   <li>
-                    <img src="../../img/yamaguchi/img_signboard01.jpg" alt="" />
+                    <img src='../../img/yamaguchi/img_signboard01.jpg' alt='' />
                   </li>
                   <li>
-                    <img src="../../img/yamaguchi/img_signboard02.jpg" alt="" />
+                    <img src='../../img/yamaguchi/img_signboard02.jpg' alt='' />
                   </li>
                   <li>
-                    <img src="../../img/yamaguchi/img_signboard03.jpg" alt="" />
+                    <img src='../../img/yamaguchi/img_signboard03.jpg' alt='' />
                   </li>
                 </ul>
               </div>
             </div>
-            <div id="top_koukoku" className="pt pb">
-              <div className="box_flex mb">
-                <div className="line">
-                  <div className="in">
+            <div id='top_koukoku' className='pt pb'>
+              <div className='box_flex mb'>
+                <div className='line'>
+                  <div className='in'>
                     <p>
-                      <img src="../../img/yamaguchi/logo_line.png" alt="" />
+                      <img src='../../img/yamaguchi/logo_line.png' alt='' />
                     </p>
-                    <p className="b">
+                    <p className='b'>
                       LINEからお問い合わせ
-                      <br className="dsp_smt" />
+                      <br className='dsp_smt' />
                       できます！
                     </p>
                     <p>
                       QRコードから
-                      <a
-                        href="https://line.me/R/ti/p/65gpK3qcDs"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                      >
+                      <a href='https://line.me/R/ti/p/65gpK3qcDs' rel='noopener noreferrer' target='_blank'>
                         「友だち登録」
                       </a>
                       すると、LINEでお問い合わせができます。
                     </p>
                   </div>
-                  <p className="qr">
-                    <img src="../../img/yamaguchi/qr_line.png" alt="" />
+                  <p className='qr'>
+                    <img src='../../img/yamaguchi/qr_line.png' alt='' />
                   </p>
                 </div>
-                <dl className="card">
+                <dl className='card'>
                   <dt>お支払いはクレジットでもご利用できます</dt>
                   <dd>
                     <p>
-                      <img src="../../img/yamaguchi/img_card01.png" alt="" />
+                      <img src='../../img/yamaguchi/img_card01.png' alt='' />
                     </p>
                     <p>
-                      <img src="../../img/yamaguchi/img_card02.png" alt="" />
+                      <img src='../../img/yamaguchi/img_card02.png' alt='' />
                     </p>
                   </dd>
                 </dl>
               </div>
-              <div className="list mb">
+              <div className='list mb'>
                 <dl>
-                  <dt className="mp">誇大広告にはご注意ください！</dt>
-                  <dd className="b">
-                    探偵案内所、探偵ランキングなど作為的に掲載し、一部の業者だけあっせん・誘導する根拠のない嘘の誇大広告にはご注意ください。
-                  </dd>
+                  <dt className='mp'>誇大広告にはご注意ください！</dt>
+                  <dd className='b'>探偵案内所、探偵ランキングなど作為的に掲載し、一部の業者だけあっせん・誘導する根拠のない嘘の誇大広告にはご注意ください。</dd>
                 </dl>
               </div>
               <ul>
                 <li>
-                  <a
-                    href="http://www.ncia-research.or.jp/"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src="../../img/yamaguchi/bana01.png"
-                      alt="全国調査業協同組合"
-                    />
+                  <a href='http://www.ncia-research.or.jp/' rel='nofollow noopener noreferrer' target='_blank'>
+                    <img src='../../img/yamaguchi/bana01.png' alt='全国調査業協同組合' />
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://www.pref.yamaguchi.lg.jp/site/police/"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src="../../img/yamaguchi/bana02.png"
-                      alt="山口県警察"
-                    />
+                  <a href='https://www.pref.yamaguchi.lg.jp/site/police/' rel='nofollow noopener noreferrer' target='_blank'>
+                    <img src='../../img/yamaguchi/bana02.png' alt='山口県警察' />
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://rikon.vbest.jp/"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src="../../img/yamaguchi/bana03.png"
-                      alt="ベリーベスト法律事務所"
-                    />
+                  <a href='https://rikon.vbest.jp/' rel='nofollow noopener noreferrer' target='_blank'>
+                    <img src='../../img/yamaguchi/bana03.png' alt='ベリーベスト法律事務所' />
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="https://best-legal.jp/want-to-claim-affair-alimony-3366"
-                    rel="nofollow noopener noreferrer"
-                    target="_blank"
-                  >
-                    <img
-                      src="../../img/yamaguchi/bana04.png"
-                      alt="不倫・浮気の慰謝料請求ならベリーベスト法律事務所"
-                    />
+                  <a href='https://best-legal.jp/want-to-claim-affair-alimony-3366' rel='nofollow noopener noreferrer' target='_blank'>
+                    <img src='../../img/yamaguchi/bana04.png' alt='不倫・浮気の慰謝料請求ならベリーベスト法律事務所' />
                   </a>
                 </li>
               </ul>
             </div>
-            <div id="top_area" className="bg_wide pt pb">
-              <h3 className="mp">
-                <b className="fm">全国対応</b>いたします
-                <b className="ok">海外もOK!</b>
+            <div id='top_area' className='bg_wide pt pb'>
+              <h3 className='mp'>
+                <b className='fm'>全国対応</b>いたします
+                <b className='ok'>海外もOK!</b>
               </h3>
-              <div className="box">
-                <h4 className="mp">山口対応可能エリア</h4>
-                <div className="wrap">
+              <div className='box'>
+                <h4 className='mp'>山口対応可能エリア</h4>
+                <div className='wrap'>
                   <ul>
                     <li>下関市</li>
                     <li>宇部市</li>
@@ -1019,7 +788,7 @@ const yamaguchi = () => {
                     <li>久米南町</li>
                   </ul>
                 </div>
-                <p className="blue nm">
+                <p className='blue nm'>
                   全国主要都市のネットワークで安心の調査をお約束いたします。
                   <br />
                   海外の調査も承ります。
@@ -1035,91 +804,82 @@ const yamaguchi = () => {
   );
 };
 
-const jsonN = "総合探偵社中央リサーチ山口",
-  jsonS = "yamaguchi",
-  jsonD =
-    "探偵で山口の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチ山口が高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　山口県周南市平和通２－３１村上ビル２階（JR徳山駅から徒歩３分）山口県公安委員会届け出済み";
+const jsonN = '総合探偵社中央リサーチ山口',
+  jsonS = 'yamaguchi',
+  jsonD = '探偵で山口の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチ山口が高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　山口県周南市平和通２－３１村上ビル２階（JR徳山駅から徒歩３分）山口県公安委員会届け出済み';
 
 const jsonLd = {
-  "@context": "http://schema.org/",
-  "@graph": [
+  '@context': 'http://schema.org/',
+  '@graph': [
     {
-      "@type": "LocalBusiness",
-      name: "総合探偵社中央リサーチ山口",
+      '@type': 'LocalBusiness',
+      name: '総合探偵社中央リサーチ山口',
       description: `${jsonD}`,
       url: `https://www.chuou.biz/${jsonS}/`,
-      logo: "https://www.chuou.biz/img/title.png",
-      image: ["https://www.chuou.biz/img/top/title_sp.jpg"],
-      telephone: "0834-22-7513",
+      logo: 'https://www.chuou.biz/img/title.png',
+      image: ['https://www.chuou.biz/img/top/title_sp.jpg'],
+      telephone: '0834-22-7513',
       address: {
-        "@type": "PostalAddress",
-        streetAddress: "山口県周南市平和通２－３１村上ビル２階",
-        addressLocality: "周南市",
-        postalCode: "745-0015",
-        addressRegion: "山口県",
-        addressCountry: "日本",
+        '@type': 'PostalAddress',
+        streetAddress: '山口県周南市平和通２－３１村上ビル２階',
+        addressLocality: '周南市',
+        postalCode: '745-0015',
+        addressRegion: '山口県',
+        addressCountry: '日本',
       },
       geo: {
-        "@type": "GeoCoordinates",
+        '@type': 'GeoCoordinates',
         latitude: 34.0497376,
         longitude: 131.8038309,
       },
-      priceRange: "お問い合わせください",
+      priceRange: 'お問い合わせください',
       openingHoursSpecification: [
         {
-          "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday",
-          ],
-          opens: "00:00",
-          closes: "24:00",
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '00:00',
+          closes: '24:00',
         },
       ],
     },
     {
-      "@type": "WebSite",
-      "@id": `https://www.chuou.biz/${jsonS}/#website`,
+      '@type': 'WebSite',
+      '@id': `https://www.chuou.biz/${jsonS}/#website`,
       url: `https://www.chuou.biz/${jsonS}/`,
       name: `${jsonN}`,
       description: `${jsonD}`,
-      inLanguage: "ja",
+      inLanguage: 'ja',
       publisher: {
-        "@id": `https://www.chuou.biz/${jsonS}/#person`,
+        '@id': `https://www.chuou.biz/${jsonS}/#person`,
       },
     },
     {
-      "@type": "WebPage",
-      "@id": `https://www.chuou.biz/${jsonS}/#webpage`,
+      '@type': 'WebPage',
+      '@id': `https://www.chuou.biz/${jsonS}/#webpage`,
       url: `https://www.chuou.biz/${jsonS}/`,
       name: `${jsonN}`,
       description: `${jsonD}`,
-      inLanguage: "ja",
+      inLanguage: 'ja',
       isPartOf: {
-        "@id": `https://www.chuou.biz/${jsonS}/#website`,
+        '@id': `https://www.chuou.biz/${jsonS}/#website`,
       },
       breadcrumb: {
-        "@id": `https://www.chuou.biz/${jsonS}/#breadcrumblist`,
+        '@id': `https://www.chuou.biz/${jsonS}/#breadcrumblist`,
       },
-      datePublished: "2023-2-22T21:00:00+09:00",
-      dateModified: "2023-3-03T04:00:00+09:00",
+      datePublished: '2023-2-22T21:00:00+09:00',
+      dateModified: '2023-3-03T04:00:00+09:00',
     },
     {
-      "@type": "BreadcrumbList",
-      "@id": `https://www.chuou.biz/${jsonS}/#breadcrumblist`,
+      '@type': 'BreadcrumbList',
+      '@id': `https://www.chuou.biz/${jsonS}/#breadcrumblist`,
       itemListElement: [
         {
-          "@type": "ListItem",
-          "@id": `https://www.chuou.biz/${jsonS}/#listItem`,
+          '@type': 'ListItem',
+          '@id': `https://www.chuou.biz/${jsonS}/#listItem`,
           position: 1,
           item: {
-            "@type": "WebPage",
-            "@id": `https://www.chuou.biz/${jsonS}/`,
+            '@type': 'WebPage',
+            '@id': `https://www.chuou.biz/${jsonS}/`,
             name: `${jsonN}`,
             description: `${jsonD}`,
             url: `https://www.chuou.biz/${jsonS}/`,
@@ -1134,11 +894,11 @@ const jsonLd = {
 export const Head = () => (
   <>
     <Seo
-      title2="山口の探偵｜浮気調査は55年の実績と信頼｜総合探偵社中央リサーチ山口"
-      description="探偵で山口の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチ山口が高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　山口県周南市平和通２－３１村上ビル２階（JR徳山駅から徒歩３分）山口県公安委員会届け出済み"
-      keyword="探偵,山口,興信所,浮気調査,中央リサーチ山口"
+      title2='山口の探偵｜浮気調査は55年の実績と信頼｜総合探偵社中央リサーチ山口'
+      description='探偵で山口の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチ山口が高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　山口県周南市平和通２－３１村上ビル２階（JR徳山駅から徒歩３分）山口県公安委員会届け出済み'
+      keyword='探偵,山口,興信所,浮気調査,中央リサーチ山口'
     />
-    <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+    <script type='application/ld+json'>{JSON.stringify(jsonLd)}</script>
   </>
 );
 
