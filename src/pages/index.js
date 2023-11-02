@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => {
   dayjs.locale('ja');
   return (
     <>
-      <Header h1title='広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ' />
+      <Header h1title='広島の探偵中央リサーチ｜浮気調査55年の実績と信頼' />
 
       <div id='img_top_msg' className='bg_blue_grad'>
         <p className='mp nm'>内閣総理大臣認可 全国調査業協同組合組合員</p>
@@ -576,7 +576,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'LocalBusiness',
-      name: '広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ',
+      name: '広島の探偵中央リサーチ｜浮気調査55年の実績と信頼',
       description: '広島の信頼できる探偵 - 中央リサーチは、55年の実績で浮気・不倫の総合調査を得意とし、迅速かつ確実な証拠収集をお約束します。料金は明瞭で、初回相談は無料。広島市中区にあり、広島県公安委員会に正式に届け出ている安心の探偵社です。',
       url: 'https://www.chuou.biz/',
       logo: 'https://www.chuou.biz/img/title.png',
@@ -609,7 +609,7 @@ const jsonLd = {
       '@type': 'WebSite',
       '@id': 'https://www.chuou.biz/#website',
       url: 'https://www.chuou.biz/',
-      name: '広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ',
+      name: '広島の探偵中央リサーチ｜浮気調査55年の実績と信頼',
       description: '広島の信頼できる探偵 - 中央リサーチは、55年の実績で浮気・不倫の総合調査を得意とし、迅速かつ確実な証拠収集をお約束します。料金は明瞭で、初回相談は無料。広島市中区にあり、広島県公安委員会に正式に届け出ている安心の探偵社です。',
       inLanguage: 'ja',
       publisher: {
@@ -620,7 +620,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': 'https://www.chuou.biz/#webpage',
       url: 'https://www.chuou.biz/',
-      name: '広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ',
+      name: '広島の探偵中央リサーチ｜浮気調査55年の実績と信頼',
       description: '広島の信頼できる探偵 - 中央リサーチは、55年の実績で浮気・不倫の総合調査を得意とし、迅速かつ確実な証拠収集をお約束します。料金は明瞭で、初回相談は無料。広島市中区にあり、広島県公安委員会に正式に届け出ている安心の探偵社です。',
       inLanguage: 'ja',
       isPartOf: {
@@ -643,7 +643,7 @@ const jsonLd = {
           item: {
             '@type': 'WebPage',
             '@id': 'https://www.chuou.biz/',
-            name: '広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ',
+            name: '広島の探偵中央リサーチ｜浮気調査55年の実績と信頼',
             description: '広島の信頼できる探偵 - 中央リサーチは、55年の実績で浮気・不倫の総合調査を得意とし、迅速かつ確実な証拠収集をお約束します。料金は明瞭で、初回相談は無料。広島市中区にあり、広島県公安委員会に正式に届け出ている安心の探偵社です。',
             url: 'https://www.chuou.biz/',
           },
@@ -656,7 +656,7 @@ const jsonLd = {
 
 export const Head = () => (
   <>
-    <Seo title2='広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ' description='広島の信頼できる探偵 - 中央リサーチは、55年の実績で浮気・不倫の総合調査を得意とし、迅速かつ確実な証拠収集をお約束します。料金は明瞭で、初回相談は無料。広島市中区にあり、広島県公安委員会に正式に届け出ている安心の探偵社です。' />
+    <Seo title2='広島の探偵中央リサーチ｜浮気調査55年の実績と信頼' description='広島の信頼できる探偵 - 中央リサーチは、55年の実績で浮気・不倫の総合調査を得意とし、迅速かつ確実な証拠収集をお約束します。料金は明瞭で、初回相談は無料。広島市中区にあり、広島県公安委員会に正式に届け出ている安心の探偵社です。' />
     <script type='application/ld+json'>{JSON.stringify(jsonLd)}</script>
   </>
 );
