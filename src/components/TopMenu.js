@@ -36,7 +36,7 @@ const TopMenu = () => {
               <a href='https://www.google.com/search?q=%E4%B8%AD%E5%A4%AE%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81%E5%BA%83%E5%B3%B6&oq=&aqs=chrome.1.35i39i362l8.447828j0j7&sourceid=chrome&ie=UTF-8#lrd=0x355a98aec914fe47:0xc729f078c1ec08b6,1,,,,' rel='nofollow noopener noreferrer' target='_blank'>
                 Googleクチコミ実績
               </a>
-              <StaticImage src='../img/top/hoshi4.5.png' width={66} height={11} loading='lazy' alt='' />
+              <StaticImage src='../img/top/hoshi5.png' width={66} height={11} loading='lazy' alt='' />
             </div>
 
             <p className='comment cen dsp_hpt ml20 smp'>
