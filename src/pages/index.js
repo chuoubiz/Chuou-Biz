@@ -579,8 +579,8 @@ const jsonLd = {
       name: '広島の探偵｜浮気調査は55年の実績と信頼｜総合探偵社 中央リサーチ',
       description: '探偵で広島の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチが高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　広島県広島市中区上幟町２－４５今田ビル２階（広島家庭裁判所前）広島県公安委員会届け出済み',
       url: 'https://www.chuou.biz/',
-      logo: 'https://www.chuou.biz/img/title.png',
-      image: ['https://www.chuou.biz/img/top/title_sp.jpg'],
+      logo: 'https://chuou.biz/img/logo.png',
+      image: ['https://chuou.biz/img/ogp.jpg'],
       telephone: '0120-30-6630',
       address: {
         '@type': 'PostalAddress',
