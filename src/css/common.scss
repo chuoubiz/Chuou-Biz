@@ -1039,6 +1039,202 @@ p.link.full a span::after {
 .bg_blue_grad2 {
   background: linear-gradient(90deg, rgba(20, 170, 213, 1) 0%, rgba(0, 94, 156, 1) 100%);
 }
+
+.dark-blue {
+  color: #005e9c;
+}
+.bold {
+  font-weight: 900;
+}
+.txt16 {
+  font-size: 16px;
+}
+.txt20 {
+  font-size: 20px;
+}
+
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.jirei_page {
+  #case01,
+  #case02,
+  #case03,
+  #case04,
+  #case05 {
+    border: 1px solid #14aad5;
+    padding: 10px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    .case_inner {
+      background: #e7f6fb;
+      padding: 45px 20px 20px;
+      position: relative;
+      .subtitle {
+        position: relative;
+
+        h2 {
+          &.case {
+            color: rgba(20, 170, 213, 0.2);
+            font-size: 56px;
+            left: -20px;
+            letter-spacing: 2.8px;
+            line-height: 1.2;
+            position: absolute;
+            top: -45px;
+            z-index: 0;
+            display: block;
+            width: 100%;
+            .fa-angle-down {
+              background-color: #14aad5;
+              border-radius: 100px;
+              box-sizing: border-box;
+              color: #fff;
+              display: inline-block;
+              font-size: 40px;
+              width: 40px;
+              height: 40px;
+              padding: 10px;
+              position: absolute;
+              right: -20px;
+              top: 20px;
+              @media not screen and (min-width: 769px) {
+                top: 5px;
+              }
+            }
+          }
+        }
+      }
+      .irai_box {
+        position: relative;
+        .irai_list {
+          display: flex;
+          flex-wrap: wrap;
+          margin: 10px 0;
+          li {
+            display: inline-flex;
+            background: #14aad5 url('../img/investigation_case/human.png') no-repeat left 15px center;
+            background-size: 16px auto;
+            border-radius: 30px;
+            color: #fff;
+            padding: 5px 15px 5px 40px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            &.target {
+              background-color: #005e9c;
+            }
+          }
+        }
+        .case_img {
+          @media screen and (min-width: 769px) {
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+          @media not screen and (min-width: 769px) {
+            text-align: center;
+          }
+        }
+        .irai_naiyo {
+          margin: 15px 0;
+          &:first-of-type {
+            width: 620px;
+            @media not screen and (min-width: 1025px) {
+              width: 550px;
+            }
+            @media not screen and (min-width: 769px) {
+              width: 100%;
+            }
+          }
+          dt {
+            background: url('../img/investigation_case/target.png') no-repeat left top;
+            font-size: 18px;
+            font-weight: bold;
+            color: #005e9c;
+            border-bottom: 1px solid #14aad5;
+            padding: 3px 0 5px 35px;
+            margin-bottom: 15px;
+          }
+        }
+        .irai_come {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          dt {
+            background: #14aad5;
+            border-radius: 50%;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            width: 75px;
+            height: 75px;
+            img {
+              height: 100%;
+            }
+
+            @media not screen and (min-width: 769px) {
+              box-sizing: border-box;
+
+              width: 45px;
+              height: 45px;
+              padding: 8px;
+            }
+          }
+          dd {
+            width: 90%;
+            background: #fff;
+            border-radius: 15px;
+            padding: 25px;
+            position: relative;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            @media not screen and (min-width: 769px) {
+              width: 75%;
+              padding: 15px;
+              margin-bottom: 25px;
+            }
+            &:before {
+              border: 15px solid transparent;
+              border-right: 20px solid #fff;
+              content: '';
+              left: -34px;
+              position: absolute;
+              top: 20px;
+              @media not screen and (min-width: 769px) {
+                top: 10px;
+              }
+            }
+            p {
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+          &.reverce {
+            flex-direction: row-reverse;
+            dt {
+              background: #333;
+            }
+            dd {
+              &::before {
+                border-left: 20px solid #fff;
+                border-right: none;
+                left: auto;
+                right: -20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 .investigation_case h4 {
   font-size: 18px;
   color: #005e9c;

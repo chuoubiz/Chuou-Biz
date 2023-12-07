@@ -438,7 +438,7 @@ const index = () => {
                   <dt>
                     <img src='../../img/ehime/profile_name04.png' alt='' />
                     <span className='label very'>
-                      <a to='https://rikon.vbest.jp/' target='_blank' rel='nofollow noopener noreferrer'>
+                      <a href='https://rikon.vbest.jp/' target='_blank' rel='nofollow noopener noreferrer'>
                         <img src='../../img/top/bery_best_btn.png' alt='ベリーベスト法律事務所' loading='lazy' />
                       </a>
                     </span>
@@ -879,11 +879,7 @@ const jsonLd = {
 
 export const Head = () => (
   <>
-    <Seo
-      title2='愛媛の探偵｜浮気調査は55年の実績と信頼｜総合探偵社中央リサーチ愛媛'
-      description='探偵で愛媛の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチ愛媛が高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　愛媛県松山市三番町７－７－１村上ビル2階（松山市民病院から徒歩２分）愛媛県公安委員会届け出済み'
-      keyword='探偵,愛媛,興信所,浮気調査,中央リサーチ愛媛'
-    />
+    <Seo title2='愛媛の探偵｜浮気調査は55年の実績と信頼｜総合探偵社中央リサーチ愛媛' description='探偵で愛媛の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチ愛媛が高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　愛媛県松山市三番町７－７－１村上ビル2階（松山市民病院から徒歩２分）愛媛県公安委員会届け出済み' keyword='探偵,愛媛,興信所,浮気調査,中央リサーチ愛媛' />
     <script type='application/ld+json'>{JSON.stringify(jsonLd)}</script>
   </>
 );
