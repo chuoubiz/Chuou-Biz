@@ -9,12 +9,12 @@ import Breadcrumb from '../../components/breadcrumb';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
-const Jirei = () => {
+const Jirei = ({ location }) => {
   const pagemeta = {
     title: `事例紹介`,
     slug: `jirei`,
   };
-  const [isOpen, setIsOpen] = useState({ case01: true, case02: false, case03: false, case04: false, case05: false });
+  const [isOpen, setIsOpen] = useState({ case01: false, case02: false, case03: false, case04: false, case05: false });
 
   const toggleAccordion = (sectionId) => {
     setIsOpen((prev) => ({
@@ -23,31 +23,32 @@ const Jirei = () => {
     }));
   };
 
+  const hash = location.hash;
+  const additionalOffset = 100; // 追加のオフセット値を設定
+
   useEffect(() => {
-    const hash = window.location.hash;
-
-    if (hash) {
-      const isCase01 = hash.substring(1) === 'case01';
-      const additionalOffset = isCase01 ? 130 : 100; // case01の場合は大きいオフセットを適用
-
-      if (!isOpen[hash.substring(1)]) {
-        toggleAccordion(hash.substring(1));
-      }
-
-      setTimeout(() => {
-        const targetElement = document.querySelector(hash);
-        if (targetElement) {
-          const elementPosition = targetElement.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - additionalOffset;
-
-          window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth',
-          });
+    if (typeof window !== 'undefined') {
+      if (hash) {
+        const sectionId = hash.substring(1);
+        if (!isOpen[sectionId]) {
+          toggleAccordion(sectionId);
         }
-      }, 100); // アコーディオンが開くのにかかる時間
+
+        setTimeout(() => {
+          const targetElement = document.querySelector(hash);
+          if (targetElement) {
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - additionalOffset;
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth',
+            });
+          }
+        }, 300); // アコーディオンが開くまでの遅延時間
+      }
     }
-  }, [window.location.hash]);
+  }, [hash, isOpen]); // 依存配列を更新
 
   return (
     <>
