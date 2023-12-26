@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Seo from '../../components/SEO';
 import HeaderYamaguchi from '../../components/HeaderYamaguchi';
@@ -22,6 +22,33 @@ const Jirei = () => {
       [sectionId]: !prev[sectionId],
     }));
   };
+
+  useEffect(() => {
+    const hash = window.location.hash;
+
+    if (hash) {
+      const isCase01 = hash.substring(1) === 'case01';
+      const additionalOffset = isCase01 ? 130 : 100; // case01の場合は大きいオフセットを適用
+
+      if (!isOpen[hash.substring(1)]) {
+        toggleAccordion(hash.substring(1));
+      }
+
+      setTimeout(() => {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - additionalOffset;
+
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }
+      }, 100); // アコーディオンが開くのにかかる時間
+    }
+  }, [window.location.hash]);
+
   return (
     <>
       <div id='wrap'>
