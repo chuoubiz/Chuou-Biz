@@ -13,7 +13,7 @@ import timezone from 'dayjs/plugin/timezone';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault("Asia/Tokyo");
+dayjs.tz.setDefault('Asia/Tokyo');
 
 const PostPage = ({ data }) => {
   dayjs.locale('ja');
@@ -23,37 +23,44 @@ const PostPage = ({ data }) => {
     <>
       <div id='wrap'>
         <Header h1title={`${microcmsPosts.category.name}｜${microcmsPosts.title}`} />
-        <SubpageTitle subtitle={microcmsPosts.category.name} id="column" />
+        <SubpageTitle subtitle={microcmsPosts.category.name} id='column' />
         <Breadcrumb url={`/category/${microcmsPosts.category.id}/`} cat={microcmsPosts.category.name} title={data.microcmsPosts.title} />
         <Layout>
-          <div className="main pb">
-
-            <article className="main">
-
-              {data.microcmsPosts.eyecatch ? (
-                <div className="eyecatch_img">
-                  <img
-                    src={data.microcmsPosts.eyecatch.url + '?fm=webp'}
-                    width={370}
-                    height={277}
-                    alt={data.microcmsPosts.title + 'サムネイル画像'}
-                    loading="lazy"
-                  />
+          <div className='main pb'>
+            <article className='main'>
+              {data.microcmsPosts.eyecatch && (
+                <div className='eyecatch_img'>
+                  <img src={data.microcmsPosts.eyecatch.url + '?fm=webp'} width={370} height={277} alt={data.microcmsPosts.title + 'サムネイル画像'} loading='lazy' />
                 </div>
-              ) : null}
+              )}
 
-              <h3 className="line">{data.microcmsPosts.title}<br />
-              <span className='date'>更新日：<time dateTime={dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY-MM-DDTHH:mm:ss')}>{dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY/MM/DD')}</time></span></h3>
+              <h3 className='line'>
+                {data.microcmsPosts.title}
+                <br />
+                <span className='date'>
+                  更新日：<time dateTime={dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY-MM-DDTHH:mm:ss')}>{dayjs.utc(data.microcmsPosts.date).tz('Asia/Tokyo').format('YYYY/MM/DD')}</time>
+                </span>
+              </h3>
 
-              <div className='post_main_box'
-              dangerouslySetInnerHTML={{
+              <div
+                className='post_main_box'
+                dangerouslySetInnerHTML={{
                   __html: `${data.microcmsPosts.content}`,
-              }}
+                }}
               />
 
-              <p class="cen"><a href={`/category/${microcmsPosts.category.id}/`} className='bt01'>一覧に戻る</a></p>
-              <p class="cen"><a href="/" className='bt01'>広島で浮気調査なら<br class="dsp_smt" />総合探偵社 中央リサーチ広島へ</a></p>
-                
+              <p class='cen'>
+                <a href={`/category/${microcmsPosts.category.id}/`} className='bt01'>
+                  一覧に戻る
+                </a>
+              </p>
+              <p class='cen'>
+                <a href='/' className='bt01'>
+                  広島で浮気調査なら
+                  <br class='dsp_smt' />
+                  総合探偵社 中央リサーチ広島へ
+                </a>
+              </p>
             </article>
           </div>
         </Layout>
@@ -63,32 +70,28 @@ const PostPage = ({ data }) => {
   );
 };
 
-export const Head = ({data}) => (  
-  <>  
-    <Seo title2={data.microcmsPosts.title} /> 
+export const Head = ({ data }) => (
+  <>
+    <Seo title2={data.microcmsPosts.title} />
   </>
-)
+);
 
 export const query = graphql`
-query ($postId: String) {
-  microcmsPosts(id: {eq: $postId}) {
-    title
-    category {
-      id
-      name
+  query ($postId: String) {
+    microcmsPosts(id: { eq: $postId }) {
+      title
+      category {
+        id
+        name
+      }
+      content
+      eyecatch {
+        url
+      }
+      postsId
+      date
     }
-    content
-    eyecatch {
-      url
-    }
-    postsId    
-    date
   }
-}
 `;
 
-
-
 export default PostPage;
-
-
