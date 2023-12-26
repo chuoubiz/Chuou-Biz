@@ -28,7 +28,7 @@ const Jirei = () => {
 
     if (hash) {
       const isCase01 = hash.substring(1) === 'case01';
-      const additionalOffset = isCase01 ? 100 : 100; // case01の場合は大きいオフセットを適用
+      const additionalOffset = isCase01 ? 130 : 100; // case01の場合は大きいオフセットを適用
 
       if (!isOpen[hash.substring(1)]) {
         toggleAccordion(hash.substring(1));
