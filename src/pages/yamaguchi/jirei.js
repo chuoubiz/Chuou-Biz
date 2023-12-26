@@ -27,13 +27,15 @@ const Jirei = ({ location }) => {
   const additionalOffset = 100; // 追加のオフセット値を設定
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (hash) {
-        const sectionId = hash.substring(1);
-        if (!isOpen[sectionId]) {
-          toggleAccordion(sectionId);
-        }
+    if (typeof window !== 'undefined' && hash) {
+      const sectionId = hash.substring(1);
 
+      if (!isOpen[sectionId]) {
+        toggleAccordion(sectionId);
+      }
+
+      // 初回レンダリング時のみスクロール位置を調整
+      if (!window.location.hashScrolled) {
         setTimeout(() => {
           const targetElement = document.querySelector(hash);
           if (targetElement) {
@@ -46,9 +48,11 @@ const Jirei = ({ location }) => {
             });
           }
         }, 300); // アコーディオンが開くまでの遅延時間
+
+        window.location.hashScrolled = true; // スクロールが完了したことをマーク
       }
     }
-  }, [hash, isOpen]); // 依存配列を更新
+  }, [hash]);
 
   return (
     <>
