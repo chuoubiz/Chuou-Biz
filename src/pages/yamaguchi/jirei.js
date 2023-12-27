@@ -24,35 +24,31 @@ const Jirei = ({ location }) => {
   };
 
   const hash = location.hash;
-  const additionalOffset = 100; // 追加のオフセット値を設定
+  const additionalOffset = 50; // 追加のオフセット値を設定
 
   useEffect(() => {
-    if (typeof window !== 'undefined' && hash) {
-      const sectionId = hash.substring(1);
+    const sectionId = hash.substring(1); // ハッシュからセクションIDを取得
 
+    if (sectionId) {
+      // セクションが閉じている場合のみtoggleAccordionを呼び出す
       if (!isOpen[sectionId]) {
         toggleAccordion(sectionId);
       }
 
-      // 初回レンダリング時のみスクロール位置を調整
-      if (!window.location.hashScrolled) {
-        setTimeout(() => {
-          const targetElement = document.querySelector(hash);
-          if (targetElement) {
-            const elementPosition = targetElement.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - additionalOffset;
-
-            window.scrollTo({
-              top: offsetPosition,
-              behavior: 'smooth',
-            });
-          }
-        }, 300); // アコーディオンが開くまでの遅延時間
-
-        window.location.hashScrolled = true; // スクロールが完了したことをマーク
-      }
+      // アコーディオンが開くのにかかる時間後にスクロール位置を調整
+      setTimeout(() => {
+        const targetElement = document.getElementById(sectionId);
+        if (targetElement) {
+          const elementPosition = targetElement.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - additionalOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth',
+          });
+        }
+      }, 300); // 300ミリ秒はアコーディオンが開くのにかかる時間に基づく
     }
-  }, [hash]);
+  }, [hash, isOpen]);
 
   return (
     <>
@@ -70,9 +66,15 @@ const Jirei = ({ location }) => {
               <section id='case01'>
                 <div class='case_inner'>
                   <div class='subtitle'>
-                    <h2 className='case serif' onClick={() => toggleAccordion('case01')}>
+                    <h2 className='case serif'>
                       Case01
-                      <FontAwesomeIcon icon={faAngleDown} />
+                      <button
+                        className='case-button' // 必要に応じてクラス名を指定
+                        onClick={() => toggleAccordion('case01')}
+                        aria-label='case01' // スクリーンリーダー用のラベル
+                      >
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </button>
                     </h2>
                     <p className='bold txt20 mb0'>浮気を繰り返す夫に証拠を突き付けて今度こそ反省させたい！</p>
                     浮気調査の事例{' '}
@@ -129,9 +131,15 @@ const Jirei = ({ location }) => {
               <section id='case02'>
                 <div class='case_inner'>
                   <div class='subtitle'>
-                    <h2 className='case serif' onClick={() => toggleAccordion('case02')}>
+                    <h2 className='case serif'>
                       Case02
-                      <FontAwesomeIcon icon={faAngleDown} />
+                      <button
+                        className='case-button' // 必要に応じてクラス名を指定
+                        onClick={() => toggleAccordion('case02')}
+                        aria-label='case02' // スクリーンリーダー用のラベル
+                      >
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </button>
                     </h2>
                     <p className='bold txt20 mb0'>新入社員が次々に辞める原因は悪質な女性従業員か？素行調査で分かったいじめの実態とは</p>
                     素行調査の事例
@@ -203,9 +211,15 @@ const Jirei = ({ location }) => {
               <section id='case03'>
                 <div class='case_inner'>
                   <div class='subtitle'>
-                    <h2 className='case serif' onClick={() => toggleAccordion('case03')}>
+                    <h2 className='case serif'>
                       Case03
-                      <FontAwesomeIcon icon={faAngleDown} />
+                      <button
+                        className='case-button' // 必要に応じてクラス名を指定
+                        onClick={() => toggleAccordion('case03')}
+                        aria-label='case03' // スクリーンリーダー用のラベル
+                      >
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </button>
                     </h2>
                     <p className='bold txt20 mb0'>憧れのマイホーム入居後に近隣住民から嫌がらせを受けて地獄の日々…</p>
                     嫌がらせの事例
@@ -275,9 +289,15 @@ const Jirei = ({ location }) => {
               <section id='case04'>
                 <div class='case_inner'>
                   <div class='subtitle'>
-                    <h2 className='case serif' onClick={() => toggleAccordion('case04')}>
+                    <h2 className='case serif'>
                       Case04
-                      <FontAwesomeIcon icon={faAngleDown} />
+                      <button
+                        className='case-button' // 必要に応じてクラス名を指定
+                        onClick={() => toggleAccordion('case04')}
+                        aria-label='case04' // スクリーンリーダー用のラベル
+                      >
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </button>
                     </h2>
                     <p className='bold txt20 mb0'>婚約者にLGBTQであることを隠されているかもしれない…隠し事をせず話してほしい…</p>
                     結婚調査の事例
@@ -348,9 +368,15 @@ const Jirei = ({ location }) => {
               <section id='case05'>
                 <div class='case_inner'>
                   <div class='subtitle'>
-                    <h2 className='case serif' onClick={() => toggleAccordion('case05')}>
+                    <h2 className='case serif'>
                       Case05
-                      <FontAwesomeIcon icon={faAngleDown} />
+                      <button
+                        className='case-button' // 必要に応じてクラス名を指定
+                        onClick={() => toggleAccordion('case05')}
+                        aria-label='case05' // スクリーンリーダー用のラベル
+                      >
+                        <FontAwesomeIcon icon={faAngleDown} />
+                      </button>
                     </h2>
                     <p className='bold txt20 mb0'>朝起きたら認知症のおばあちゃんがいない！荷物も何も持たずにどこへ行った？！</p>
                     家出調査の事例
