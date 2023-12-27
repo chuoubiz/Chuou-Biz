@@ -1,15 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function Layout({children}) {
+export default function Layout({ children }) {
   return (
     <>
-    
-    
-    <section id="container" className="cf">
-        
-        {children}
-        
-    </section>
+      <section id='container'>{children}</section>
     </>
-  )
+  );
 }
