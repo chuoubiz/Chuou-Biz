@@ -31,12 +31,13 @@ const Jirei = ({ location }) => {
     const sectionId = hash.substring(1); // ハッシュからセクションIDを取得
 
     if (sectionId) {
-      // セクションが閉じている場合のみtoggleAccordionを呼び出す
-      if (!isOpen[sectionId]) {
-        toggleAccordion(sectionId);
-      }
+      // 初期状態で特定のセクションを開く
+      setIsOpen((prev) => ({
+        ...prev,
+        [sectionId]: true,
+      }));
 
-      // アコーディオンが開くのにかかる時間後にスクロール位置を調整
+      // スクロール位置の調整
       setTimeout(() => {
         const targetElement = document.getElementById(sectionId);
         if (targetElement) {
@@ -47,9 +48,9 @@ const Jirei = ({ location }) => {
             behavior: 'smooth',
           });
         }
-      }, 300); // 300ミリ秒はアコーディオンが開くのにかかる時間に基づく
+      }, 300);
     }
-  }, [hash, isOpen]);
+  }, [hash]);
 
   return (
     <>
