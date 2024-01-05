@@ -75,22 +75,34 @@ const HeaderOkayama = (props) => {
 
                 <ul className='smpnav-content'>
                   <li>
-                    <Link to='/okayama/about/#uwaki'>浮気・不倫調査</Link>
+                    <Link to='/okayama/about/#uwaki' state={{ scrollTo: true }}>
+                      浮気・不倫調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/okayama/about/#sokou'>素行調査</Link>
+                    <Link to='/okayama/about/#sokou' state={{ scrollTo: true }}>
+                      素行調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/okayama/about/#konzen'>婚前・身上調査</Link>
+                    <Link to='/okayama/about/#konzen' state={{ scrollTo: true }}>
+                      婚前・身上調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/okayama/about/#oede'>家出・所在調査</Link>
+                    <Link to='/okayama/about/#iede' state={{ scrollTo: true }}>
+                      家出・所在調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/okayama/about/#stalker'>いじめ・嫌がらせ対策</Link>
+                    <Link to='/okayama/about/#stalker' state={{ scrollTo: true }}>
+                      いじめ・嫌がらせ対策
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/okayama/about/#touchouki'>盗聴器発見</Link>
+                    <Link to='/okayama/about/#touchouki' state={{ scrollTo: true }}>
+                      盗聴器発見
+                    </Link>
                   </li>
                 </ul>
               </li>
