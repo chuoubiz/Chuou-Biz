@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'gatsby';
 
 import Seo from '../../components/SEO';
@@ -8,7 +8,18 @@ import Layout from '../../components/Layout';
 import SubpageTitle from '../../components/SubpageTitle';
 import Breadcrumb from '../../components/breadcrumb';
 
-const about = () => {
+const About = () => {
+  useEffect(() => {
+    if (window.location.hash) {
+      setTimeout(() => {
+        const id = window.location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100); // 小さな遅延を設ける
+    }
+  }, []); // 空の依存配列を指定して、コンポーネントのマウント時にのみ実行
   const pagemeta = {
     title: `調査項目`,
     slug: `about`,
@@ -110,4 +121,4 @@ export const Head = () => (
     <Seo title2='調査項目｜総合探偵社中央リサーチ山口' description='山口の興信所・探偵社の中央リサーチ山口の調査項目について。浮気調査を最も得意とする探偵社です。ご依頼者様の心のお悩みを解決し、平穏な日々を取り戻せるよう全力を尽くします。浮気調査に多くの実績を持つ当社にお任せください。' keyword='調査項目,探偵,山口,興信所,浮気調査,中央リサーチ山口' />
   </>
 );
-export default about;
+export default About;

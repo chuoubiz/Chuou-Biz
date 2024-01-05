@@ -74,22 +74,34 @@ const HeaderYamaguchi = (props) => {
                 </label>
                 <ul className='smpnav-content'>
                   <li>
-                    <Link to='/yamaguchi/about/#uwaki'>浮気・不倫調査</Link>
+                    <Link to='/yamaguchi/about/#uwaki' state={{ scrollTo: true }}>
+                      浮気・不倫調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/yamaguchi/about/#saiban'>裁判証拠収集</Link>
+                    <Link to='/yamaguchi/about/#saiban' state={{ scrollTo: true }}>
+                      裁判証拠収集
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/yamaguchi/about/#kekkon'>結婚・身上調査</Link>
+                    <Link to='/yamaguchi/about/#kekkon' state={{ scrollTo: true }}>
+                      結婚・身上調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/yamaguchi/about/#iede'>家出・所在調査</Link>
+                    <Link to='/yamaguchi/about/#iede' state={{ scrollTo: true }}>
+                      家出・所在調査
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/yamaguchi/about/#stalker'>嫌がらせ対策</Link>
+                    <Link to='/yamaguchi/about/#stalker' state={{ scrollTo: true }}>
+                      嫌がらせ対策
+                    </Link>
                   </li>
                   <li>
-                    <Link to='/yamaguchi/about/#touchouki'>盗聴器発見</Link>
+                    <Link to='/yamaguchi/about/#touchouki' state={{ scrollTo: true }}>
+                      盗聴器発見
+                    </Link>
                   </li>
                 </ul>
               </li>
