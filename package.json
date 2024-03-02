@@ -23,6 +23,7 @@
     "gatsby-paginate": "^1.1.1",
     "gatsby-plugin-canonical-urls": "^5.7.0",
     "gatsby-plugin-google-tagmanager": "^5.7.0",
+    "gatsby-plugin-htaccess": "^1.4.0",
     "gatsby-plugin-image": "^3.6.0",
     "gatsby-plugin-lodash": "^6.6.0",
     "gatsby-plugin-netlify": "^5.1.0",

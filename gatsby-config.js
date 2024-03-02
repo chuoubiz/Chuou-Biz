@@ -18,8 +18,8 @@ module.exports = {
     keyword: '探偵,広島,興信所,浮気調査,結婚・身上調査,中央リサーチ広島',
     description: '探偵で広島の調査なら｢浮気調査、不倫調査」を最も得意とする総合探偵社中央リサーチが高いスキルで浮気の証拠をとり早期解決に導きます。分かりやすい料金表でお見積り、ご相談無料です。所在地　広島県広島市中区上幟町２－４５今田ビル２階（広島家庭裁判所前）広島県公安委員会届け出済み',
     image: '/img/ogp.jpg',
-    url: 'https://www.chuou.biz',
-    siteUrl: 'https://www.chuou.biz',
+    url: 'https:/chuou.biz',
+    siteUrl: 'https://chuou.biz',
     timezone: 'Asia/Tokyo',
   },
   plugins: [
@@ -62,12 +62,18 @@ module.exports = {
       },
     },
 
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        entryLimit: 50000,
+        resolveSiteUrl: () => 'https://chuou.biz',
+      },
+    },
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: `https://www.chuou.biz/`,
-        sitemap: `https://www.chuou.biz/sitemap-0.xml`,
+        host: `https://chuou.biz`,
+        sitemap: `https://chuou.biz/sitemap-index.xml`,
         policy: [{ userAgent: `*`, allow: `/` }],
       },
     },
@@ -75,10 +81,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://www.chuou.biz`,
+        siteUrl: `https://chuou.biz`,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-htaccess',
+      options: {
+        RewriteBase: '/',
+        https: true,
+        www: false,
+        SymLinksIfOwnerMatch: true,
+        host: 'chuou.biz', // if 'www' is set to 'false', be sure to also remove it here!
+        ErrorDocument: `          
+          ErrorDocument 404 /error_pages/404.html
+        `,
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {
