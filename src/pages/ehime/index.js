@@ -81,7 +81,7 @@ const index = () => {
               </div>
 
               <div className='top_price_txt smp'>
-                <StaticImage src='../../img/plan_txt01_smp.webp' alt='安心プラン5500円' />
+              <StaticImage src='../../img/plan_txt01_smp.webp' alt='結果保証プラン有り結果が出なければ0円証拠が取れなければ料金はいただきません' />
               </div>
 
               <dl className='mp ehime_top'>
