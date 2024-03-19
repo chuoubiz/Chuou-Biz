@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+  const [isSubMenuOpen, setSubMenuOpen] = useState(false);
+  const [isConsultationOpen, setConsultationOpen] = useState(false);
   return (
     <>
       <header id="header" className="cf">
@@ -48,7 +52,7 @@ const Header = (props) => {
             <li>
               <Link to="/voice/">お客様の声</Link>
             </li>
-            <li className="dsp_hp">
+            <li className="dsp_hp drop">
               <Link to="/" className="child">
                 調査項目
               </Link>
@@ -86,7 +90,7 @@ const Header = (props) => {
                 </li>
               </ul>
             </li>
-            <li className="dsp_hp">
+            <li className="dsp_hp drop">
               <Link to="/corporation/" className="child">
                 法人様向けプラン
               </Link>
@@ -163,61 +167,52 @@ const Header = (props) => {
           </ul>
         </nav>
         <nav className="smp_nav">
-          <input type="checkbox" id="overlay-input" />
-          <label htmlFor="overlay-input" id="overlay-button">
-            <span></span>
-          </label>
-          <div id="overlay">
+        <div id="overlay-button" className={isOverlayOpen ? 'open' : ''} onClick={() => {setIsOverlayOpen(!isOverlayOpen); setIsOpen(false); setSubMenuOpen(false);}}>
+          <span></span>
+        </div>
+        <div id="overlay" className={isOverlayOpen ? 'open' : ''}>          
             <ul>
               <li>
                 <Link to="/">ホーム</Link>
               </li>
               <li>
-                <input id="smpnav-check1" className="smpnav-check1" type="checkbox" />
-                <label className="smpnav-label" htmlFor="smpnav-check1">
-                  調査項目
-                  <FontAwesomeIcon icon={faPlus} />
-                </label>
-                <ul className="smpnav-content">
+              <label className={`smpnav-label ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
+                調査項目
+                <FontAwesomeIcon icon={faPlus} />
+              </label>
+                <ul className={`smpnav-content ${isOpen ? 'open' : ''}`}>
                   <li>
-                    <Link to="/fickleness/">浮気・不倫調査</Link>
+                    <Link to="/fickleness/" onClick={() => setIsOverlayOpen(false)}>浮気・不倫調査</Link>
+                  </li>                  
+                  <li>
+                    <Link to="/behavior/" onClick={() => setIsOverlayOpen(false)}>素行調査</Link>
                   </li>
                   <li>
-                    <Link to="/fickleness/type/">離婚の種類について</Link>
+                    <Link to="/trial/" onClick={() => setIsOverlayOpen(false)}>裁判証拠収集</Link>
                   </li>
                   <li>
-                    <Link to="/fickleness/proof/">内容証明について</Link>
+                    <Link to="/marriage/" onClick={() => setIsOverlayOpen(false)}>結婚・身上調査</Link>
                   </li>
                   <li>
-                    <Link to="/behavior/">素行調査</Link>
+                    <Link to="/whereabouts/" onClick={() => setIsOverlayOpen(false)}>家出・所在調査</Link>
                   </li>
                   <li>
-                    <Link to="/trial/">裁判証拠収集</Link>
+                    <Link to="/stalker/" onClick={() => setIsOverlayOpen(false)}>嫌がらせ対策</Link>
                   </li>
                   <li>
-                    <Link to="/marriage/">結婚・身上調査</Link>
+                    <Link to="/tapping/" onClick={() => setIsOverlayOpen(false)}>盗聴器発見</Link>
                   </li>
                   <li>
-                    <Link to="/whereabouts/">家出・所在調査</Link>
-                  </li>
-                  <li>
-                    <Link to="/stalker/">嫌がらせ対策</Link>
-                  </li>
-                  <li>
-                    <Link to="/tapping/">盗聴器発見</Link>
-                  </li>
-                  <li>
-                    <Link to="/fingerprint/">指紋・筆跡鑑定</Link>
+                    <Link to="/fingerprint/" onClick={() => setIsOverlayOpen(false)}>指紋・筆跡鑑定</Link>
                   </li>
                 </ul>
               </li>
               <li>
-                <input id="smpnav-check2" className="smpnav-check2" type="checkbox" />
-                <label className="smpnav-label" htmlFor="smpnav-check2">
-                  法人様向けプラン
-                  <FontAwesomeIcon icon={faPlus} />
-                </label>
-                <ul className="smpnav-content">
+              <div className={`smpnav-label houjin ${isSubMenuOpen ? 'open' : ''}`} onClick={() => setSubMenuOpen(!isSubMenuOpen)}>
+                法人様向けプラン
+                <FontAwesomeIcon icon={faPlus} />
+              </div>
+                <ul className={`smpnav-content ${isSubMenuOpen ? 'open' : ''}`}>
                   <li>
                     <Link to="/corporation/#credit-check">企業信用調査</Link>
                   </li>
@@ -245,26 +240,25 @@ const Header = (props) => {
                 </ul>
               </li>
               <li>
-                <input id="smpnav-check3" className="smpnav-check3" type="checkbox" />
-                <label className="smpnav-label" htmlFor="smpnav-check3">
-                  相談室案内
-                  <FontAwesomeIcon icon={faPlus} />
-                </label>
-                <ul className="smpnav-content">
+              <div className={`smpnav-label ${isConsultationOpen ? 'open' : ''}`} onClick={() => setConsultationOpen(!isConsultationOpen)}>
+                相談室案内
+                <FontAwesomeIcon icon={faPlus} />
+              </div>
+              <ul className={`smpnav-content soudan ${isConsultationOpen ? 'open' : ''}`}>
                   <li>
-                    <Link to="/">広島相談室</Link>
+                    <Link to="/" onClick={() => setTimeout(() => setConsultationOpen(false), 0)}>広島相談室</Link>
                   </li>
                   <li>
-                    <Link to="/okayama/">岡山相談室</Link>
+                    <Link to="/okayama/" onClick={() => setTimeout(() => setConsultationOpen(false), 0)}>岡山相談室</Link>
                   </li>
                   <li>
-                    <Link to="/ehime/">愛媛相談室</Link>
+                    <Link to="/ehime/" onClick={() => setTimeout(() => setConsultationOpen(false), 0)}>愛媛相談室</Link>
                   </li>
                   <li>
-                    <Link to="/yamaguchi/">山口相談室</Link>
+                    <Link to="/yamaguchi/" onClick={() => setTimeout(() => setConsultationOpen(false), 0)}>山口相談室</Link>
                   </li>
                   <li>
-                    <Link to="/shimane/">島根相談室</Link>
+                    <Link to="/shimane/" onClick={() => setTimeout(() => setConsultationOpen(false), 0)}>島根相談室</Link>
                   </li>
                 </ul>
               </li>
@@ -297,6 +291,7 @@ const Header = (props) => {
               </li>
             </ul>
           </div>
+
         </nav>
       </header>
     </>

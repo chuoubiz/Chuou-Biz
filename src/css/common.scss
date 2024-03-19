@@ -413,9 +413,10 @@ a:visited {
   color: #14aad5;
   font-weight: 500;
 }
+.drop .dropdwn_menu { display: none; opacity: 0; transition: opacity 0.5s ease; }
+.drop:hover .dropdwn_menu { display: block; opacity: 1; }
 #menu ul li .dropdwn_menu {
   width: 100%;
-  display: none;
   position: absolute;
   padding: 0;
   background: rgba(255, 255, 255, 0.8);
@@ -3271,20 +3272,22 @@ input[type='checkbox']:checked ~ #overlay-button span {
   height: 100%;
   width: 100vw;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  visibility: hidden;
+  z-index: 1000;  
   opacity: 0;
+  visibility: hidden;
   position: fixed;
   transition: all 0.5s ease-in-out;
   top: 0;
   padding-bottom: 140px;
 }
+#overlay.open { opacity: 1; visibility: visible; }
 #overlay.active {
   margin: 0;
 }
+/*
 #overlay div {
   width: 100%;
-}
+}*/
 
 @media screen and (max-width: 768px) {
   #overlay ul {
@@ -3335,10 +3338,17 @@ input[type='checkbox']:checked ~ #overlay-button span {
     content: '';
     transition: all 0.2s ease-in-out;
   }
+  /*
   input[type='checkbox']:checked ~ #overlay-button span:before {
     transform: rotate(45deg) translate(7px, 7px);
   }
   input[type='checkbox']:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }*/
+  #overlay-button.open span:before {
+    transform: rotate(45deg) translate(7px, 7px);
+  }
+  #overlay-button.open span:after {
     transform: rotate(-45deg) translate(7px, -7px);
   }
 }
@@ -3390,6 +3400,16 @@ input[type='checkbox']:checked ~ #overlay-button span {
     transform: rotate(45deg) translate(5px, 5px);
   }
   input[type='checkbox']:checked ~ #overlay-button span:after {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  #overlay-button.open span {
+    height: 0px;
+  }
+  #overlay-button.open span:before {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #overlay-button.open span:after {
     transform: rotate(-45deg) translate(5px, -5px);
   }
 }
@@ -3471,16 +3491,24 @@ input[type='checkbox']:checked ~ #overlay-button span {
   border-bottom: solid 1px #ccc;
 }
 
+.smpnav-label.open .fa-plus {
+  transform: rotate(-45deg);
+}
+
 .smpnav-content {
-  display: block;
   height: 0;
-  opacity: 0;
-  transition: 0.5s;
-  visibility: hidden;
+  transition: height 0.3s ease-out;
+  overflow: hidden;
   position: relative;
   box-sizing: border-box;
 }
 
+.smpnav-content.open {
+  height: 376px;
+}
+.smpnav-content.soudan.open {
+  height: 235px;
+}
 .smpnav-check1,
 .smpnav-check2,
 .smpnav-check3,
@@ -3518,11 +3546,10 @@ input[type='checkbox']:checked ~ #overlay-button span {
   color: #666;
   display: inline-block;
   position: absolute;
-  right: 10px;
-  top: 18px;
+  right: 10px;  
   box-sizing: border-box;
   font-size: 120%;
-  max-width: 20px;
+  max-width: 20px;  
 }
 
 .smpnav-check1:checked + .smpnav-label .fa-plus,
